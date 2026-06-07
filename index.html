@@ -637,6 +637,42 @@ footer a{color:var(--gold)}
   color:#f3bf2b;
 }
 
+
+/* UNIFIED GLOBAL HOVER EFFECT */
+
+.card,
+.token-box,
+.status-item,
+.vision-card,
+.step-card,
+.faq-item,
+.story-chapter,
+.token-address-box,
+.claim-box{
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    border-color .28s ease !important;
+}
+
+.card:hover,
+.token-box:hover,
+.status-item:hover,
+.vision-card:hover,
+.step-card:hover,
+.faq-item:hover,
+.story-chapter:hover,
+.token-address-box:hover,
+.claim-box:hover{
+  transform:translateY(-8px) !important;
+  border-color:rgba(243,191,43,.55) !important;
+  box-shadow:
+    0 0 28px rgba(243,191,43,.28),
+    0 0 90px rgba(243,191,43,.18),
+    0 30px 90px rgba(0,0,0,.6) !important;
+}
+
+
 @media(max-width:980px){
   section{padding:90px 20px}
   .hero{
