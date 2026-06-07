@@ -269,10 +269,13 @@ nav{
 .poster-wrap{
   position:sticky;
   top:120px;
+  align-self:start;
 }
 
 .poster{
   width:100%;
+  min-height:82vh;
+  object-fit:cover;
   border-radius:34px;
   border:1px solid var(--border);
   box-shadow:
@@ -311,6 +314,21 @@ nav{
   font-size:18px;
   line-height:1.9;
   margin-bottom:16px;
+}
+
+
+.story-chapter:nth-child(even){
+  margin-left:40px;
+}
+
+.story-chapter{
+  transition:.25s;
+}
+
+.story-chapter:hover{
+  transform:translateY(-6px);
+  border-color:rgba(243,191,43,.35);
+  box-shadow:0 0 35px rgba(243,191,43,.08);
 }
 
 .story-quote{
@@ -640,6 +658,15 @@ footer a{color:var(--gold)}
   .hero h1{font-size:44px;line-height:1}
   .hero p{font-size:18px;line-height:1.7}
   .hero-badge{font-size:12px;padding:8px 14px}
+  
+  .story-chapter:nth-child(even){
+    margin-left:0;
+  }
+
+  .poster{
+    min-height:auto;
+  }
+
   .section-title h2{font-size:38px}
 }
 
