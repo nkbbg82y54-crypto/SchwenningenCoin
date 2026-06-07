@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Schwenningen Token | Community Token auf Solana</title>
 
 <style>
-
 :root{
   --gold:#f3bf2b;
   --gold-light:#ffdd75;
-  --bg:#050505;
-  --card:#0d0d0d;
   --text:#ffffff;
   --muted:#bdbdbd;
   --border:rgba(243,191,43,.22);
@@ -31,16 +26,12 @@ html{
 }
 
 body{
-
   font-family:Arial,sans-serif;
-
   background:
     radial-gradient(circle at top right, rgba(243,191,43,.12), transparent 25%),
     radial-gradient(circle at bottom left, rgba(243,191,43,.08), transparent 25%),
     #050505;
-
   color:var(--text);
-
   overflow-x:hidden;
 }
 
@@ -74,40 +65,28 @@ section{
 }
 
 header{
-
   position:fixed;
   top:0;
-
   width:100%;
-
   z-index:1000;
-
   background:rgba(0,0,0,.72);
-
   backdrop-filter:blur(14px);
-
   border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 nav{
-
   max-width:1250px;
-
   margin:auto;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   padding:20px 24px;
 }
 
 .logo{
-
   display:flex;
   align-items:center;
   gap:14px;
-
   font-size:20px;
   font-weight:800;
 }
@@ -129,69 +108,43 @@ nav{
 }
 
 .hero{
-
   position:relative;
-
   min-height:100vh;
-
   display:grid;
   grid-template-columns:1fr 1fr;
   align-items:center;
-
   gap:60px;
-
   padding-top:140px;
 }
 
 .hero::before{
-
   content:"";
-
   position:absolute;
-
   right:-200px;
   top:50%;
-
   transform:translateY(-50%);
-
   width:700px;
   height:700px;
-
-  background:
-    radial-gradient(circle, rgba(243,191,43,.18), transparent 65%);
-
+  background:radial-gradient(circle, rgba(243,191,43,.18), transparent 65%);
   z-index:-1;
 }
 
 .hero-badge{
-
   display:inline-block;
-
   padding:10px 18px;
-
   border-radius:999px;
-
   background:rgba(243,191,43,.12);
-
   border:1px solid rgba(243,191,43,.3);
-
   color:var(--gold-light);
-
   margin-bottom:24px;
-
   font-size:14px;
-
   letter-spacing:.7px;
 }
 
 .hero h1{
-
   font-size:clamp(60px,8vw,110px);
-
   line-height:.92;
-
   margin-bottom:26px;
-
   font-weight:900;
 }
 
@@ -200,15 +153,10 @@ nav{
 }
 
 .hero p{
-
   font-size:22px;
-
   line-height:1.8;
-
   color:var(--muted);
-
   max-width:620px;
-
   margin-bottom:36px;
 }
 
@@ -219,184 +167,117 @@ nav{
 }
 
 .btn{
-
   padding:15px 30px;
-
   border-radius:14px;
-
-  background:
-    linear-gradient(135deg,var(--gold-light),var(--gold));
-
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
   color:#111;
-
   font-weight:800;
 }
 
 .btn-outline{
-
   padding:15px 30px;
-
   border-radius:14px;
-
   border:1px solid rgba(255,255,255,.15);
-
   background:rgba(255,255,255,.04);
-
   color:#fff;
 }
 
 .coin{
-
   width:100%;
-
   max-width:620px;
-
   display:block;
-
   margin:auto;
-
   filter:
     drop-shadow(0 0 35px rgba(243,191,43,.45))
     drop-shadow(0 0 80px rgba(243,191,43,.18))
     drop-shadow(0 40px 100px rgba(0,0,0,.85));
-
   animation:float 5s ease-in-out infinite;
 }
 
 @keyframes float{
-
-  0%,100%{
-    transform:translateY(0px);
-  }
-
-  50%{
-    transform:translateY(-18px);
-  }
+  0%,100%{transform:translateY(0px);}
+  50%{transform:translateY(-18px);}
 }
 
 .cards{
-
   display:grid;
-
   grid-template-columns:repeat(4,1fr);
-
   gap:24px;
 }
 
 .card{
-
   background:rgba(8,8,8,.82);
-
   border:1px solid var(--border);
-
   border-radius:26px;
-
   padding:36px 28px;
-
   text-align:center;
 }
 
 .card h3{
-
   color:var(--gold);
-
   margin-bottom:14px;
-
   font-size:24px;
 }
 
 .card p{
-
   color:var(--muted);
-
   line-height:1.8;
 }
 
 .story{
-
   display:grid;
-
   grid-template-columns:1fr 1fr;
-
   gap:50px;
-
   align-items:center;
 }
 
 .poster{
-
   width:100%;
-
   border-radius:30px;
-
   border:1px solid var(--border);
-
   box-shadow:
     0 40px 90px rgba(0,0,0,.6),
     0 0 40px rgba(243,191,43,.08);
 }
 
 .story-box{
-
   background:rgba(8,8,8,.82);
-
   border:1px solid var(--border);
-
   border-radius:30px;
-
   padding:44px;
 }
 
 .story-box h2{
-
   font-size:48px;
-
   margin-bottom:24px;
-
   color:var(--gold);
 }
 
 .story-box p{
-
   color:var(--muted);
-
   line-height:1.9;
-
   margin-bottom:18px;
-
   font-size:18px;
 }
 
 .tokenomics{
-
   display:grid;
-
   grid-template-columns:repeat(4,1fr);
-
   gap:24px;
 }
 
 .token-box{
-
   background:rgba(8,8,8,.82);
-
   border:1px solid var(--border);
-
   border-radius:26px;
-
   padding:38px;
-
   text-align:center;
 }
 
 .token-box strong{
-
   display:block;
-
   font-size:42px;
-
   color:var(--gold);
-
   margin-bottom:12px;
 }
 
@@ -404,25 +285,86 @@ nav{
   color:var(--muted);
 }
 
-.address{
+.token-address-box{
+  margin-top:50px;
+  background:linear-gradient(145deg, rgba(18,18,18,.95), rgba(8,8,8,.98));
+  border:1px solid rgba(243,191,43,.22);
+  border-radius:32px;
+  padding:42px;
+  max-width:950px;
+  margin-left:auto;
+  margin-right:auto;
+  box-shadow:
+    0 0 40px rgba(243,191,43,.06),
+    0 40px 100px rgba(0,0,0,.55);
+}
 
-  margin-top:36px;
+.token-top{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-bottom:34px;
+}
 
-  background:rgba(8,8,8,.82);
-
-  border:1px dashed rgba(243,191,43,.4);
-
+.solana-icon{
+  width:72px;
+  height:72px;
   border-radius:22px;
+  background:rgba(255,255,255,.04);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.08);
+}
 
-  padding:28px;
+.solana-icon img{
+  width:42px;
+}
 
-  text-align:center;
+.network-label{
+  color:#8f8f8f;
+  font-size:13px;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
 
-  color:#dddddd;
+.token-title{
+  font-size:28px;
+  font-weight:800;
+  color:#ffffff;
+}
 
-  word-break:break-all;
+.address-label{
+  color:var(--gold);
+  margin-bottom:14px;
+  font-size:15px;
+  letter-spacing:1px;
+}
 
+.token-address{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:22px;
+  font-size:18px;
   line-height:1.8;
+  word-break:break-all;
+  color:#dddddd;
+}
+
+.copy-btn{
+  margin-top:24px;
+  padding:14px 22px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  color:#111;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.copy-btn:hover{
+  opacity:.92;
 }
 
 .faq{
@@ -431,67 +373,45 @@ nav{
 }
 
 .faq-item{
-
   background:rgba(8,8,8,.82);
-
   border:1px solid var(--border);
-
   border-radius:24px;
-
   padding:30px;
 }
 
 .faq-item h3{
-
   color:var(--gold);
-
   margin-bottom:12px;
 }
 
 .faq-item p{
-
   color:var(--muted);
-
   line-height:1.8;
 }
 
 .disclaimer{
-
   background:rgba(243,191,43,.08);
-
   border:1px solid rgba(243,191,43,.3);
-
   border-radius:28px;
-
   padding:40px;
 }
 
 .disclaimer h3{
-
   color:var(--gold);
-
   margin-bottom:18px;
-
   font-size:30px;
 }
 
 .disclaimer p{
-
   color:#dddddd;
-
   line-height:1.9;
 }
 
 footer{
-
   border-top:1px solid rgba(255,255,255,.06);
-
   background:#050505;
-
   padding:60px 24px;
-
   text-align:center;
-
   color:#8e8e8e;
 }
 
@@ -500,42 +420,26 @@ footer a{
 }
 
 .modal{
-
   display:none;
-
   position:fixed;
-
   z-index:9999;
-
   left:0;
   top:0;
-
   width:100%;
   height:100%;
-
   overflow:auto;
-
   background:rgba(0,0,0,.82);
-
   backdrop-filter:blur(8px);
 }
 
 .modal-content{
-
   background:#0b0b0b;
-
   margin:8% auto;
-
   padding:40px;
-
   border:1px solid rgba(243,191,43,.25);
-
   border-radius:28px;
-
   max-width:700px;
-
   color:#ffffff;
-
   box-shadow:
     0 0 50px rgba(0,0,0,.6),
     0 0 20px rgba(243,191,43,.08);
@@ -547,20 +451,14 @@ footer a{
 }
 
 .modal-content p{
-
   line-height:1.9;
-
   color:#d4d4d4;
 }
 
 .close-modal{
-
   float:right;
-
   font-size:34px;
-
   cursor:pointer;
-
   color:#f3bf2b;
 }
 
@@ -569,37 +467,38 @@ footer a{
 }
 
 @media(max-width:980px){
+  .hero,
+  .story{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
 
-.hero,
-.story{
-  grid-template-columns:1fr;
-  text-align:center;
+  .cards,
+  .tokenomics{
+    grid-template-columns:1fr;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .token-top{
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+  }
 }
-
-.cards,
-.tokenomics{
-  grid-template-columns:1fr;
-}
-
-.hero-buttons{
-  justify-content:center;
-}
-
-.nav-links{
-  display:none;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-
 <nav>
-
 <div class="logo">
 <img src="assets/coin.png" alt="Schwenningen Token">
 <span>Schwenningen Token</span>
@@ -611,18 +510,12 @@ footer a{
 <a href="#faq">FAQ</a>
 <a href="#rechtliches">Hinweise</a>
 </div>
-
 </nav>
-
 </header>
 
 <section class="hero">
-
 <div>
-
-<div class="hero-badge">
-COMMUNITY TOKEN AUF SOLANA
-</div>
+<div class="hero-badge">COMMUNITY TOKEN AUF SOLANA</div>
 
 <h1>
 SCHWENNINGEN<br>
@@ -639,77 +532,53 @@ Transparent. Limitiert. Lokal.
 <a href="#tokenomics" class="btn">Token entdecken</a>
 <a href="#story" class="btn-outline">Mehr erfahren</a>
 </div>
-
 </div>
 
 <div>
 <img src="assets/coin.png" class="coin" alt="Schwenningen Token">
 </div>
-
 </section>
 
 <section>
-
 <div class="section-title">
-
 <h2>Warum dieser Token?</h2>
-
 <p>
 Der Schwenningen Token ist kein klassisches Investmentprojekt,
 sondern ein kreatives digitales Community-Experiment
 mit lokalem Bezug zu Schwenningen und dem Heuberg.
 </p>
-
 </div>
 
 <div class="cards">
-
 <div class="card">
 <h3>Lokal</h3>
-<p>
-Inspiriert von Schwenningen und der Region —
-als digitales Symbol regionaler Verbundenheit.
-</p>
+<p>Inspiriert von Schwenningen und der Region — als digitales Symbol regionaler Verbundenheit.</p>
 </div>
 
 <div class="card">
 <h3>Transparent</h3>
-<p>
-Öffentlich einsehbarer SPL-Token
-mit fester Gesamtmenge auf Solana.
-</p>
+<p>Öffentlich einsehbarer SPL-Token mit fester Gesamtmenge auf Solana.</p>
 </div>
 
 <div class="card">
 <h3>Community</h3>
-<p>
-Gedacht als kreatives Web3-Projekt
-mit Sammler- und Community-Charakter.
-</p>
+<p>Gedacht als kreatives Web3-Projekt mit Sammler- und Community-Charakter.</p>
 </div>
 
 <div class="card">
 <h3>Modern</h3>
-<p>
-Basierend auf der Solana Blockchain —
-schnell, günstig und weltweit transferierbar.
-</p>
+<p>Basierend auf der Solana Blockchain — schnell, günstig und weltweit transferierbar.</p>
 </div>
-
 </div>
-
 </section>
 
 <section id="story">
-
 <div class="story">
-
 <div>
 <img src="assets/poster.jpg" class="poster" alt="Schwenningen Token Poster">
 </div>
 
 <div class="story-box">
-
 <h2>Die Story</h2>
 
 <p>
@@ -733,27 +602,17 @@ zu einem digitalen Symbol lokaler Verbundenheit.
 Frei transferierbar, transparent und offen —
 für alle, die Freude an digitalen Community-Projekten haben.
 </p>
-
 </div>
-
 </div>
-
 </section>
 
 <section id="tokenomics">
-
 <div class="section-title">
-
 <h2>Tokenomics</h2>
-
-<p>
-Einfach, transparent und bewusst begrenzt.
-</p>
-
+<p>Einfach, transparent und bewusst begrenzt.</p>
 </div>
 
 <div class="tokenomics">
-
 <div class="token-box">
 <strong>165.000</strong>
 <span>Gesamtmenge</span>
@@ -773,79 +632,66 @@ Einfach, transparent und bewusst begrenzt.
 <strong>OPEN</strong>
 <span>Frei transferierbar</span>
 </div>
-
 </div>
 
-<div class="address">
-Token-Adresse:<br><br>
+<div class="token-address-box">
+<div class="token-top">
+<div class="solana-icon">
+<img src="assets/solana.png" alt="Solana">
+</div>
+
+<div>
+<div class="network-label">SOLANA NETWORK</div>
+<div class="token-title">Schwenningen Token</div>
+</div>
+</div>
+
+<div class="address-label">Token-Adresse</div>
+
+<div class="token-address">
 3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E
 </div>
 
+<button class="copy-btn" onclick="copyAddress()">Adresse kopieren</button>
+</div>
 </section>
 
 <section id="faq">
-
 <div class="section-title">
-
 <h2>FAQ</h2>
-
-<p>
-Die wichtigsten Fragen zum Projekt.
-</p>
-
+<p>Die wichtigsten Fragen zum Projekt.</p>
 </div>
 
 <div class="faq">
-
 <div class="faq-item">
 <h3>Ist das ein Investment?</h3>
-<p>
-Nein. Der Schwenningen Token ist kein Finanzprodukt
-und kein Investmentprojekt.
-</p>
+<p>Nein. Der Schwenningen Token ist kein Finanzprodukt und kein Investmentprojekt.</p>
 </div>
 
 <div class="faq-item">
 <h3>Gibt es ein Gewinnversprechen?</h3>
-<p>
-Nein. Es existieren keinerlei Rendite-
-oder Gewinnzusagen.
-</p>
+<p>Nein. Es existieren keinerlei Rendite- oder Gewinnzusagen.</p>
 </div>
 
 <div class="faq-item">
 <h3>Wofür ist der Token gedacht?</h3>
-<p>
-Als digitales Community- und Sammlerprojekt
-mit lokalem Bezug zu Schwenningen.
-</p>
+<p>Als digitales Community- und Sammlerprojekt mit lokalem Bezug zu Schwenningen.</p>
 </div>
 
 <div class="faq-item">
 <h3>Auf welchem Netzwerk läuft der Token?</h3>
-<p>
-Auf der Solana Blockchain als SPL-Token.
-</p>
+<p>Auf der Solana Blockchain als SPL-Token.</p>
 </div>
-
 </div>
-
 </section>
 
 <section id="rechtliches">
-
 <div class="section-title">
-
 <h2>Wichtige Hinweise</h2>
-
-<p>
-Transparenz und klare Kommunikation stehen im Vordergrund.
-</p>
-
+<p>Transparenz und klare Kommunikation stehen im Vordergrund.</p>
 </div>
 
 <div class="disclaimer">
-
 <h3>Disclaimer</h3>
 
 <p>
@@ -863,16 +709,11 @@ oder Renditeerwartungen.
 Kryptowährungen und digitale Token können Risiken beinhalten.
 Jeder Nutzer handelt eigenverantwortlich.
 </p>
-
 </div>
-
 </section>
 
 <footer>
-
-<p>
-© 2026 Schwenningen Token
-</p>
+<p>© 2026 Schwenningen Token</p>
 
 <br>
 
@@ -881,24 +722,17 @@ Jeder Nutzer handelt eigenverantwortlich.
 &nbsp;·&nbsp;
 <a href="#" onclick="openPrivacy()">Datenschutz</a>
 </p>
-
 </footer>
 
-<!-- IMPRESSUM -->
-
 <div id="impressum-modal" class="modal">
-
 <div class="modal-content">
-
 <span class="close-modal" onclick="closeModal()">&times;</span>
 
 <h2>Impressum</h2>
 
 <br>
 
-<p>
-Angaben gemäß § 5 TMG
-</p>
+<p>Angaben gemäß § 5 TMG</p>
 
 <br>
 
@@ -928,17 +762,11 @@ und Sammlerprojekt auf Basis der Solana Blockchain.
 Es handelt sich ausdrücklich nicht um ein Finanzprodukt,
 keine Anlageberatung und kein öffentliches Investmentangebot.
 </p>
-
 </div>
-
 </div>
-
-<!-- DATENSCHUTZ -->
 
 <div id="privacy-modal" class="modal">
-
 <div class="modal-content">
-
 <span class="close-modal" onclick="closePrivacy()">&times;</span>
 
 <h2>Datenschutzerklärung</h2>
@@ -991,8 +819,7 @@ durch GitHub verarbeitet werden.
 <br>
 
 <p>
-Weitere Informationen:
-<br><br>
+Weitere Informationen:<br><br>
 https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement
 </p>
 
@@ -1041,50 +868,43 @@ Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen
 jederzeit das Recht auf Auskunft über gespeicherte personenbezogene Daten,
 deren Herkunft und Empfänger sowie den Zweck der Datenverarbeitung.
 </p>
-
 </div>
-
 </div>
 
 <script>
-
 function openModal(){
-
-document.getElementById("impressum-modal").style.display = "block";
+  document.getElementById("impressum-modal").style.display = "block";
 }
 
 function closeModal(){
-
-document.getElementById("impressum-modal").style.display = "none";
+  document.getElementById("impressum-modal").style.display = "none";
 }
 
 function openPrivacy(){
-
-document.getElementById("privacy-modal").style.display = "block";
+  document.getElementById("privacy-modal").style.display = "block";
 }
 
 function closePrivacy(){
+  document.getElementById("privacy-modal").style.display = "none";
+}
 
-document.getElementById("privacy-modal").style.display = "none";
+function copyAddress(){
+  navigator.clipboard.writeText("3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E");
+  alert("Token-Adresse kopiert");
 }
 
 window.onclick = function(event){
+  const impressum = document.getElementById("impressum-modal");
+  const privacy = document.getElementById("privacy-modal");
 
-const impressum = document.getElementById("impressum-modal");
-const privacy = document.getElementById("privacy-modal");
+  if(event.target == impressum){
+    impressum.style.display = "none";
+  }
 
-if(event.target == impressum){
-
-impressum.style.display = "none";
+  if(event.target == privacy){
+    privacy.style.display = "none";
+  }
 }
-
-if(event.target == privacy){
-
-privacy.style.display = "none";
-}
-
-}
-
 </script>
 
 </body>
