@@ -37,7 +37,7 @@ section{
 
 .section-title{text-align:center;margin-bottom:70px}
 .section-title h2{font-size:48px;margin-bottom:18px;color:var(--gold)}
-.section-title p{color:var(--muted);max-width:720px;margin:auto;line-height:1.8}
+.section-title p{color:var(--muted);max-width:760px;margin:auto;line-height:1.8}
 
 header{
   position:fixed;
@@ -86,7 +86,7 @@ nav{
   z-index:-1;
 }
 
-.hero-badge{
+.hero-badge,.claim-badge{
   display:inline-block;
   padding:10px 18px;
   border-radius:999px;
@@ -177,29 +177,135 @@ nav{
   line-height:1.8;
 }
 
-.story{
+/* STORY GROSS */
+
+.story-hero{
+  max-width:1400px;
+  padding-top:140px;
+}
+
+.story-intro{
+  text-align:center;
+  max-width:980px;
+  margin:0 auto 70px;
+}
+
+.story-intro h2{
+  font-size:clamp(46px,7vw,86px);
+  line-height:1;
+  color:var(--gold);
+  margin-bottom:28px;
+}
+
+.story-intro p{
+  color:var(--muted);
+  font-size:22px;
+  line-height:1.9;
+}
+
+.story-layout{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
+  grid-template-columns:.9fr 1.1fr;
+  gap:60px;
+  align-items:start;
+}
+
+.poster-wrap{
+  position:sticky;
+  top:120px;
 }
 
 .poster{
   width:100%;
-  border-radius:30px;
+  border-radius:34px;
   border:1px solid var(--border);
-  box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 40px rgba(243,191,43,.08);
+  box-shadow:
+    0 50px 120px rgba(0,0,0,.75),
+    0 0 60px rgba(243,191,43,.12);
 }
 
-.story-box{
+.story-manifest{
+  display:grid;
+  gap:26px;
+}
+
+.story-chapter{
+  background:linear-gradient(145deg, rgba(18,18,18,.92), rgba(8,8,8,.98));
+  border:1px solid rgba(243,191,43,.18);
+  border-radius:30px;
+  padding:38px;
+}
+
+.story-chapter span{
+  display:block;
+  color:var(--gold-light);
+  font-size:13px;
+  letter-spacing:2px;
+  margin-bottom:14px;
+}
+
+.story-chapter h3{
+  color:var(--gold);
+  font-size:32px;
+  margin-bottom:18px;
+}
+
+.story-chapter p{
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.9;
+  margin-bottom:16px;
+}
+
+.story-quote{
+  margin:70px auto 0;
+  max-width:1050px;
+  text-align:center;
+  padding:55px 38px;
+  border-radius:34px;
+  background:rgba(243,191,43,.08);
+  border:1px solid rgba(243,191,43,.3);
+}
+
+.story-quote strong{
+  display:block;
+  font-size:clamp(32px,5vw,58px);
+  line-height:1.18;
+  color:var(--gold);
+  margin-bottom:18px;
+}
+
+.story-quote p{
+  color:#dddddd;
+  font-size:20px;
+  line-height:1.8;
+}
+
+.vision-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.vision-card{
   background:rgba(8,8,8,.82);
   border:1px solid var(--border);
-  border-radius:30px;
-  padding:44px;
+  border-radius:28px;
+  padding:36px;
 }
 
-.story-box h2{font-size:48px;margin-bottom:24px;color:var(--gold)}
-.story-box p{color:var(--muted);line-height:1.9;margin-bottom:18px;font-size:18px}
+.vision-card h3{
+  color:var(--gold);
+  font-size:26px;
+  margin-bottom:16px;
+}
+
+.vision-card p{
+  color:var(--muted);
+  line-height:1.85;
+}
+
+/* TOKENOMICS */
 
 .token-box{text-align:center}
 .token-box strong{display:block;font-size:34px;color:var(--gold);margin-bottom:12px}
@@ -325,19 +431,6 @@ nav{
 .copy-btn:hover{opacity:.92}
 
 .claim-box{text-align:center}
-
-.claim-badge{
-  display:inline-block;
-  margin-bottom:24px;
-  padding:10px 18px;
-  border-radius:999px;
-  background:rgba(243,191,43,.12);
-  border:1px solid rgba(243,191,43,.3);
-  color:var(--gold-light);
-  font-size:13px;
-  letter-spacing:1px;
-}
-
 .claim-box h3{font-size:42px;margin-bottom:24px;color:var(--gold)}
 .claim-box p{color:var(--muted);line-height:1.9;font-size:19px;margin-bottom:24px}
 .wallet-example{margin:34px 0}
@@ -400,11 +493,12 @@ footer a{color:var(--gold)}
 }
 
 @media(max-width:980px){
-  .hero,.story{grid-template-columns:1fr;text-align:center}
-  .cards,.tokenomics,.status-grid{grid-template-columns:1fr}
+  .hero,.story-layout{grid-template-columns:1fr;text-align:center}
+  .cards,.tokenomics,.status-grid,.vision-grid{grid-template-columns:1fr}
   .hero-buttons{justify-content:center}
   .nav-links{display:none}
   .token-top{justify-content:center;flex-direction:column;text-align:center}
+  .poster-wrap{position:relative;top:auto}
 }
 </style>
 </head>
@@ -420,6 +514,7 @@ footer a{color:var(--gold)}
 
 <div class="nav-links">
 <a href="#story">Story</a>
+<a href="#vision">Vision</a>
 <a href="#tokenomics">Tokenomics</a>
 <a href="#claim">Token erhalten</a>
 <a href="#faq">FAQ</a>
@@ -440,8 +535,8 @@ Transparent. Limitiert. Lokal.
 </p>
 
 <div class="hero-buttons">
-<a href="#claim" class="btn">Token erhalten</a>
-<a href="#story" class="btn-outline">Mehr erfahren</a>
+<a href="#story" class="btn">Die Story lesen</a>
+<a href="#claim" class="btn-outline">Token erhalten</a>
 </div>
 </div>
 
@@ -468,18 +563,160 @@ mit lokalem Bezug zu Schwenningen und dem Heuberg.
 </div>
 </section>
 
-<section id="story">
-<div class="story">
-<div>
+<section id="story" class="story-hero">
+
+<div class="story-intro">
+<h2>Die Story</h2>
+<p>
+Aus einer einfachen Idee wurde ein digitales Heimatprojekt:
+ein Token, der Schwenningen, Community und moderne Blockchain-Technologie miteinander verbindet.
+</p>
+</div>
+
+<div class="story-layout">
+
+<div class="poster-wrap">
 <img src="assets/poster.jpg" class="poster" alt="Schwenningen Token Poster">
 </div>
 
-<div class="story-box">
-<h2>Die Story</h2>
-<p>Der Schwenningen Token entstand als kreatives Blockchain-Projekt mit lokalem Bezug zu Schwenningen und dem Heuberg.</p>
-<p>Ziel ist nicht Spekulation oder Rendite, sondern ein modernes digitales Gemeinschaftsprojekt mit Sammler- und Community-Charakter.</p>
-<p>Der Token verbindet Heimatgefühl, modernes Design und Blockchain-Technologie zu einem digitalen Symbol lokaler Verbundenheit.</p>
-<p>Frei transferierbar, transparent und offen — für alle, die Freude an digitalen Community-Projekten haben.</p>
+<div class="story-manifest">
+
+<div class="story-chapter">
+<span>KAPITEL 01</span>
+<h3>Die Idee</h3>
+<p>
+Der Schwenningen Token entstand als kreatives Blockchain-Projekt
+mit lokalem Bezug zu Schwenningen und dem Heuberg.
+Am Anfang stand dabei nur eine einfache Frage:
+Warum sollte es keine digitale Community für Schwenningen geben?
+</p>
+<p>
+Während weltweit immer mehr digitale Projekte entstehen,
+entstehen viele davon anonym, kurzlebig oder ausschließlich mit Fokus auf Spekulation.
+Der Schwenningen Token verfolgt bewusst einen anderen Ansatz.
+</p>
+</div>
+
+<div class="story-chapter">
+<span>KAPITEL 02</span>
+<h3>Digitale Heimat</h3>
+<p>
+Nicht schneller Profit, sondern Identität,
+Gemeinschaft und ein modernes digitales Heimatgefühl stehen im Mittelpunkt.
+Die Idee dahinter ist einfach:
+eine sichtbare digitale Verbindung zwischen Menschen,
+die Schwenningen kennen, hier leben, hier aufgewachsen sind
+oder sich mit der Region verbunden fühlen.
+</p>
+<p>
+Ein lokales Symbol — nicht auf Papier,
+sondern dauerhaft sichtbar auf der Blockchain.
+</p>
+</div>
+
+<div class="story-chapter">
+<span>KAPITEL 03</span>
+<h3>Tradition trifft Technologie</h3>
+<p>
+Der Token verbindet Tradition, Heimatgefühl und moderne Technologie.
+Er soll zeigen, dass Blockchain nicht nur für globale Großprojekte existiert,
+sondern auch für kleine, echte Gemeinschaften funktionieren kann.
+</p>
+<p>
+Jeder Token erzählt dabei ein kleines Stück Schwenningen:
+die Region, die Menschen, die Geschichte, die Kultur
+und die Idee, dass moderne Technologie auch lokal verbinden kann.
+</p>
+</div>
+
+<div class="story-chapter">
+<span>KAPITEL 04</span>
+<h3>Transparent und öffentlich</h3>
+<p>
+Die Solana Blockchain macht daraus etwas Dauerhaftes:
+transparent, öffentlich einsehbar und weltweit erreichbar.
+Jeder Transfer, jede Wallet und die gesamte Tokenmenge bleiben nachvollziehbar.
+</p>
+<p>
+Der Schwenningen Token versteht sich deshalb nicht als klassisches Investmentprojekt
+und auch nicht als gewöhnlicher Meme-Coin. Es gibt keinen Presale,
+keine Verkaufsrunde und kein Gewinnversprechen.
+</p>
+</div>
+
+<div class="story-chapter">
+<span>KAPITEL 05</span>
+<h3>Lokal beginnen, sichtbar werden</h3>
+<p>
+Während viele Projekte versuchen, sofort eine globale Marke zu werden,
+beginnt der Schwenningen Token bewusst lokal.
+Aus einer kleinen Region entsteht eine digitale Gemeinschaft,
+die weltweit sichtbar ist und trotzdem ihre Herkunft nicht verliert.
+</p>
+<p>
+Der Token kann dadurch als eine Art digitale Regionalmarke verstanden werden —
+modern, offen, gemeinschaftlich und dauerhaft auf der Blockchain gespeichert.
+</p>
+</div>
+
+<div class="story-chapter">
+<span>KAPITEL 06</span>
+<h3>Community statt Spekulation</h3>
+<p>
+Die Community-Verteilung soll bewusst einfach bleiben.
+Zum Start können Einwohnerinnen und Einwohner aus Schwenningen
+kostenlos Tokens erhalten und damit Teil dieses Projekts werden.
+</p>
+<p>
+Nicht als Investoren, sondern als Teil einer digitalen Gemeinschaft.
+Frei transferierbar, transparent und offen — für alle,
+die Freude an Technologie, digitaler Kultur, regionaler Verbundenheit
+und neuen Ideen haben.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="story-quote">
+<strong>„Nicht schneller Profit, sondern digitale Heimat.“</strong>
+<p>
+Der Schwenningen Token ist ein lokales Community-Projekt für Menschen,
+die Teil einer modernen, offenen und digitalen Regionalidee sein möchten.
+</p>
+</div>
+
+</section>
+
+<section id="vision">
+<div class="section-title">
+<h2>Die Vision</h2>
+<p>
+Schwenningen Token soll zeigen, dass moderne Blockchain-Projekte nicht nur global,
+sondern auch lokal Bedeutung haben können.
+</p>
+</div>
+
+<div class="vision-grid">
+<div class="vision-card">
+<h3>Digitale Regionalmarke</h3>
+<p>
+Ein modernes Symbol für Schwenningen, das lokale Identität mit digitaler Kultur verbindet.
+</p>
+</div>
+
+<div class="vision-card">
+<h3>Community sichtbar machen</h3>
+<p>
+Ein Token, der Menschen aus der Region verbindet — transparent, offen und nachvollziehbar.
+</p>
+</div>
+
+<div class="vision-card">
+<h3>Heimat auf der Blockchain</h3>
+<p>
+Ein Experiment, das zeigt, dass Technologie auch regional, persönlich und gemeinschaftlich sein kann.
+</p>
 </div>
 </div>
 </section>
@@ -695,44 +932,24 @@ https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-s
 </div>
 
 <script>
-function openModal(){
-  document.getElementById("impressum-modal").style.display="block";
-}
-
-function closeModal(){
-  document.getElementById("impressum-modal").style.display="none";
-}
-
-function openPrivacy(){
-  document.getElementById("privacy-modal").style.display="block";
-}
-
-function closePrivacy(){
-  document.getElementById("privacy-modal").style.display="none";
-}
+function openModal(){document.getElementById("impressum-modal").style.display="block"}
+function closeModal(){document.getElementById("impressum-modal").style.display="none"}
+function openPrivacy(){document.getElementById("privacy-modal").style.display="block"}
+function closePrivacy(){document.getElementById("privacy-modal").style.display="none"}
 
 function copyAddress(){
   navigator.clipboard.writeText("3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E");
-
   const button = document.querySelector(".copy-btn");
   button.innerText = "Adresse kopiert ✓";
-
-  setTimeout(() => {
-    button.innerText = "Adresse kopieren";
-  }, 2000);
+  setTimeout(()=>{button.innerText="Adresse kopieren"},2000);
 }
 
 window.onclick=function(event){
   const impressum=document.getElementById("impressum-modal");
   const privacy=document.getElementById("privacy-modal");
 
-  if(event.target==impressum){
-    impressum.style.display="none";
-  }
-
-  if(event.target==privacy){
-    privacy.style.display="none";
-  }
+  if(event.target==impressum){impressum.style.display="none"}
+  if(event.target==privacy){privacy.style.display="none"}
 }
 </script>
 
