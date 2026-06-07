@@ -3,7 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Schwenningen Token | Community Token auf Solana</title>
+
+<meta name="description" content="Schwenningen Token – ein lokales Community- und Sammlerprojekt auf der Solana Blockchain. Digitale Heimat, regionale Verbundenheit und transparente Community-Verteilung.">
+<meta property="og:title" content="Schwenningen Token">
+<meta property="og:description" content="Ein digitales Community-Projekt für Schwenningen auf der Solana Blockchain.">
+<meta property="og:image" content="assets/poster.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.schwenningen-token.de">
+
+<link rel="icon" href="assets/coin.png">
 
 <style>
 :root{
@@ -166,6 +176,11 @@ nav{
 
 .card{text-align:center}
 
+.card-icon{
+  font-size:34px;
+  margin-bottom:18px;
+}
+
 .card h3,.faq-item h3{
   color:var(--gold);
   margin-bottom:14px;
@@ -176,8 +191,6 @@ nav{
   color:var(--muted);
   line-height:1.8;
 }
-
-/* STORY */
 
 .story-hero{
   max-width:1400px;
@@ -281,31 +294,44 @@ nav{
   line-height:1.8;
 }
 
-.vision-grid{
+.vision-grid,.steps-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:24px;
 }
 
-.vision-card{
+.vision-card,.step-card{
   background:rgba(8,8,8,.82);
   border:1px solid var(--border);
   border-radius:28px;
   padding:36px;
 }
 
-.vision-card h3{
+.vision-card h3,.step-card h3{
   color:var(--gold);
   font-size:26px;
   margin-bottom:16px;
 }
 
-.vision-card p{
+.vision-card p,.step-card p{
   color:var(--muted);
   line-height:1.85;
 }
 
-/* TOKENOMICS */
+.step-number{
+  width:54px;
+  height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:18px;
+  background:rgba(243,191,43,.12);
+  border:1px solid rgba(243,191,43,.3);
+  color:var(--gold-light);
+  font-weight:900;
+  font-size:20px;
+  margin-bottom:22px;
+}
 
 .token-box{text-align:center}
 .token-box strong{display:block;font-size:34px;color:var(--gold);margin-bottom:12px}
@@ -506,6 +532,13 @@ footer{
 
 footer a{color:var(--gold)}
 
+.footer-small{
+  margin-top:14px;
+  color:#777;
+  font-size:14px;
+  line-height:1.8;
+}
+
 .modal{
   display:none;
   position:fixed;
@@ -541,13 +574,16 @@ footer a{color:var(--gold)}
 }
 
 @media(max-width:980px){
+  section{padding:90px 20px}
   .hero,.story-layout{grid-template-columns:1fr;text-align:center}
-  .cards,.tokenomics,.status-grid,.vision-grid{grid-template-columns:1fr}
+  .cards,.tokenomics,.status-grid,.vision-grid,.steps-grid{grid-template-columns:1fr}
   .hero-buttons{justify-content:center}
   .nav-links{display:none}
   .token-top{justify-content:center;flex-direction:column;text-align:center}
   .poster-wrap{position:relative;top:auto}
   .status-item{text-align:center}
+  .hero h1{font-size:54px}
+  .section-title h2{font-size:38px}
 }
 </style>
 </head>
@@ -605,10 +641,10 @@ mit lokalem Bezug zu Schwenningen und dem Heuberg.
 </div>
 
 <div class="cards">
-<div class="card"><h3>Lokal</h3><p>Inspiriert von Schwenningen und der Region — als digitales Symbol regionaler Verbundenheit.</p></div>
-<div class="card"><h3>Transparent</h3><p>Öffentlich einsehbarer SPL-Token mit fester Gesamtmenge auf Solana.</p></div>
-<div class="card"><h3>Community</h3><p>Gedacht als kreatives Web3-Projekt mit Sammler- und Community-Charakter.</p></div>
-<div class="card"><h3>Modern</h3><p>Basierend auf der Solana Blockchain — schnell, günstig und weltweit transferierbar.</p></div>
+<div class="card"><div class="card-icon">🏔️</div><h3>Lokal</h3><p>Inspiriert von Schwenningen und der Region — als digitales Symbol regionaler Verbundenheit.</p></div>
+<div class="card"><div class="card-icon">🔍</div><h3>Transparent</h3><p>Öffentlich einsehbarer SPL-Token mit fester Gesamtmenge auf Solana.</p></div>
+<div class="card"><div class="card-icon">🤝</div><h3>Community</h3><p>Gedacht als kreatives Web3-Projekt mit Sammler- und Community-Charakter.</p></div>
+<div class="card"><div class="card-icon">⚡</div><h3>Modern</h3><p>Basierend auf der Solana Blockchain — schnell, günstig und weltweit transferierbar.</p></div>
 </div>
 </section>
 
@@ -820,6 +856,30 @@ mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 <p>Der Token ist öffentlich über Solscan und Solana Explorer nachvollziehbar.</p>
 </div>
 
+<div class="status-item">
+<div class="status-label">MINT</div>
+<h4>Mint deaktiviert</h4>
+<p>Es ist keine weitere Ausgabe von Tokens vorgesehen.</p>
+</div>
+
+<div class="status-item">
+<div class="status-label">FREEZE</div>
+<h4>Freeze deaktiviert</h4>
+<p>Token können nicht zentral eingefroren werden.</p>
+</div>
+
+<div class="status-item">
+<div class="status-label">NO PRESALE</div>
+<h4>Kein Vorverkauf</h4>
+<p>Keine Verkaufsrunde, kein Presale und kein Investmentangebot.</p>
+</div>
+
+<div class="status-item">
+<div class="status-label">LOCAL FIRST</div>
+<h4>Regional gedacht</h4>
+<p>Der Fokus liegt auf Schwenningen, Community und digitaler Verbundenheit.</p>
+</div>
+
 </div>
 </div>
 
@@ -838,11 +898,47 @@ mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 <div class="token-address">3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E</div>
 
 <div class="explorer-links">
-<a href="https://solscan.io/token/3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E" target="_blank" class="explorer-btn">Solscan Explorer</a>
-<a href="https://explorer.solana.com/address/3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E" target="_blank" class="explorer-btn">Solana Explorer</a>
+<a href="https://solscan.io/token/3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E" target="_blank" class="explorer-btn">Token auf Solscan prüfen</a>
+<a href="https://explorer.solana.com/address/3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E" target="_blank" class="explorer-btn">Token im Solana Explorer ansehen</a>
 </div>
 
 <button class="copy-btn" onclick="copyAddress()">Adresse kopieren</button>
+</div>
+</section>
+
+<section id="steps">
+<div class="section-title">
+<h2>So funktioniert es</h2>
+<p>
+Der Weg zum Schwenningen Token ist bewusst einfach gehalten.
+Keine Börse, kein Kaufprozess, keine Spekulation.
+</p>
+</div>
+
+<div class="steps-grid">
+<div class="step-card">
+<div class="step-number">1</div>
+<h3>Solana-Wallet erstellen</h3>
+<p>
+Du benötigst eine eigene Solana-Wallet-Adresse, zum Beispiel aus einer kompatiblen Wallet-App.
+</p>
+</div>
+
+<div class="step-card">
+<div class="step-number">2</div>
+<h3>E-Mail senden</h3>
+<p>
+Sende deinen Namen, deinen Bezug zu Schwenningen und deine Solana-Wallet-Adresse per E-Mail.
+</p>
+</div>
+
+<div class="step-card">
+<div class="step-number">3</div>
+<h3>Token erhalten</h3>
+<p>
+Wenn Tokens verfügbar sind, werden dir bis zu 10 Schwenningen Tokens freiwillig zugesendet.
+</p>
+</div>
 </div>
 </section>
 
@@ -896,6 +992,8 @@ Es besteht kein Anspruch auf Zuteilung. Kein Verkauf, kein Investmentangebot.
 <div class="faq-item"><h3>Gibt es ein Gewinnversprechen?</h3><p>Nein. Es existieren keinerlei Rendite- oder Gewinnzusagen.</p></div>
 <div class="faq-item"><h3>Wie bekomme ich Tokens?</h3><p>Zum Start können Einwohnerinnen und Einwohner per E-Mail bis zu 10 Tokens anfragen. Dafür wird eine Solana-Wallet-Adresse benötigt.</p></div>
 <div class="faq-item"><h3>Auf welchem Netzwerk läuft der Token?</h3><p>Auf der Solana Blockchain als SPL-Token.</p></div>
+<div class="faq-item"><h3>Muss ich etwas bezahlen?</h3><p>Nein. Die Erstverteilung ist als kostenlose Community-Verteilung gedacht, solange Tokens verfügbar sind.</p></div>
+<div class="faq-item"><h3>Kann ich mit dem Token handeln?</h3><p>Der Token ist technisch frei transferierbar. Die Website bewirbt jedoch ausdrücklich keinen Handel, keine Spekulation und kein Investment.</p></div>
 </div>
 </section>
 
@@ -923,6 +1021,9 @@ Jeder Nutzer handelt eigenverantwortlich.
 
 <footer>
 <p>© 2026 Schwenningen Token</p>
+<p class="footer-small">
+schwenningen-token.de · Community-Projekt · Solana SPL Token
+</p>
 <br>
 <p>
 <a href="#" onclick="openModal()">Impressum</a>
