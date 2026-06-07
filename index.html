@@ -27,12 +27,11 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{
   scroll-behavior:smooth;
-  overflow-x:hidden;
+  overflow-x:clip;
   max-width:100%;
 }
 
 body{
-  overflow-x:hidden;
   width:100%;
   max-width:100%;
 }
@@ -44,7 +43,7 @@ body{
     radial-gradient(circle at bottom left, rgba(243,191,43,.08), transparent 25%),
     #050505;
   color:var(--text);
-  overflow-x:hidden;
+  overflow-x:clip;
 }
 
 a{text-decoration:none;color:inherit}
@@ -269,14 +268,16 @@ nav{
 .poster-wrap{
   position:-webkit-sticky;
   position:sticky;
-  top:110px;
+  top:105px;
   align-self:start;
-  height:fit-content;
+  height:calc(100vh - 130px);
+  min-height:560px;
 }
 
 .poster{
   width:100%;
-  min-height:82vh;
+  height:100%;
+  min-height:560px;
   object-fit:cover;
   border-radius:34px;
   border:1px solid var(--border);
@@ -666,6 +667,7 @@ footer a{color:var(--gold)}
   }
 
   .poster{
+    height:auto;
     min-height:auto;
   }
 
