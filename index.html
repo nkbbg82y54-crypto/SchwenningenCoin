@@ -878,11 +878,13 @@ Jeder Nutzer handelt eigenverantwortlich.
 
 <p>
 <a href="#" onclick="openModal()">Impressum</a>
+&nbsp;·&nbsp;
+<a href="#" onclick="openPrivacy()">Datenschutz</a>
 </p>
 
 </footer>
 
-<!-- IMPRESSUM MODAL -->
+<!-- IMPRESSUM -->
 
 <div id="impressum-modal" class="modal">
 
@@ -931,6 +933,119 @@ keine Anlageberatung und kein öffentliches Investmentangebot.
 
 </div>
 
+<!-- DATENSCHUTZ -->
+
+<div id="privacy-modal" class="modal">
+
+<div class="modal-content">
+
+<span class="close-modal" onclick="closePrivacy()">&times;</span>
+
+<h2>Datenschutzerklärung</h2>
+
+<br>
+
+<h3>1. Allgemeine Hinweise</h3>
+
+<br>
+
+<p>
+Der Schutz Ihrer persönlichen Daten ist wichtig.
+Diese Website dient ausschließlich der Darstellung
+des privaten Community-Projekts „Schwenningen Token“.
+</p>
+
+<br>
+
+<h3>2. Verantwortlicher</h3>
+
+<br>
+
+<p>
+Florian Lessner<br>
+Gartenstraße 2<br>
+72477 Schwenningen<br>
+Deutschland
+</p>
+
+<br>
+
+<p>
+E-Mail:<br>
+xx@xx.xx
+</p>
+
+<br>
+
+<h3>3. Hosting über GitHub Pages</h3>
+
+<br>
+
+<p>
+Diese Website wird über GitHub Pages bereitgestellt.
+Beim Aufruf der Website können technisch notwendige Daten
+wie IP-Adresse, Browserinformationen, Datum und Uhrzeit
+durch GitHub verarbeitet werden.
+</p>
+
+<br>
+
+<p>
+Weitere Informationen:
+<br><br>
+https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement
+</p>
+
+<br>
+
+<h3>4. Keine Cookies / Kein Tracking</h3>
+
+<br>
+
+<p>
+Diese Website verwendet keine Cookies,
+kein Tracking und keine Analyse-Tools.
+</p>
+
+<br>
+
+<h3>5. Keine Registrierung</h3>
+
+<br>
+
+<p>
+Es existieren keine Benutzerkonten,
+keine Registrierungsmöglichkeiten
+und kein Kontaktformular.
+</p>
+
+<br>
+
+<h3>6. Externe Inhalte</h3>
+
+<br>
+
+<p>
+Diese Website bindet derzeit keine externen Dienste
+wie Google Fonts, Google Analytics oder Social-Media-Plugins ein.
+</p>
+
+<br>
+
+<h3>7. Ihre Rechte</h3>
+
+<br>
+
+<p>
+Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen
+jederzeit das Recht auf Auskunft über gespeicherte personenbezogene Daten,
+deren Herkunft und Empfänger sowie den Zweck der Datenverarbeitung.
+</p>
+
+</div>
+
+</div>
+
 <script>
 
 function openModal(){
@@ -943,14 +1058,31 @@ function closeModal(){
 document.getElementById("impressum-modal").style.display = "none";
 }
 
+function openPrivacy(){
+
+document.getElementById("privacy-modal").style.display = "block";
+}
+
+function closePrivacy(){
+
+document.getElementById("privacy-modal").style.display = "none";
+}
+
 window.onclick = function(event){
 
-const modal = document.getElementById("impressum-modal");
+const impressum = document.getElementById("impressum-modal");
+const privacy = document.getElementById("privacy-modal");
 
-if(event.target == modal){
+if(event.target == impressum){
 
-modal.style.display = "none";
+impressum.style.display = "none";
 }
+
+if(event.target == privacy){
+
+privacy.style.display = "none";
+}
+
 }
 
 </script>
