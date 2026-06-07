@@ -439,6 +439,11 @@ nav{
   color:#111;
   font-weight:800;
   cursor:pointer;
+  transition:.2s;
+}
+
+.copy-btn:hover{
+  opacity:.92;
 }
 
 .claim-box{
@@ -514,50 +519,6 @@ footer{
 
 footer a{
   color:var(--gold);
-}
-
-.modal{
-  display:none;
-  position:fixed;
-  z-index:9999;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  overflow:auto;
-  background:rgba(0,0,0,.82);
-  backdrop-filter:blur(8px);
-}
-
-.modal-content{
-  background:#0b0b0b;
-  margin:8% auto;
-  padding:40px;
-  border:1px solid rgba(243,191,43,.25);
-  border-radius:28px;
-  max-width:700px;
-  color:#ffffff;
-
-  box-shadow:
-    0 0 50px rgba(0,0,0,.6),
-    0 0 20px rgba(243,191,43,.08);
-}
-
-.modal-content h2,
-.modal-content h3{
-  color:#f3bf2b;
-}
-
-.modal-content p{
-  line-height:1.9;
-  color:#d4d4d4;
-}
-
-.close-modal{
-  float:right;
-  font-size:34px;
-  cursor:pointer;
-  color:#f3bf2b;
 }
 
 @media(max-width:980px){
@@ -643,96 +604,6 @@ Transparent. Limitiert. Lokal.
 
 <div>
 <img src="assets/coin.png" class="coin" alt="Schwenningen Token">
-</div>
-
-</section>
-
-<section>
-
-<div class="section-title">
-
-<h2>Warum dieser Token?</h2>
-
-<p>
-Der Schwenningen Token ist kein klassisches Investmentprojekt,
-sondern ein kreatives digitales Community-Experiment
-mit lokalem Bezug zu Schwenningen und dem Heuberg.
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>Lokal</h3>
-<p>
-Inspiriert von Schwenningen und der Region —
-als digitales Symbol regionaler Verbundenheit.
-</p>
-</div>
-
-<div class="card">
-<h3>Transparent</h3>
-<p>
-Öffentlich einsehbarer SPL-Token mit fester Gesamtmenge auf Solana.
-</p>
-</div>
-
-<div class="card">
-<h3>Community</h3>
-<p>
-Gedacht als kreatives Web3-Projekt mit Sammler- und Community-Charakter.
-</p>
-</div>
-
-<div class="card">
-<h3>Modern</h3>
-<p>
-Basierend auf der Solana Blockchain —
-schnell, günstig und weltweit transferierbar.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="story">
-
-<div class="story">
-
-<div>
-<img src="assets/poster.jpg" class="poster" alt="Schwenningen Token Poster">
-</div>
-
-<div class="story-box">
-
-<h2>Die Story</h2>
-
-<p>
-Der Schwenningen Token entstand als kreatives Blockchain-Projekt
-mit lokalem Bezug zu Schwenningen und dem Heuberg.
-</p>
-
-<p>
-Ziel ist nicht Spekulation oder Rendite,
-sondern ein modernes digitales Gemeinschaftsprojekt
-mit Sammler- und Community-Charakter.
-</p>
-
-<p>
-Der Token verbindet Heimatgefühl,
-modernes Design und Blockchain-Technologie
-zu einem digitalen Symbol lokaler Verbundenheit.
-</p>
-
-<p>
-Frei transferierbar, transparent und offen —
-für alle, die Freude an digitalen Community-Projekten haben.
-</p>
-
-</div>
-
 </div>
 
 </section>
@@ -877,6 +748,28 @@ Adresse kopieren
 </div>
 
 </section>
+
+<script>
+
+function copyAddress(){
+
+navigator.clipboard.writeText(
+"3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E"
+);
+
+const button = document.querySelector(".copy-btn");
+
+button.innerText = "Adresse kopiert ✓";
+
+setTimeout(() => {
+
+button.innerText = "Adresse kopieren";
+
+}, 2000);
+
+}
+
+</script>
 
 </body>
 </html>
