@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,6 +31,7 @@ html{
 }
 
 body{
+
   font-family:Arial,sans-serif;
 
   background:
@@ -37,6 +40,7 @@ body{
     #050505;
 
   color:var(--text);
+
   overflow-x:hidden;
 }
 
@@ -70,19 +74,25 @@ section{
 }
 
 header{
+
   position:fixed;
   top:0;
+
   width:100%;
+
   z-index:1000;
 
   background:rgba(0,0,0,.72);
+
   backdrop-filter:blur(14px);
 
   border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 nav{
+
   max-width:1250px;
+
   margin:auto;
 
   display:flex;
@@ -93,6 +103,7 @@ nav{
 }
 
 .logo{
+
   display:flex;
   align-items:center;
   gap:14px;
@@ -118,6 +129,7 @@ nav{
 }
 
 .hero{
+
   position:relative;
 
   min-height:100vh;
@@ -125,13 +137,16 @@ nav{
   display:grid;
   grid-template-columns:1fr 1fr;
   align-items:center;
+
   gap:60px;
 
   padding-top:140px;
 }
 
 .hero::before{
+
   content:"";
+
   position:absolute;
 
   right:-200px;
@@ -149,6 +164,7 @@ nav{
 }
 
 .hero-badge{
+
   display:inline-block;
 
   padding:10px 18px;
@@ -156,6 +172,7 @@ nav{
   border-radius:999px;
 
   background:rgba(243,191,43,.12);
+
   border:1px solid rgba(243,191,43,.3);
 
   color:var(--gold-light);
@@ -163,11 +180,14 @@ nav{
   margin-bottom:24px;
 
   font-size:14px;
+
   letter-spacing:.7px;
 }
 
 .hero h1{
+
   font-size:clamp(60px,8vw,110px);
+
   line-height:.92;
 
   margin-bottom:26px;
@@ -180,7 +200,9 @@ nav{
 }
 
 .hero p{
+
   font-size:22px;
+
   line-height:1.8;
 
   color:var(--muted);
@@ -197,6 +219,7 @@ nav{
 }
 
 .btn{
+
   padding:15px 30px;
 
   border-radius:14px;
@@ -205,10 +228,12 @@ nav{
     linear-gradient(135deg,var(--gold-light),var(--gold));
 
   color:#111;
+
   font-weight:800;
 }
 
 .btn-outline{
+
   padding:15px 30px;
 
   border-radius:14px;
@@ -221,10 +246,13 @@ nav{
 }
 
 .coin{
+
   width:100%;
+
   max-width:620px;
 
   display:block;
+
   margin:auto;
 
   filter:
@@ -236,6 +264,7 @@ nav{
 }
 
 @keyframes float{
+
   0%,100%{
     transform:translateY(0px);
   }
@@ -246,12 +275,16 @@ nav{
 }
 
 .cards{
+
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
+
   gap:24px;
 }
 
 .card{
+
   background:rgba(8,8,8,.82);
 
   border:1px solid var(--border);
@@ -264,6 +297,7 @@ nav{
 }
 
 .card h3{
+
   color:var(--gold);
 
   margin-bottom:14px;
@@ -272,19 +306,25 @@ nav{
 }
 
 .card p{
+
   color:var(--muted);
 
   line-height:1.8;
 }
 
 .story{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:50px;
+
   align-items:center;
 }
 
 .poster{
+
   width:100%;
 
   border-radius:30px;
@@ -297,6 +337,7 @@ nav{
 }
 
 .story-box{
+
   background:rgba(8,8,8,.82);
 
   border:1px solid var(--border);
@@ -307,6 +348,7 @@ nav{
 }
 
 .story-box h2{
+
   font-size:48px;
 
   margin-bottom:24px;
@@ -315,6 +357,7 @@ nav{
 }
 
 .story-box p{
+
   color:var(--muted);
 
   line-height:1.9;
@@ -325,12 +368,16 @@ nav{
 }
 
 .tokenomics{
+
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
+
   gap:24px;
 }
 
 .token-box{
+
   background:rgba(8,8,8,.82);
 
   border:1px solid var(--border);
@@ -343,6 +390,7 @@ nav{
 }
 
 .token-box strong{
+
   display:block;
 
   font-size:42px;
@@ -357,6 +405,7 @@ nav{
 }
 
 .address{
+
   margin-top:36px;
 
   background:rgba(8,8,8,.82);
@@ -382,6 +431,7 @@ nav{
 }
 
 .faq-item{
+
   background:rgba(8,8,8,.82);
 
   border:1px solid var(--border);
@@ -392,18 +442,21 @@ nav{
 }
 
 .faq-item h3{
+
   color:var(--gold);
 
   margin-bottom:12px;
 }
 
 .faq-item p{
+
   color:var(--muted);
 
   line-height:1.8;
 }
 
 .disclaimer{
+
   background:rgba(243,191,43,.08);
 
   border:1px solid rgba(243,191,43,.3);
@@ -414,6 +467,7 @@ nav{
 }
 
 .disclaimer h3{
+
   color:var(--gold);
 
   margin-bottom:18px;
@@ -422,12 +476,14 @@ nav{
 }
 
 .disclaimer p{
+
   color:#dddddd;
 
   line-height:1.9;
 }
 
 footer{
+
   border-top:1px solid rgba(255,255,255,.06);
 
   background:#050505;
@@ -441,6 +497,75 @@ footer{
 
 footer a{
   color:var(--gold);
+}
+
+.modal{
+
+  display:none;
+
+  position:fixed;
+
+  z-index:9999;
+
+  left:0;
+  top:0;
+
+  width:100%;
+  height:100%;
+
+  overflow:auto;
+
+  background:rgba(0,0,0,.82);
+
+  backdrop-filter:blur(8px);
+}
+
+.modal-content{
+
+  background:#0b0b0b;
+
+  margin:8% auto;
+
+  padding:40px;
+
+  border:1px solid rgba(243,191,43,.25);
+
+  border-radius:28px;
+
+  max-width:700px;
+
+  color:#ffffff;
+
+  box-shadow:
+    0 0 50px rgba(0,0,0,.6),
+    0 0 20px rgba(243,191,43,.08);
+}
+
+.modal-content h2,
+.modal-content h3{
+  color:#f3bf2b;
+}
+
+.modal-content p{
+
+  line-height:1.9;
+
+  color:#d4d4d4;
+}
+
+.close-modal{
+
+  float:right;
+
+  font-size:34px;
+
+  cursor:pointer;
+
+  color:#f3bf2b;
+}
+
+.close-modal:hover{
+  opacity:.7;
 }
 
 @media(max-width:980px){
@@ -752,12 +877,83 @@ Jeder Nutzer handelt eigenverantwortlich.
 <br>
 
 <p>
-<a href="impressum.html">Impressum</a>
-&nbsp;·&nbsp;
-<a href="datenschutz.html">Datenschutz</a>
+<a href="#" onclick="openModal()">Impressum</a>
 </p>
 
 </footer>
+
+<!-- IMPRESSUM MODAL -->
+
+<div id="impressum-modal" class="modal">
+
+<div class="modal-content">
+
+<span class="close-modal" onclick="closeModal()">&times;</span>
+
+<h2>Impressum</h2>
+
+<br>
+
+<p>
+Angaben gemäß § 5 TMG
+</p>
+
+<br>
+
+<p>
+Florian Lessner<br>
+Gartenstraße 2<br>
+72477 Schwenningen<br>
+Deutschland
+</p>
+
+<br>
+
+<p>
+E-Mail:<br>
+xx@xx.xx
+</p>
+
+<br><br>
+
+<h3>Hinweis</h3>
+
+<br>
+
+<p>
+Der Schwenningen Token ist ein privates Community-
+und Sammlerprojekt auf Basis der Solana Blockchain.
+Es handelt sich ausdrücklich nicht um ein Finanzprodukt,
+keine Anlageberatung und kein öffentliches Investmentangebot.
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function openModal(){
+
+document.getElementById("impressum-modal").style.display = "block";
+}
+
+function closeModal(){
+
+document.getElementById("impressum-modal").style.display = "none";
+}
+
+window.onclick = function(event){
+
+const modal = document.getElementById("impressum-modal");
+
+if(event.target == modal){
+
+modal.style.display = "none";
+}
+}
+
+</script>
 
 </body>
 </html>
