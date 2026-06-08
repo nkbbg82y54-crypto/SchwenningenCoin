@@ -1123,6 +1123,44 @@ footer a{color:var(--gold)}
   font-size:14px;
 }
 
+
+.step-title-row{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin:18px 0 16px;
+}
+
+.step-title-row h3{
+  margin:0 !important;
+}
+
+.step-title-row .wallet-app-icon,
+.step-title-row .step-icon{
+  width:52px;
+  height:52px;
+  min-width:52px;
+  border-radius:16px;
+  margin:0;
+}
+
+.step-title-row .step-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  font-size:26px;
+  box-shadow:0 10px 28px rgba(0,0,0,.35);
+}
+
+@media(max-width:980px){
+  .step-title-row{
+    justify-content:center;
+    text-align:left;
+  }
+}
+
 </style>
 </head>
 
@@ -1532,9 +1570,11 @@ Als einfaches Beispiel eignet sich Phantom — als App oder Browser-Erweiterung.
 <div class="steps-grid">
 
 <div class="step-card">
-<img src="assets/phantom-appsymbol.png" class="wallet-app-icon" alt="Phantom Wallet Appsymbol">
 <div class="step-number">1</div>
+<div class="step-title-row">
+<img src="assets/phantom-appsymbol.png" class="wallet-app-icon" alt="Phantom Wallet Appsymbol">
 <h3>Phantom Wallet installieren</h3>
+</div>
 <p>
 Installiere zum Beispiel Phantom auf deinem Smartphone oder als Browser-Erweiterung.
 Phantom unterstützt Solana und zeigt SPL-Token in der Wallet an.
@@ -1573,11 +1613,11 @@ Phantom unterstützt Solana und zeigt SPL-Token in der Wallet an.
 
 
 <div class="step-card">
-<div class="step-visual">
 <div class="step-number">2</div>
+<div class="step-title-row">
 <div class="step-icon">🔐</div>
-</div>
 <h3>Wallet erstellen</h3>
+</div>
 <p>
 Erstelle eine neue Wallet und notiere deine geheime Wiederherstellungsphrase sicher offline.
 Diese Phrase niemals an andere weitergeben.
@@ -1589,11 +1629,11 @@ Seed Phrase sicher offline speichern
 </div>
 
 <div class="step-card">
-<div class="step-visual">
 <div class="step-number">3</div>
+<div class="step-title-row">
 <div class="step-icon">📋</div>
-</div>
 <h3>Solana-Adresse kopieren</h3>
+</div>
 <p>
 In deiner Wallet findest du deine öffentliche Solana-Adresse.
 Nur diese öffentliche Adresse wird benötigt, um Tokens empfangen zu können.
@@ -1605,11 +1645,11 @@ Nur die öffentliche Adresse teilen
 </div>
 
 <div class="step-card">
-<div class="step-visual">
 <div class="step-number">4</div>
+<div class="step-title-row">
 <div class="step-icon">✉️</div>
-</div>
 <h3>E-Mail senden</h3>
+</div>
 <p>
 Sende deinen Namen, deinen Bezug zu Schwenningen und deine Solana-Wallet-Adresse per E-Mail an das Projekt.
 </p>
@@ -1620,11 +1660,11 @@ Name · Bezug · Wallet-Adresse
 </div>
 
 <div class="step-card">
-<div class="step-visual">
 <div class="step-number">5</div>
+<div class="step-title-row">
 <div class="step-icon">🪙</div>
-</div>
 <h3>Token erhalten</h3>
+</div>
 <p>
 Wenn Tokens verfügbar sind, werden dir bis zu 10 Schwenningen Tokens freiwillig an deine Solana-Adresse gesendet.
 </p>
@@ -1635,11 +1675,11 @@ Bis zu 10 Tokens möglich
 </div>
 
 <div class="step-card">
-<div class="step-visual">
 <div class="step-number">!</div>
+<div class="step-title-row">
 <div class="step-icon">⚠️</div>
-</div>
 <h3>Wichtiger Sicherheitshinweis</h3>
+</div>
 <p>
 Gib niemals deine geheime Wiederherstellungsphrase, private Schlüssel oder Passwörter weiter.
 Für die Verteilung wird ausschließlich deine öffentliche Solana-Adresse benötigt.
