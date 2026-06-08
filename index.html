@@ -970,15 +970,18 @@ footer a{color:var(--gold)}
 }
 
 
+
 .wallet-header{
   display:flex;
   align-items:center;
-  gap:18px;
+  justify-content:flex-start;
+  gap:16px;
   margin-bottom:22px;
 }
 
 .wallet-header .step-number{
   margin-bottom:0;
+  flex-shrink:0;
 }
 
 .wallet-app-icon{
@@ -987,10 +990,13 @@ footer a{color:var(--gold)}
   border-radius:18px;
   object-fit:cover;
   display:block;
+  flex-shrink:0;
+  margin:0;
   box-shadow:
     0 0 24px rgba(150,80,255,.35),
     0 14px 36px rgba(0,0,0,.40);
 }
+
 
 </style>
 </head>
