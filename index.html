@@ -788,6 +788,80 @@ footer a{color:var(--gold)}
   font-weight:800;
 }
 
+
+/* FAQ ACCORDION */
+
+.faq{
+  max-width:980px;
+  margin:0 auto;
+  display:grid;
+  gap:16px;
+}
+
+.faq-item{
+  padding:0;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.faq-question{
+  width:100%;
+  padding:26px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  background:transparent;
+  border:none;
+  color:#ffffff;
+  text-align:left;
+  font:inherit;
+  cursor:pointer;
+}
+
+.faq-question h3{
+  margin:0;
+  color:var(--gold);
+  font-size:22px;
+}
+
+.faq-icon{
+  color:var(--gold);
+  font-size:28px;
+  flex-shrink:0;
+  transition:.25s;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease;
+}
+
+.faq-answer-inner{
+  padding:0 30px 28px;
+  color:var(--muted);
+  line-height:1.85;
+}
+
+.faq-item.active .faq-answer{
+  max-height:360px;
+}
+
+.faq-item.active .faq-icon{
+  transform:rotate(45deg);
+}
+
+@media(hover:hover){
+  .faq-item:hover .faq-answer{
+    max-height:360px;
+  }
+
+  .faq-item:hover .faq-icon{
+    transform:rotate(45deg);
+  }
+}
+
 </style>
 </head>
 
@@ -1266,16 +1340,133 @@ Es besteht kein Anspruch auf Zuteilung. Kein Verkauf, kein Investmentangebot.
 <section id="faq">
 <div class="section-title">
 <h2>FAQ</h2>
-<p>Die wichtigsten Fragen zum Projekt.</p>
+<p>
+Die wichtigsten Fragen kompakt erklärt. Zum Öffnen einfach über eine Frage fahren oder antippen.
+</p>
 </div>
 
 <div class="faq">
-<div class="faq-item"><h3>Ist das ein Investment?</h3><p>Nein. Der Schwenningen Token ist kein Finanzprodukt und kein Investmentprojekt.</p></div>
-<div class="faq-item"><h3>Gibt es ein Gewinnversprechen?</h3><p>Nein. Es existieren keinerlei Rendite- oder Gewinnzusagen.</p></div>
-<div class="faq-item"><h3>Wie bekomme ich Tokens?</h3><p>Zum Start können Einwohnerinnen und Einwohner per E-Mail bis zu 10 Tokens anfragen. Dafür wird eine Solana-Wallet-Adresse benötigt.</p></div>
-<div class="faq-item"><h3>Auf welchem Netzwerk läuft der Token?</h3><p>Auf der Solana Blockchain als SPL-Token.</p></div>
-<div class="faq-item"><h3>Muss ich etwas bezahlen?</h3><p>Nein. Die Erstverteilung ist als kostenlose Community-Verteilung gedacht, solange Tokens verfügbar sind.</p></div>
-<div class="faq-item"><h3>Kann ich mit dem Token handeln?</h3><p>Der Token ist technisch frei transferierbar. Die Website bewirbt jedoch ausdrücklich keinen Handel, keine Spekulation und kein Investment.</p></div>
+
+<div class="faq-item">
+<button class="faq-question" type="button" onclick="toggleFaq(this)">
+<h3>Ist der Schwenningen Token ein Investment?</h3>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-inner">
+Nein. Der Schwenningen Token ist ausdrücklich kein Finanzprodukt, keine Anlageberatung und kein Investmentprojekt. Im Mittelpunkt stehen Community, digitale Heimat und regionale Verbundenheit.
+</div>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" type="button" onclick="toggleFaq(this)">
+<h3>Gibt es ein Gewinnversprechen?</h3>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-inner">
+Nein. Es gibt keinerlei Renditeversprechen, Kursziele oder Gewinnzusagen. Der Token wird nicht als Wertanlage beworben.
+</div>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" type="button" onclick="toggleFaq(this)">
+<h3>Wie bekomme ich Tokens?</h3>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-inner">
+Zum Start können Einwohnerinnen und Einwohner aus Schwenningen bis zu 10 Tokens per E-Mail anfragen. Dafür wird eine öffentliche Solana-Wallet-Adresse benötigt.
+</div>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" type="button" onclick="toggleFaq(this)">
+<h3>Welche Wallet brauche ich?</h3>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-inner">
+Du brauchst eine Solana-fähige Wallet. Als einfaches Beispiel eignet sich Phantom. Wichtig: Für den Empfang wird nur deine öffentliche Solana-Adresse benötigt.
+</div>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" type="button" onclick="toggleFaq(this)">
+<h3>Was darf ich niemals weitergeben?</h3>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-inner">
+Niemals deine geheime Wiederherstellungsphrase, private Schlüssel oder Passwörter weitergeben. Wer diese Daten hat, kann deine Wallet kontrollieren. Für die Token-Verteilung reicht ausschließlich die öffentliche Adresse.
+</div>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" type="button" onclick="toggleFaq(this)">
+<h3>Muss ich etwas bezahlen?</h3>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-inner">
+Nein. Die Erstverteilung ist als kostenlose Community-Verteilung gedacht, solange Tokens verfügbar sind. Es besteht kein Anspruch auf Zuteilung.
+</div>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" type="button" onclick="toggleFaq(this)">
+<h3>Auf welchem Netzwerk läuft der Token?</h3>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-inner">
+Der Schwenningen Token läuft auf der Solana Blockchain als SPL-Token. Die Tokenadresse kann öffentlich über Solscan oder den Solana Explorer geprüft werden.
+</div>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" type="button" onclick="toggleFaq(this)">
+<h3>Ist das ein offizielles Projekt der Gemeinde?</h3>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-inner">
+Nein. Es handelt sich um ein privates Community-Projekt mit lokalem Bezug. Es besteht keine Verbindung zur Gemeindeverwaltung Schwenningen oder zu offiziellen kommunalen Einrichtungen.
+</div>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" type="button" onclick="toggleFaq(this)">
+<h3>Was sind Regionalpartner?</h3>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-inner">
+Regionalpartner sind als freiwilliges Zukunftsnetzwerk gedacht. Lokale Vereine, Geschäfte, Gastronomie, Events oder Projekte können später sichtbar Teil der Community-Idee werden.
+</div>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" type="button" onclick="toggleFaq(this)">
+<h3>Kann ich den Token handeln?</h3>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-inner">
+Der Token ist technisch frei transferierbar. Diese Website bewirbt jedoch ausdrücklich keinen Handel, keine Spekulation und kein Investment.
+</div>
+</div>
+</div>
+
 </div>
 </section>
 
@@ -1390,6 +1581,12 @@ https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-s
 </div>
 
 <script>
+
+function toggleFaq(button){
+  const item = button.closest(".faq-item");
+  item.classList.toggle("active");
+}
+
 function toggleMenu(){
   document.getElementById("mobileMenu").classList.toggle("active");
 }
