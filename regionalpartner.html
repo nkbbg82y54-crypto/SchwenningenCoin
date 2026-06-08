@@ -61,6 +61,74 @@ footer a{color:var(--gold)}
 .footer-small{margin-top:14px;color:#777;font-size:14px;line-height:1.8}
 @media(max-width:980px){
 section{padding:90px 20px}.hero{grid-template-columns:1fr;text-align:center;min-height:auto;padding-top:115px;padding-bottom:60px;gap:28px}.hero-art{padding:24px;order:1}.hero>div:first-child{order:2}.partner-symbol{font-size:72px}.hero h1{font-size:44px;line-height:1}.hero p{font-size:18px;line-height:1.7}.hero-badge{font-size:12px;padding:8px 14px}.cards,.partner-grid,.benefit-grid,.process-grid{grid-template-columns:1fr}.nav-links{display:none}.mobile-menu-btn{display:block}.btn-outline{margin-left:0;margin-top:14px}.section-title h2{font-size:38px}}
+
+.partner-poster-wrap{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:48px;
+  align-items:start;
+}
+
+.partner-poster-sticky{
+  position:-webkit-sticky;
+  position:sticky;
+  top:110px;
+}
+
+.partner-poster{
+  width:100%;
+  border-radius:34px;
+  border:1px solid rgba(243,191,43,.25);
+  box-shadow:
+    0 0 40px rgba(243,191,43,.10),
+    0 40px 100px rgba(0,0,0,.55);
+}
+
+.poster-explain{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+.poster-card{
+  background:rgba(8,8,8,.82);
+  border:1px solid rgba(243,191,43,.22);
+  border-radius:28px;
+  padding:34px 30px;
+  transition:.28s ease;
+}
+
+.poster-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(243,191,43,.55);
+  box-shadow:
+    0 0 28px rgba(243,191,43,.28),
+    0 0 90px rgba(243,191,43,.18),
+    0 30px 90px rgba(0,0,0,.6);
+}
+
+.poster-card h3{
+  color:var(--gold);
+  font-size:28px;
+  margin-bottom:16px;
+}
+
+.poster-card p{
+  color:var(--muted);
+  line-height:1.9;
+}
+
+@media(max-width:980px){
+  .partner-poster-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .partner-poster-sticky{
+    position:relative;
+    top:auto;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -68,6 +136,52 @@ section{padding:90px 20px}.hero{grid-template-columns:1fr;text-align:center;min-
 <div class="mobile-menu" id="mobileMenu"><a href="index.html" onclick="closeMenu()">Startseite</a><a href="#idee" onclick="closeMenu()">Idee</a><a href="#bereiche" onclick="closeMenu()">Partnerbereiche</a><a href="#mitmachen" onclick="closeMenu()">Mitmachen</a></div>
 <section class="hero"><div><div class="hero-badge">VISION: REGIONALPARTNER</div><h1>Gemeinsam für<br><span>Schwenningen.</span></h1><p>Regionalpartner sind als freiwilliges Netzwerk rund um den Schwenningen Token gedacht. Lokale Geschäfte, Vereine, Gastronomie, Events und Anbieter können Teil einer sichtbaren digitalen Community-Idee werden.</p><a href="#mitmachen" class="btn">Interesse bekunden</a><a href="index.html" class="btn-outline">Zur Startseite</a></div><div class="hero-art"><div class="partner-symbol">🤝</div></div></section>
 <section id="idee"><div class="section-title"><h2>Die Idee dahinter</h2><p>Der Schwenningen Token soll nicht nur ein digitales Symbol bleiben. Langfristig kann daraus ein freiwilliges regionales Netzwerk entstehen, das Menschen, Orte, Vereine und lokale Anbieter miteinander verbindet.</p></div><div class="cards"><div class="card"><div class="card-icon">🏘️</div><h3>Regional sichtbar</h3><p>Lokale Akteure können Teil einer modernen digitalen Regionalidee werden.</p></div><div class="card"><div class="card-icon">🎁</div><h3>Kreative Aktionen</h3><p>Denkbar sind kleine Community-Aktionen, symbolische Vorteile oder besondere Ideen.</p></div><div class="card"><div class="card-icon">🤝</div><h3>Freiwilliges Netzwerk</h3><p>Alles bleibt freiwillig, unkompliziert und ohne Verpflichtung.</p></div></div></section>
+
+<section id="partnerposter">
+<div class="section-title">
+<h2>Regionalpartner sichtbar machen</h2>
+<p>
+Das Regionalpartner-Konzept soll greifbar, sichtbar und emotional werden.
+Partner können später individuell als Teil der Community dargestellt werden.
+</p>
+</div>
+
+<div class="partner-poster-wrap">
+
+<div class="partner-poster-sticky">
+<img src="assets/regionalpartner-poster.jpg" class="partner-poster" alt="Regionalpartner Poster">
+</div>
+
+<div class="poster-explain">
+
+<div class="poster-card">
+<h3>Mehr als nur ein Logo</h3>
+<p>
+Das Regionalpartner-Konzept verbindet digitale Community mit echter regionaler Identität.
+Durch individuelle Partnerposter entsteht Sichtbarkeit, Wiedererkennung und ein gemeinsamer Auftritt innerhalb des Netzwerks.
+</p>
+</div>
+
+<div class="poster-card">
+<h3>Individuell für jeden Partner</h3>
+<p>
+Später können eigene Versionen für Vereine, Gastronomie, Events, Geschäfte oder regionale Projekte entstehen.
+So wird jeder Partner sichtbar Teil der Schwenningen-Community.
+</p>
+</div>
+
+<div class="poster-card">
+<h3>Digital & lokal verbunden</h3>
+<p>
+Die Poster verbinden moderne Web3-Optik mit Heimat, Gemeinschaft und regionalem Charakter.
+Genau daraus entsteht die besondere Identität des Projekts.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
 <section id="bereiche"><div class="section-title"><h2>Mögliche Partnerbereiche</h2><p>Das Regionalpartner-Netzwerk ist offen gedacht. Es geht nicht um ein offizielles Zahlungssystem, sondern um regionale Verbundenheit und kreative Kooperationen.</p></div><div class="partner-grid"><div class="partner-card"><div class="card-icon">☕</div><h3>Cafés & Gastronomie</h3><p>Kleine Aktionen, Community-Treffen oder symbolische Vorteile für Token-Holder.</p></div><div class="partner-card"><div class="card-icon">🛍️</div><h3>Einzelhandel</h3><p>Lokale Geschäfte sichtbar machen und digitale Community mit regionalem Leben verbinden.</p></div><div class="partner-card"><div class="card-icon">⚽</div><h3>Vereine</h3><p>Engagement, Ehrenamt und Vereinsleben digital unterstützen und sichtbarer machen.</p></div><div class="partner-card"><div class="card-icon">🎉</div><h3>Events</h3><p>Veranstaltungen, Aktionen oder lokale Treffen mit digitalem Community-Gedanken.</p></div><div class="partner-card"><div class="card-icon">🛠️</div><h3>Handwerk & Service</h3><p>Regionale Anbieter können Teil der digitalen Regionalmarke werden.</p></div><div class="partner-card"><div class="card-icon">🌲</div><h3>Kultur & Heimat</h3><p>Projekte rund um Heimat, Tradition, Natur und regionale Identität.</p></div></div></section>
 <section><div class="notice"><strong>Kein offizielles kommunales Projekt</strong><p>Das Regionalpartner-Konzept ist eine private Community-Idee. Es besteht keine Verbindung zur Gemeindeverwaltung Schwenningen oder zu offiziellen kommunalen Einrichtungen.</p></div></section>
 <section><div class="section-title"><h2>Was Partner davon haben könnten</h2><p>Der Fokus liegt nicht auf finanzieller Nutzung, sondern auf Sichtbarkeit, Gemeinschaft und regionaler Identität.</p></div><div class="benefit-grid"><div class="benefit-card"><h3>Mehr Sichtbarkeit</h3><p>Partner können als Teil einer modernen lokalen Community-Idee wahrgenommen werden.</p></div><div class="benefit-card"><h3>Community-Nähe</h3><p>Neue Kontakte zu Menschen, die regionale Projekte und digitale Ideen unterstützen.</p></div><div class="benefit-card"><h3>Gemeinsame Aktionen</h3><p>Kleine freiwillige Aktionen, kreative Kooperationen oder lokale Treffen sind denkbar.</p></div></div></section>
