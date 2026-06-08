@@ -1268,6 +1268,61 @@ footer a{color:var(--gold)}
   opacity:.85;
 }
 
+
+footer{
+  margin-top:90px;
+  padding:50px 24px 70px;
+  border-top:1px solid rgba(255,255,255,.08);
+  text-align:center;
+}
+
+.copyright{
+  color:#8f8f8f;
+  font-size:15px;
+  margin-bottom:26px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+
+  margin-bottom:28px;
+}
+
+.footer-links a{
+  color:var(--gold);
+  font-weight:800;
+  transition:.2s ease;
+}
+
+.footer-links a:hover{
+  opacity:.8;
+}
+
+.footer-links span{
+  color:#666;
+}
+
+.footer-tags{
+  max-width:980px;
+  margin:auto;
+
+  color:#777;
+  line-height:2;
+  font-size:14px;
+}
+
+@media(max-width:900px){
+
+  .footer-tags{
+    line-height:1.9;
+    font-size:13px;
+  }
+}
+
 </style>
 </head>
 
@@ -2065,27 +2120,27 @@ Jeder Nutzer handelt eigenverantwortlich.
 </div>
 </section>
 
-<footer>
-<p>© 2026 Schwenningen Token</p>
-<p class="footer-small">
-schwenningen-token.de · Community-Projekt · Solana SPL Token
-</p>
-<br>
-<p>
-<a href="#" onclick="openModal()">Impressum</a>
-&nbsp;·&nbsp;
-<a href="#" onclick="openPrivacy()">Datenschutz</a>
-</p>
 
-<div class="footer-seo">
-Schwenningen Token · Solana SPL Token · Community Coin · Regionaltoken · Schwenningen Heuberg · Web3 Community · Regionalpartner · Phantom Wallet
+<footer>
+
+<div class="copyright">
+© 2026 Schwenningen Token
 </div>
 
+<div class="footer-links">
+<a href="impressum.html">Impressum</a>
+<span>·</span>
+<a href="datenschutz.html">Datenschutz</a>
+<span>·</span>
+<a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank">Whitepaper</a>
+</div>
 
+<div class="footer-tags">
+schwenningen-token.de · Solana SPL Token · Community-Projekt · Regionaltoken · Schwenningen Heuberg · Web3 Community · Regionalpartner · Phantom Wallet
+</div>
 
-
-<div class="footer-links"><a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank">Whitepaper</a></div>
 </footer>
+
 
 <div id="impressum-modal" class="modal">
 <div class="modal-content">
