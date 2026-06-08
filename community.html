@@ -203,6 +203,123 @@ main{
     font-size:18px;
   }
 }
+
+/* DONATE SECTION */
+
+.donate-section{
+  max-width:1250px;
+  margin:auto;
+  padding:90px 24px;
+}
+
+.donate-box{
+  max-width:950px;
+  margin:auto;
+  padding:48px 34px;
+  border-radius:34px;
+  text-align:center;
+  background:linear-gradient(145deg, rgba(20,20,20,.96), rgba(8,8,8,.99));
+  border:1px solid rgba(243,191,43,.25);
+  box-shadow:
+    0 0 40px rgba(243,191,43,.08),
+    0 40px 120px rgba(0,0,0,.55);
+}
+
+.donate-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:22px;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(243,191,43,.10);
+  border:1px solid rgba(243,191,43,.22);
+  color:var(--gold);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+
+.donate-solana-logo{
+  width:20px;
+  height:20px;
+  object-fit:contain;
+  filter:drop-shadow(0 0 8px rgba(20,241,149,.35));
+}
+
+.donate-box h2{
+  color:var(--gold);
+  font-size:42px;
+  margin-bottom:18px;
+}
+
+.donate-text{
+  max-width:720px;
+  margin:auto;
+  color:var(--muted);
+  font-size:19px;
+  line-height:1.9;
+}
+
+.donate-address-wrap{
+  margin-top:34px;
+}
+
+.donate-address{
+  padding:22px;
+  border-radius:22px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  color:#fff;
+  font-size:17px;
+  font-weight:800;
+  word-break:break-all;
+}
+
+.donate-copy-btn{
+  margin-top:18px;
+  padding:14px 22px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  color:#111;
+  font-weight:900;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.donate-copy-btn:hover{
+  transform:translateY(-2px);
+}
+
+.donate-note{
+  margin-top:24px;
+  color:#9f9f9f;
+  line-height:1.8;
+}
+
+@media(max-width:900px){
+  .donate-section{
+    padding:70px 18px;
+  }
+
+  .donate-box{
+    padding:38px 22px;
+  }
+
+  .donate-box h2{
+    font-size:34px;
+  }
+
+  .donate-text{
+    font-size:17px;
+  }
+
+  .donate-address{
+    font-size:15px;
+  }
+}
+
 </style>
 </head>
 
@@ -295,6 +412,38 @@ swhbg@schwenningen-token.de gesendet werden.
 
 </section>
 
+
+<section class="donate-section" id="unterstuetzen">
+<div class="donate-box">
+
+<div class="donate-badge">
+<img src="assets/solana.png" alt="Solana" class="donate-solana-logo">
+SOLANA SUPPORT
+</div>
+
+<h2>Projekt unterstützen</h2>
+
+<p class="donate-text">
+Wenn du die Website, Sticker, Community-Aktionen oder die Weiterentwicklung
+des Projekts unterstützen möchtest, kannst du freiwillig SOL senden.
+Auch andere Solana-basierte Token sind technisch möglich.
+</p>
+
+<div class="donate-address-wrap">
+<div class="donate-address">HL7xyeaccyBVFoGbbkqfC74HuEFNP8aZseDxVhSxwZJy</div>
+
+<button class="donate-copy-btn" onclick="copyDonateAddress(this)">
+Adresse kopieren
+</button>
+</div>
+
+<p class="donate-note">
+Danke für die Unterstützung der digitalen Heimat.
+</p>
+
+</div>
+</section>
+
 <div class="notice">
 Der Schwenningen Token ist ein privates Community-Projekt
 und kein offizielles Projekt der Gemeindeverwaltung.
@@ -302,5 +451,15 @@ und kein offizielles Projekt der Gemeindeverwaltung.
 
 </main>
 
+<script>
+
+function copyDonateAddress(button){
+  navigator.clipboard.writeText("HL7xyeaccyBVFoGbbkqfC74HuEFNP8aZseDxVhSxwZJy");
+  const oldText = button.innerText;
+  button.innerText = "Adresse kopiert ✓";
+  setTimeout(()=>{button.innerText = oldText}, 2000);
+}
+
+</script>
 </body>
 </html>
