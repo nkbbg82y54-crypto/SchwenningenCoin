@@ -320,6 +320,28 @@ main{
   }
 }
 
+
+.heart{
+  margin-left:6px;
+
+  filter:
+    drop-shadow(0 0 10px rgba(243,191,43,.45));
+
+  animation:heartGlow 2.8s ease-in-out infinite;
+}
+
+@keyframes heartGlow{
+  0%,100%{
+    opacity:.8;
+    transform:scale(1);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(1.08);
+  }
+}
+
 </style>
 </head>
 
@@ -437,9 +459,12 @@ Adresse kopieren
 </button>
 </div>
 
+
 <p class="donate-note">
 Danke für die Unterstützung der digitalen Heimat.
+<span class="heart">💛</span>
 </p>
+
 
 </div>
 </section>
