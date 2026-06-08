@@ -1,176 +1,57 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Community</title>
-
+<title>Community | Schwenningen Token</title>
 <style>
-:root{
---gold:#f3bf2b;
---bg:#070707;
---card:#121212;
---text:#f2f2f2;
---muted:#a9a9a9;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Inter,Arial,sans-serif;
-background:var(--bg);
-color:var(--text);
-line-height:1.8;
-}
-
-header{
-padding:26px;
-border-bottom:1px solid rgba(255,255,255,.08);
-position:sticky;
-top:0;
-background:rgba(7,7,7,.92);
-backdrop-filter:blur(12px);
-z-index:10;
-}
-
-nav{
-display:flex;
-gap:18px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-nav a{
-color:#d6d6d6;
-text-decoration:none;
-font-weight:700;
-}
-
-nav a:hover{
-color:var(--gold);
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:70px 24px;
-}
-
-.hero{
-margin-bottom:50px;
-}
-
-.hero h1{
-font-size:clamp(42px,7vw,74px);
-line-height:1.05;
-margin-bottom:20px;
-color:var(--gold);
-}
-
-.hero p{
-max-width:760px;
-color:var(--muted);
-font-size:20px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:24px;
-}
-
-.card{
-background:var(--card);
-border-radius:28px;
-padding:32px;
-border:1px solid rgba(255,255,255,.08);
-transition:.25s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-border-color:rgba(243,191,43,.35);
-box-shadow:0 0 40px rgba(243,191,43,.12);
-}
-
-.card h3{
-margin-bottom:14px;
-color:var(--gold);
-font-size:24px;
-}
-
-.card p{
-color:var(--muted);
-}
-
-footer{
-padding:40px 20px;
-text-align:center;
-color:#777;
-border-top:1px solid rgba(255,255,255,.08);
-}
-
-@media(max-width:900px){
-.hero p{
-font-size:18px;
-}
-}
+:root{--gold:#f3bf2b;--muted:#bdbdbd;--border:rgba(243,191,43,.22)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:radial-gradient(circle at top right,rgba(243,191,43,.10),transparent 25%),#050505;color:#fff}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;background:rgba(0,0,0,.78);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
+nav{max-width:1180px;margin:auto;padding:22px 24px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+nav a{color:#d7d7d7;font-weight:800}
+nav a:hover{color:var(--gold)}
+main{max-width:1180px;margin:auto;padding:90px 24px}
+.hero{text-align:center;margin-bottom:70px}
+.hero h1{font-size:clamp(44px,7vw,82px);color:var(--gold);line-height:1;margin-bottom:24px}
+.hero p{max-width:780px;margin:auto;color:var(--muted);font-size:20px;line-height:1.9}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:rgba(8,8,8,.82);border:1px solid var(--border);border-radius:28px;padding:34px 28px;transition:.28s ease}
+.card:hover{transform:translateY(-8px);border-color:rgba(243,191,43,.55);box-shadow:0 0 28px rgba(243,191,43,.28),0 0 90px rgba(243,191,43,.18),0 30px 90px rgba(0,0,0,.6)}
+.icon{font-size:38px;margin-bottom:18px}
+.card h3{color:var(--gold);font-size:25px;margin-bottom:14px}
+.card p{color:var(--muted);line-height:1.8}
+.notice{margin-top:50px;padding:34px;border-radius:28px;background:rgba(243,191,43,.08);border:1px solid rgba(243,191,43,.25);text-align:center;color:#ddd;line-height:1.9}
+@media(max-width:900px){main{padding:70px 18px}.grid{grid-template-columns:1fr}.hero p{font-size:18px}}
 </style>
 </head>
-
 <body>
-
 <header>
 <nav>
 <a href="index.html">Startseite</a>
-<a href="regionalpartner.html">Regionalpartner</a>
 <a href="wallet.html">Wallet & Blockchain</a>
-<a href="status.html">Projektstatus</a>
+<a href="regionalpartner.html">Regionalpartner</a>
 <a href="community.html">Community</a>
 </nav>
 </header>
-
-<div class="container">
-
-<div class="hero">
-<h1>Die Community</h1>
-<p>Digitale Heimat sichtbar machen – online und regional vor Ort.</p>
+<main>
+<section class="hero">
+<h1>Community</h1>
+<p>Der Schwenningen Token soll digitale Heimat sichtbar machen — online, lokal und gemeinschaftlich.</p>
+</section>
+<section class="grid">
+<div class="card"><div class="icon">🏔️</div><h3>Digitale Heimat</h3><p>Ein Symbol für regionale Verbundenheit, Schwenningen und den Heuberg.</p></div>
+<div class="card"><div class="icon">📱</div><h3>QR-Sticker</h3><p>Sticker und QR-Codes können reale Orte direkt mit dem Projekt verbinden.</p></div>
+<div class="card"><div class="icon">🎉</div><h3>Lokale Aktionen</h3><p>Später können kleine Community-Aktionen, Treffen oder Events entstehen.</p></div>
+<div class="card"><div class="icon">🖼️</div><h3>Galerie</h3><p>Bilder, Poster und Momente können die Entwicklung des Projekts dokumentieren.</p></div>
+<div class="card"><div class="icon">🤝</div><h3>Mitmachen</h3><p>Jeder mit Bezug zu Schwenningen kann Teil der digitalen Community-Idee werden.</p></div>
+<div class="card"><div class="icon">✉️</div><h3>Kontakt</h3><p>Ideen, Fragen oder Interesse können per E-Mail an swhbg@schwenningen-token.de gesendet werden.</p></div>
+</section>
+<div class="notice">
+Der Schwenningen Token ist ein privates Community-Projekt und kein offizielles Projekt der Gemeindeverwaltung.
 </div>
-
-
-<div class="grid">
-<div class="card">
-<h3>QR-Sticker</h3>
-<p>Sticker und QR-Codes verbinden reale Orte direkt mit dem Projekt.</p>
-</div>
-
-<div class="card">
-<h3>Events</h3>
-<p>Später können lokale Aktionen und Veranstaltungen eingebunden werden.</p>
-</div>
-
-<div class="card">
-<h3>Galerie</h3>
-<p>Bilder, Poster und Community-Momente schaffen Identifikation.</p>
-</div>
-
-<div class="card">
-<h3>Heimat digital</h3>
-<p>Der Schwenningen Token soll regionale Verbundenheit sichtbar machen.</p>
-</div>
-</div>
-
-
-</div>
-
-<footer>
-Schwenningen Token · Solana SPL Token · Digitale Regionalmarke
-</footer>
-
+</main>
 </body>
 </html>
