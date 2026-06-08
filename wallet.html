@@ -248,6 +248,254 @@ main{
   .holder-amount{text-align:left}
   .hero p{font-size:18px}
 }
+
+.blockchain-deep{
+  padding:56px;
+}
+
+.blockchain-layout{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:42px;
+  align-items:center;
+}
+
+.blockchain-text h2{
+  font-size:46px;
+  line-height:1.1;
+}
+
+.blockchain-text p{
+  margin-bottom:18px;
+}
+
+.blockchain-points{
+  display:grid;
+  gap:14px;
+  margin-top:26px;
+}
+
+.blockchain-point{
+  padding:18px 20px;
+  border-radius:18px;
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.08);
+  color:#d7d7d7;
+  line-height:1.75;
+}
+
+.blockchain-point strong{
+  color:var(--gold);
+}
+
+.blockchain-visual{
+  position:relative;
+  min-height:360px;
+  border-radius:30px;
+  background:
+    radial-gradient(circle at center, rgba(243,191,43,.13), transparent 58%),
+    rgba(255,255,255,.025);
+  border:1px solid rgba(255,255,255,.08);
+  overflow:hidden;
+}
+
+.block{
+  position:absolute;
+  width:88px;
+  height:88px;
+  border-radius:24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(145deg, rgba(243,191,43,.22), rgba(153,69,255,.12));
+  border:1px solid rgba(243,191,43,.30);
+  color:var(--gold);
+  font-weight:900;
+  box-shadow:
+    0 0 28px rgba(243,191,43,.16),
+    0 18px 50px rgba(0,0,0,.45);
+}
+
+.block.one{left:40px;top:130px}
+.block.two{left:160px;top:80px}
+.block.three{left:280px;top:130px}
+.block.four{left:400px;top:80px}
+
+.blockchain-connector{
+  position:absolute;
+  height:4px;
+  background:linear-gradient(90deg, var(--gold), var(--green));
+  top:174px;
+  left:115px;
+  width:360px;
+  opacity:.75;
+  box-shadow:0 0 18px rgba(20,241,149,.28);
+}
+
+.data-pulse{
+  position:absolute;
+  top:166px;
+  left:90px;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 18px var(--green);
+  animation:dataMove 3.6s linear infinite;
+}
+
+@keyframes dataMove{
+  0%{left:90px;opacity:0}
+  10%{opacity:1}
+  90%{opacity:1}
+  100%{left:465px;opacity:0}
+}
+
+@media(max-width:900px){
+  .blockchain-deep{
+    padding:30px 22px;
+  }
+
+  .blockchain-layout{
+    grid-template-columns:1fr;
+  }
+
+  .blockchain-text h2{
+    font-size:36px;
+  }
+
+  .blockchain-visual{
+    min-height:300px;
+  }
+
+  .block{
+    width:68px;
+    height:68px;
+    border-radius:20px;
+  }
+
+  .block.one{left:20px;top:120px}
+  .block.two{left:98px;top:80px}
+  .block.three{left:176px;top:120px}
+  .block.four{left:254px;top:80px}
+
+  .blockchain-connector{
+    left:70px;
+    top:153px;
+    width:230px;
+  }
+
+  .data-pulse{
+    top:145px;
+    animation:dataMoveMobile 3.6s linear infinite;
+  }
+
+  @keyframes dataMoveMobile{
+    0%{left:52px;opacity:0}
+    10%{opacity:1}
+    90%{opacity:1}
+    100%{left:286px;opacity:0}
+  }
+}
+
+
+.deep-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-top:26px;
+}
+.deep-card{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:24px;
+}
+.deep-card h3{
+  color:var(--gold);
+  font-size:22px;
+  margin-bottom:12px;
+}
+.deep-card p{
+  font-size:16px;
+  line-height:1.8;
+  color:var(--muted);
+}
+.example-box{
+  margin-top:24px;
+  padding:22px;
+  border-radius:22px;
+  background:rgba(243,191,43,.08);
+  border:1px solid rgba(243,191,43,.22);
+  color:#dddddd;
+  line-height:1.85;
+}
+.warning-box{
+  margin-top:24px;
+  padding:22px;
+  border-radius:22px;
+  background:rgba(255,90,90,.10);
+  border:1px solid rgba(255,90,90,.28);
+  color:#ffd7d7;
+  line-height:1.85;
+}
+.term-list{
+  display:grid;
+  gap:14px;
+  margin-top:24px;
+}
+.term{
+  padding:18px 20px;
+  border-radius:18px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  color:var(--muted);
+  line-height:1.75;
+}
+.term strong{
+  color:var(--gold);
+}
+.step-list{
+  margin-top:24px;
+  display:grid;
+  gap:16px;
+}
+.explain-step{
+  display:grid;
+  grid-template-columns:54px 1fr;
+  gap:18px;
+  align-items:start;
+  padding:20px;
+  border-radius:20px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+}
+.explain-number{
+  width:54px;
+  height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:18px;
+  background:rgba(243,191,43,.10);
+  border:1px solid rgba(243,191,43,.24);
+  color:var(--gold);
+  font-weight:900;
+}
+.explain-step h3{
+  color:var(--gold);
+  font-size:22px;
+  margin-bottom:8px;
+}
+.explain-step p{
+  font-size:16px;
+  line-height:1.75;
+}
+@media(max-width:900px){
+  .deep-grid{grid-template-columns:1fr}
+  .explain-step{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 
@@ -276,43 +524,134 @@ Hier wird einfach erklärt, was Blockchain, Solana, Tokens und Wallets eigentlic
 </p>
 </section>
 
-<section class="section">
+
+<section class="section blockchain-deep">
+<div class="blockchain-layout">
+
+<div class="blockchain-text">
 <h2>Was ist eine Blockchain?</h2>
 
 <p>
 Eine Blockchain ist ein öffentliches digitales Netzwerk.
-Dort können Informationen dauerhaft gespeichert und weltweit geprüft werden.
+Man kann sie sich wie ein gemeinsames digitales Kassenbuch vorstellen.
 </p>
 
-<div class="chain-box">
-<div class="chain-line"></div>
-<div class="chain-dot"></div>
-<div class="chain-dot two"></div>
-<div class="chain-dot three"></div>
+<p>
+Dieses Kassenbuch liegt nicht nur auf einem einzelnen Computer,
+sondern wird von vielen Computern gleichzeitig gespeichert und geprüft.
+Dadurch können Einträge nicht einfach heimlich verändert werden.
+</p>
+
+<p>
+Wenn ein Token übertragen wird, entsteht ein neuer Eintrag.
+Dieser Eintrag wird dauerhaft gespeichert und kann später öffentlich überprüft werden.
+</p>
+
+<div class="blockchain-points">
+
+<div class="blockchain-point">
+<strong>Öffentlich:</strong> Jeder kann prüfen, dass der Token existiert.
+</div>
+
+<div class="blockchain-point">
+<strong>Dauerhaft:</strong> Einträge bleiben auf der Blockchain nachvollziehbar.
+</div>
+
+<div class="blockchain-point">
+<strong>Transparent:</strong> Tokenmenge und Tokenkonten sind sichtbar.
+</div>
+
+<div class="blockchain-point">
+<strong>Nicht zentral:</strong> Die Daten liegen nicht nur bei einer einzelnen Stelle.
+</div>
+
+</div>
+</div>
+
+<div class="blockchain-visual" aria-label="Vereinfachte Blockchain-Animation">
+<div class="blockchain-connector"></div>
+<div class="data-pulse"></div>
+<div class="block one">1</div>
+<div class="block two">2</div>
+<div class="block three">3</div>
+<div class="block four">4</div>
+</div>
+
 </div>
 
 <p class="note">
-Die bewegten Lichtpunkte symbolisieren Daten, die weltweit über die Blockchain übertragen werden.
+Die Blöcke stehen vereinfacht für gespeicherte Einträge. Der Lichtpunkt symbolisiert eine neue Information,
+die durch das Netzwerk wandert und dauerhaft angehängt wird.
 </p>
 </section>
+
+
 
 <section class="section">
 <h2>Was ist Solana?</h2>
 
 <p>
-Solana ist die technische Plattform hinter dem Schwenningen Token.
-Sie ermöglicht schnelle und günstige digitale Transaktionen.
+Solana ist die Blockchain, auf der der Schwenningen Token läuft.
+Man kann sich Solana als technische Grundlage vorstellen:
+Sie sorgt dafür, dass der Token existiert, verschickt werden kann und öffentlich überprüfbar bleibt.
 </p>
+
+<p>
+Der Schwenningen Token ist ein sogenannter SPL-Token.
+SPL ist der Token-Standard auf Solana — ähnlich wie ein gemeinsames technisches Format,
+damit Wallets und Explorer den Token erkennen und anzeigen können.
+</p>
+
+<div class="deep-grid">
+<div class="deep-card"><h3>Schnelle Transaktionen</h3><p>Solana ist auf schnelle Übertragungen ausgelegt. Wenn ein Token verschickt wird, erscheint die Transaktion in der Regel sehr schnell auf der Blockchain.</p></div>
+<div class="deep-card"><h3>Geringe Gebühren</h3><p>Für Transfers auf Solana fallen üblicherweise nur sehr kleine Netzwerkgebühren an. Das macht Solana für Community-Projekte besonders geeignet.</p></div>
+<div class="deep-card"><h3>Öffentlich prüfbar</h3><p>Über Dienste wie Solscan oder den Solana Explorer kann jeder sehen, dass der Token existiert und welche Tokenkonten ihn halten.</p></div>
+<div class="deep-card"><h3>Keine zentrale Website nötig</h3><p>Die Website erklärt das Projekt. Der Token selbst liegt jedoch auf der Solana-Blockchain und ist dort unabhängig öffentlich sichtbar.</p></div>
+</div>
+
+<div class="example-box">
+<strong>Einfach gesagt:</strong><br>
+Solana ist die technische Straße. Die Wallet ist deine digitale Brieftasche.
+Der Schwenningen Token ist das digitale Objekt, das auf dieser Straße übertragen werden kann.
+</div>
 </section>
+
+
 
 <section class="section">
 <h2>Was ist ein Token?</h2>
 
 <p>
-Ein Token ist ein digitaler Wert oder Nachweis auf einer Blockchain.
-
-Der Schwenningen Token soll regionale Verbundenheit digital sichtbar machen.
+Ein Token ist ein digitales Objekt auf einer Blockchain.
+Er kann in einer Wallet gespeichert, von einer Adresse zu einer anderen übertragen
+und öffentlich über die Blockchain geprüft werden.
 </p>
+
+<p>
+Der Schwenningen Token ist kein Geldversprechen, keine Aktie und kein Investmentprodukt.
+Er ist als lokales Community- und Sammlerprojekt gedacht:
+ein digitales Symbol für Heimat, Zusammenhalt und regionale Verbundenheit.
+</p>
+
+<div class="term-list">
+<div class="term"><strong>Tokenmenge:</strong> Es gibt insgesamt 165.000 Schwenningen Tokens. Die Menge orientiert sich symbolisch an etwa 1.650 Einwohnern × 100 Tokens.</div>
+<div class="term"><strong>Transferierbar:</strong> Der Token kann technisch von einer Solana-Adresse an eine andere gesendet werden.</div>
+<div class="term"><strong>Öffentlich sichtbar:</strong> Tokenadresse, Tokenkonten und Transaktionen können über Blockchain-Explorer geprüft werden.</div>
+<div class="term"><strong>Kein Investment:</strong> Der Token wird nicht als Geldanlage beworben und enthält kein Gewinnversprechen.</div>
+</div>
+</section>
+
+
+
+<section class="section">
+<h2>Die wichtigsten Begriffe kurz erklärt</h2>
+<div class="term-list">
+<div class="term"><strong>Wallet:</strong> Deine digitale Brieftasche für Token.</div>
+<div class="term"><strong>Öffentliche Adresse:</strong> Eine Adresse, an die Token gesendet werden können. Diese darf weitergegeben werden.</div>
+<div class="term"><strong>Seed Phrase:</strong> Geheimer Wiederherstellungsschlüssel deiner Wallet. Diese niemals weitergeben.</div>
+<div class="term"><strong>Explorer:</strong> Eine Website wie Solscan, auf der Blockchain-Daten öffentlich geprüft werden können.</div>
+<div class="term"><strong>SPL-Token:</strong> Der technische Token-Standard auf Solana.</div>
+</div>
 </section>
 
 <section class="section">
