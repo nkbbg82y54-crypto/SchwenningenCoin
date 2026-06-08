@@ -969,6 +969,29 @@ footer a{color:var(--gold)}
   margin-right:auto;
 }
 
+
+.wallet-header{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:22px;
+}
+
+.wallet-header .step-number{
+  margin-bottom:0;
+}
+
+.wallet-app-icon{
+  width:54px;
+  height:54px;
+  border-radius:18px;
+  object-fit:cover;
+  display:block;
+  box-shadow:
+    0 0 24px rgba(150,80,255,.35),
+    0 14px 36px rgba(0,0,0,.40);
+}
+
 </style>
 </head>
 
@@ -1378,8 +1401,10 @@ Als einfaches Beispiel eignet sich Phantom — als App oder Browser-Erweiterung.
 <div class="steps-grid">
 
 <div class="step-card">
-<img src="assets/phantom-appsymbol.png" class="wallet-app-icon" alt="Phantom Wallet Appsymbol">
+<div class="wallet-header">
 <div class="step-number">1</div>
+<img src="assets/phantom-appsymbol.png" class="wallet-app-icon" alt="Phantom Wallet Appsymbol">
+</div>
 <h3>Phantom Wallet installieren</h3>
 <p>
 Installiere zum Beispiel Phantom auf deinem Smartphone oder als Browser-Erweiterung.
