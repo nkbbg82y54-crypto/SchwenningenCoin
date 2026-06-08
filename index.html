@@ -969,6 +969,20 @@ footer a{color:var(--gold)}
   margin-right:auto;
 }
 
+
+.wallet-step-header{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:18px;
+}
+
+.wallet-step-header .wallet-app-icon{
+  margin-bottom:0;
+  width:68px;
+  height:68px;
+}
+
 </style>
 </head>
 
@@ -1378,9 +1392,13 @@ Als einfaches Beispiel eignet sich Phantom — als App oder Browser-Erweiterung.
 <div class="steps-grid">
 
 <div class="step-card">
-<img src="assets/phantom-appsymbol.png" class="wallet-app-icon" alt="Phantom Wallet Appsymbol">
+
+<div class="wallet-step-header">
 <div class="step-number">1</div>
+<img src="assets/phantom-appsymbol.png" class="wallet-app-icon" alt="Phantom Wallet Appsymbol">
+</div>
 <h3>Phantom Wallet installieren</h3>
+
 <p>
 Installiere zum Beispiel Phantom auf deinem Smartphone oder als Browser-Erweiterung.
 Phantom unterstützt Solana und zeigt SPL-Token in der Wallet an.
