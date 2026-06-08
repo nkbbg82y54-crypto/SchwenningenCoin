@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regionalpartner | Schwenningen Token</title>
+<meta name="description" content="Regionalpartner des Schwenningen Token – Vision eines freiwilligen lokalen Netzwerks.">
+<meta property="og:title" content="Regionalpartner | Schwenningen Token">
+<meta property="og:description" content="Ein freiwilliges Netzwerk regionaler Partner rund um den Schwenningen Token.">
+<meta property="og:image" content="assets/poster.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/coin.png">
+<style>
+:root{--gold:#f3bf2b;--gold-light:#ffdd75;--text:#ffffff;--muted:#bdbdbd;--border:rgba(243,191,43,.22)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip;max-width:100%}
+body{font-family:Arial,sans-serif;background:radial-gradient(circle at top right, rgba(243,191,43,.13), transparent 25%),radial-gradient(circle at bottom left, rgba(243,191,43,.08), transparent 25%),#050505;color:var(--text);overflow-x:clip;width:100%;max-width:100%}
+a{text-decoration:none;color:inherit}
+section{max-width:1250px;margin:auto;padding:120px 24px}
+.section-title{text-align:center;margin-bottom:70px}
+.section-title h2{font-size:48px;margin-bottom:18px;color:var(--gold)}
+.section-title p{color:var(--muted);max-width:780px;margin:auto;line-height:1.8}
+header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(0,0,0,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.05)}
+nav{max-width:1250px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:20px 24px}
+.logo{display:flex;align-items:center;gap:14px;font-size:20px;font-weight:800}
+.logo img{width:52px;height:52px;border-radius:50%}
+.nav-links{display:flex;gap:28px;color:#d7d7d7}
+.nav-links a:hover{color:var(--gold)}
+.mobile-menu-btn{display:none;font-size:34px;cursor:pointer;color:var(--gold);line-height:1}
+.mobile-menu{position:fixed;top:84px;right:-100%;width:280px;height:calc(100vh - 84px);background:rgba(5,5,5,.96);backdrop-filter:blur(14px);border-left:1px solid rgba(243,191,43,.18);padding:40px 28px;transition:.35s;z-index:999}
+.mobile-menu.active{right:0}
+.mobile-menu a{display:block;margin-bottom:26px;color:#fff;font-size:20px}
+.mobile-menu a:hover{color:var(--gold)}
+.hero{position:relative;min-height:92vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px;padding-top:140px}
+.hero::before{content:"";position:absolute;right:-120px;top:50%;transform:translateY(-50%);width:650px;height:650px;background:radial-gradient(circle, rgba(243,191,43,.18), transparent 65%);z-index:-1}
+.hero-badge{display:inline-block;padding:10px 18px;border-radius:999px;background:rgba(243,191,43,.12);border:1px solid rgba(243,191,43,.3);color:var(--gold-light);margin-bottom:24px;font-size:14px;letter-spacing:.7px}
+.hero h1{font-size:clamp(54px,7vw,96px);line-height:.98;margin-bottom:26px;font-weight:900}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:22px;line-height:1.8;color:var(--muted);max-width:650px;margin-bottom:36px}
+.btn,.btn-outline{display:inline-block;padding:15px 30px;border-radius:14px;font-weight:800}
+.btn{background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#111}
+.btn-outline{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.04);color:#fff;margin-left:14px}
+.hero-art{background:linear-gradient(145deg, rgba(18,18,18,.95), rgba(8,8,8,.98));border:1px solid rgba(243,191,43,.22);border-radius:38px;padding:40px;box-shadow:0 0 45px rgba(243,191,43,.10),0 40px 100px rgba(0,0,0,.55)}
+.partner-symbol{width:100%;aspect-ratio:1/1;border-radius:34px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle, rgba(243,191,43,.20), transparent 56%),linear-gradient(145deg, rgba(255,255,255,.04), rgba(255,255,255,.01));border:1px solid rgba(243,191,43,.24);font-size:120px;filter:drop-shadow(0 0 40px rgba(243,191,43,.30))}
+.cards,.partner-grid,.benefit-grid,.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card,.partner-card,.benefit-card,.process-card,.cta-box{background:rgba(8,8,8,.82);border:1px solid var(--border);border-radius:28px;padding:36px 28px;transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease}
+.card:hover,.partner-card:hover,.benefit-card:hover,.process-card:hover,.cta-box:hover{transform:translateY(-8px);border-color:rgba(243,191,43,.55);box-shadow:0 0 28px rgba(243,191,43,.28),0 0 90px rgba(243,191,43,.18),0 30px 90px rgba(0,0,0,.6)}
+.card-icon{font-size:38px;margin-bottom:20px}
+.card h3,.partner-card h3,.benefit-card h3,.process-card h3{color:var(--gold);font-size:26px;margin-bottom:16px}
+.card p,.partner-card p,.benefit-card p,.process-card p{color:var(--muted);line-height:1.85}
+.notice{max-width:980px;margin:0 auto;padding:38px;border-radius:30px;background:rgba(243,191,43,.08);border:1px solid rgba(243,191,43,.30);text-align:center}
+.notice strong{color:var(--gold);font-size:30px;display:block;margin-bottom:16px}
+.notice p{color:#ddd;line-height:1.9}
+.process-card span{display:flex;width:54px;height:54px;align-items:center;justify-content:center;border-radius:18px;background:rgba(243,191,43,.12);border:1px solid rgba(243,191,43,.3);color:var(--gold-light);font-weight:900;font-size:20px;margin-bottom:22px}
+.cta-box{max-width:980px;margin:0 auto;text-align:center;background:linear-gradient(145deg, rgba(18,18,18,.95), rgba(8,8,8,.98))}
+.cta-box h2{color:var(--gold);font-size:44px;margin-bottom:18px}
+.cta-box p{color:var(--muted);font-size:19px;line-height:1.9;margin-bottom:28px}
+.email-box{display:inline-block;margin-top:18px;padding:18px 24px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:#ddd;word-break:break-all}
+footer{border-top:1px solid rgba(255,255,255,.06);background:#050505;padding:60px 24px;text-align:center;color:#8e8e8e}
+footer a{color:var(--gold)}
+.footer-small{margin-top:14px;color:#777;font-size:14px;line-height:1.8}
+@media(max-width:980px){
+section{padding:90px 20px}.hero{grid-template-columns:1fr;text-align:center;min-height:auto;padding-top:115px;padding-bottom:60px;gap:28px}.hero-art{padding:24px;order:1}.hero>div:first-child{order:2}.partner-symbol{font-size:72px}.hero h1{font-size:44px;line-height:1}.hero p{font-size:18px;line-height:1.7}.hero-badge{font-size:12px;padding:8px 14px}.cards,.partner-grid,.benefit-grid,.process-grid{grid-template-columns:1fr}.nav-links{display:none}.mobile-menu-btn{display:block}.btn-outline{margin-left:0;margin-top:14px}.section-title h2{font-size:38px}}
+</style>
+</head>
+<body>
+<header><nav><a class="logo" href="index.html"><img src="assets/coin.png" alt="Schwenningen Token"><span>Schwenningen Token</span></a><div class="nav-links"><a href="index.html">Startseite</a><a href="#idee">Idee</a><a href="#bereiche">Partnerbereiche</a><a href="#mitmachen">Mitmachen</a></div><div class="mobile-menu-btn" onclick="toggleMenu()">☰</div></nav></header>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html" onclick="closeMenu()">Startseite</a><a href="#idee" onclick="closeMenu()">Idee</a><a href="#bereiche" onclick="closeMenu()">Partnerbereiche</a><a href="#mitmachen" onclick="closeMenu()">Mitmachen</a></div>
+<section class="hero"><div><div class="hero-badge">VISION: REGIONALPARTNER</div><h1>Gemeinsam für<br><span>Schwenningen.</span></h1><p>Regionalpartner sind als freiwilliges Netzwerk rund um den Schwenningen Token gedacht. Lokale Geschäfte, Vereine, Gastronomie, Events und Anbieter können Teil einer sichtbaren digitalen Community-Idee werden.</p><a href="#mitmachen" class="btn">Interesse bekunden</a><a href="index.html" class="btn-outline">Zur Startseite</a></div><div class="hero-art"><div class="partner-symbol">🤝</div></div></section>
+<section id="idee"><div class="section-title"><h2>Die Idee dahinter</h2><p>Der Schwenningen Token soll nicht nur ein digitales Symbol bleiben. Langfristig kann daraus ein freiwilliges regionales Netzwerk entstehen, das Menschen, Orte, Vereine und lokale Anbieter miteinander verbindet.</p></div><div class="cards"><div class="card"><div class="card-icon">🏘️</div><h3>Regional sichtbar</h3><p>Lokale Akteure können Teil einer modernen digitalen Regionalidee werden.</p></div><div class="card"><div class="card-icon">🎁</div><h3>Kreative Aktionen</h3><p>Denkbar sind kleine Community-Aktionen, symbolische Vorteile oder besondere Ideen.</p></div><div class="card"><div class="card-icon">🤝</div><h3>Freiwilliges Netzwerk</h3><p>Alles bleibt freiwillig, unkompliziert und ohne Verpflichtung.</p></div></div></section>
+<section id="bereiche"><div class="section-title"><h2>Mögliche Partnerbereiche</h2><p>Das Regionalpartner-Netzwerk ist offen gedacht. Es geht nicht um ein offizielles Zahlungssystem, sondern um regionale Verbundenheit und kreative Kooperationen.</p></div><div class="partner-grid"><div class="partner-card"><div class="card-icon">☕</div><h3>Cafés & Gastronomie</h3><p>Kleine Aktionen, Community-Treffen oder symbolische Vorteile für Token-Holder.</p></div><div class="partner-card"><div class="card-icon">🛍️</div><h3>Einzelhandel</h3><p>Lokale Geschäfte sichtbar machen und digitale Community mit regionalem Leben verbinden.</p></div><div class="partner-card"><div class="card-icon">⚽</div><h3>Vereine</h3><p>Engagement, Ehrenamt und Vereinsleben digital unterstützen und sichtbarer machen.</p></div><div class="partner-card"><div class="card-icon">🎉</div><h3>Events</h3><p>Veranstaltungen, Aktionen oder lokale Treffen mit digitalem Community-Gedanken.</p></div><div class="partner-card"><div class="card-icon">🛠️</div><h3>Handwerk & Service</h3><p>Regionale Anbieter können Teil der digitalen Regionalmarke werden.</p></div><div class="partner-card"><div class="card-icon">🌲</div><h3>Kultur & Heimat</h3><p>Projekte rund um Heimat, Tradition, Natur und regionale Identität.</p></div></div></section>
+<section><div class="notice"><strong>Kein offizielles kommunales Projekt</strong><p>Das Regionalpartner-Konzept ist eine private Community-Idee. Es besteht keine Verbindung zur Gemeindeverwaltung Schwenningen oder zu offiziellen kommunalen Einrichtungen.</p></div></section>
+<section><div class="section-title"><h2>Was Partner davon haben könnten</h2><p>Der Fokus liegt nicht auf finanzieller Nutzung, sondern auf Sichtbarkeit, Gemeinschaft und regionaler Identität.</p></div><div class="benefit-grid"><div class="benefit-card"><h3>Mehr Sichtbarkeit</h3><p>Partner können als Teil einer modernen lokalen Community-Idee wahrgenommen werden.</p></div><div class="benefit-card"><h3>Community-Nähe</h3><p>Neue Kontakte zu Menschen, die regionale Projekte und digitale Ideen unterstützen.</p></div><div class="benefit-card"><h3>Gemeinsame Aktionen</h3><p>Kleine freiwillige Aktionen, kreative Kooperationen oder lokale Treffen sind denkbar.</p></div></div></section>
+<section><div class="section-title"><h2>So könnte Mitmachen funktionieren</h2><p>Einfach, freiwillig und ohne technischen Aufwand für Partner.</p></div><div class="process-grid"><div class="process-card"><span>1</span><h3>Interesse melden</h3><p>Lokale Akteure schreiben eine kurze E-Mail mit Idee oder Rückfrage.</p></div><div class="process-card"><span>2</span><h3>Idee abstimmen</h3><p>Gemeinsam wird überlegt, welche kleine Aktion oder Form der Beteiligung passt.</p></div><div class="process-card"><span>3</span><h3>Regional sichtbar werden</h3><p>Partner können später auf der Website vorgestellt oder in Aktionen eingebunden werden.</p></div></div></section>
+<section id="mitmachen"><div class="cta-box"><div class="hero-badge">MITMACHEN</div><h2>Regionalpartner werden?</h2><p>Du bist Verein, lokales Geschäft, Veranstalter, Gastronom, Handwerker oder hast eine Idee für Schwenningen? Dann melde dich gerne.</p><a class="btn" href="mailto:swhbg@schwenningen-token.de?subject=Regionalpartner%20Schwenningen%20Token&body=Hallo%2C%0A%0Aich%20interessiere%20mich%20für%20das%20Regionalpartner-Konzept.%0A%0AName%20%2F%20Organisation%3A%20%0ABezug%20zu%20Schwenningen%3A%20%0AIdee%20oder%20Frage%3A%20%0A%0AViele%20Grüße">E-Mail schreiben</a><div class="email-box">swhbg@schwenningen-token.de</div></div></section>
+<footer><p>© 2026 Schwenningen Token</p><p class="footer-small">schwenningen-token.de · Regionalpartner · Community-Projekt · Solana SPL Token</p><br><p><a href="index.html">Zurück zur Startseite</a></p></footer>
+<script>function toggleMenu(){document.getElementById("mobileMenu").classList.toggle("active")}function closeMenu(){document.getElementById("mobileMenu").classList.remove("active")}</script>
+</body></html>

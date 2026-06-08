@@ -723,6 +723,46 @@ footer a{color:var(--gold)}
   font-size:15px;
 }
 
+
+.regional-teaser{
+  background:linear-gradient(145deg, rgba(18,18,18,.95), rgba(8,8,8,.98));
+  border:1px solid rgba(243,191,43,.22);
+  border-radius:34px;
+  padding:46px;
+  max-width:1050px;
+  margin:0 auto;
+  box-shadow:0 0 45px rgba(243,191,43,.08),0 40px 100px rgba(0,0,0,.45);
+  transition:.28s ease;
+}
+.regional-teaser:hover{
+  transform:translateY(-8px);
+  border-color:rgba(243,191,43,.55);
+  box-shadow:0 0 28px rgba(243,191,43,.28),0 0 90px rgba(243,191,43,.18),0 30px 90px rgba(0,0,0,.6);
+}
+.regional-teaser-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:36px;
+  align-items:center;
+}
+.regional-teaser h2{color:var(--gold);font-size:44px;margin-bottom:18px}
+.regional-teaser p{color:var(--muted);line-height:1.9;font-size:18px;margin-bottom:18px}
+.partner-mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.partner-mini{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;
+  padding:22px;
+  color:#dddddd;
+  line-height:1.6;
+}
+.partner-mini strong{display:block;color:var(--gold);margin-bottom:8px;font-size:18px}
+@media(max-width:980px){
+  .regional-teaser-grid,.partner-mini-grid{grid-template-columns:1fr}
+  .regional-teaser{padding:32px 24px;text-align:center}
+  .regional-teaser h2{font-size:36px}
+}
+
 </style>
 </head>
 
@@ -738,6 +778,7 @@ footer a{color:var(--gold)}
 <div class="nav-links">
 <a href="#story">Story</a>
 <a href="#vision">Vision</a>
+<a href="regionalpartner.html">Regionalpartner</a>
 <a href="#tokenomics">Tokenomics</a>
 <a href="#steps">Ablauf</a>
 <a href="#claim">Token erhalten</a>
@@ -751,6 +792,7 @@ footer a{color:var(--gold)}
 <div class="mobile-menu" id="mobileMenu">
 <a href="#story" onclick="closeMenu()">Story</a>
 <a href="#vision" onclick="closeMenu()">Vision</a>
+<a href="regionalpartner.html" onclick="closeMenu()">Regionalpartner</a>
 <a href="#tokenomics" onclick="closeMenu()">Tokenomics</a>
 <a href="#steps" onclick="closeMenu()">So funktioniert es</a>
 <a href="#claim" onclick="closeMenu()">Token erhalten</a>
@@ -958,6 +1000,32 @@ Ein Token, der Menschen aus der Region verbindet — transparent, offen und nach
 <p>
 Ein Experiment, das zeigt, dass Technologie auch regional, persönlich und gemeinschaftlich sein kann.
 </p>
+</div>
+</div>
+</section>
+
+
+<section id="regionalpartner-teaser">
+<div class="regional-teaser">
+<div class="regional-teaser-grid">
+<div>
+<div class="hero-badge">VISION: REGIONALPARTNER</div>
+<h2>Gemeinsam stärker.</h2>
+<p>
+Langfristig soll rund um den Schwenningen Token ein freiwilliges Netzwerk regionaler Partner entstehen.
+Lokale Geschäfte, Vereine, Gastronomie, Handwerk und Veranstaltungen können Teil einer digitalen Community-Idee werden.
+</p>
+<p>
+Der Fokus liegt nicht auf finanzieller Nutzung, sondern auf regionaler Verbundenheit, gemeinschaftlichen Aktionen und kreativen Kooperationen.
+</p>
+<a href="regionalpartner.html" class="btn">Regionalpartner entdecken</a>
+</div>
+<div class="partner-mini-grid">
+<div class="partner-mini"><strong>☕ Gastronomie</strong>Kleine Aktionen für Gäste und Community.</div>
+<div class="partner-mini"><strong>🤝 Vereine</strong>Digitale Unterstützung für Engagement und Gemeinschaft.</div>
+<div class="partner-mini"><strong>🛠️ Handwerk</strong>Regionale Anbieter sichtbar machen.</div>
+<div class="partner-mini"><strong>🎉 Events</strong>Gemeinschaft durch lokale Veranstaltungen stärken.</div>
+</div>
 </div>
 </div>
 </section>
