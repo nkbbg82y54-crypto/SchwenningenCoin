@@ -970,33 +970,158 @@ footer a{color:var(--gold)}
 }
 
 
+.wallet-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+}
 
-.wallet-header{
+.wallet-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border-radius:12px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+  color:#dddddd;
+  font-size:14px;
+  font-weight:800;
+  transition:.22s;
+}
+
+.wallet-link:hover{
+  border-color:rgba(243,191,43,.45);
+  color:var(--gold);
+  background:rgba(243,191,43,.08);
+}
+
+@media(max-width:980px){
+  .wallet-links{
+    justify-content:center;
+  }
+}
+
+
+.store-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:22px;
+  align-items:center;
+}
+
+.store-badges img{
+  height:54px;
+  width:auto;
+  border-radius:12px;
+  transition:.22s;
+  box-shadow:0 10px 28px rgba(0,0,0,.35);
+}
+
+.store-badges img:hover{
+  transform:translateY(-3px);
+  box-shadow:
+    0 0 20px rgba(243,191,43,.18),
+    0 14px 36px rgba(0,0,0,.45);
+}
+
+@media(max-width:980px){
+  .store-badges{
+    justify-content:center;
+  }
+}
+
+
+.store-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:22px;
+  align-items:center;
+}
+
+.store-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  min-height:54px;
+  padding:10px 16px;
+  border-radius:14px;
+  background:#0b0b0b;
+  border:1px solid rgba(255,255,255,.16);
+  color:#ffffff;
+  box-shadow:0 10px 28px rgba(0,0,0,.35);
+  transition:.22s;
+}
+
+.store-badge:hover{
+  transform:translateY(-3px);
+  border-color:rgba(243,191,43,.45);
+  box-shadow:
+    0 0 20px rgba(243,191,43,.18),
+    0 14px 36px rgba(0,0,0,.45);
+}
+
+.store-icon{
+  font-size:28px;
+  line-height:1;
+}
+
+.store-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+
+.store-text small{
+  font-size:11px;
+  color:#cccccc;
+}
+
+.store-text strong{
+  font-size:17px;
+  color:#ffffff;
+}
+
+@media(max-width:980px){
+  .store-badges{
+    justify-content:center;
+  }
+}
+
+
+.step-visual{
   display:flex;
   align-items:center;
-  justify-content:flex-start;
   gap:16px;
   margin-bottom:22px;
 }
 
-.wallet-header .step-number{
-  margin-bottom:0;
-  flex-shrink:0;
-}
-
-.wallet-app-icon{
+.step-icon{
   width:54px;
   height:54px;
   border-radius:18px;
-  object-fit:cover;
-  display:block;
-  flex-shrink:0;
-  margin:0;
-  box-shadow:
-    0 0 24px rgba(150,80,255,.35),
-    0 14px 36px rgba(0,0,0,.40);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  font-size:28px;
+  box-shadow:0 10px 28px rgba(0,0,0,.35);
 }
 
+.step-mini-box{
+  margin-top:22px;
+  padding:14px 16px;
+  border-radius:16px;
+  background:rgba(243,191,43,.08);
+  border:1px solid rgba(243,191,43,.18);
+  color:#d8d8d8;
+  line-height:1.7;
+  font-size:14px;
+}
 
 </style>
 </head>
@@ -1407,58 +1532,122 @@ Als einfaches Beispiel eignet sich Phantom — als App oder Browser-Erweiterung.
 <div class="steps-grid">
 
 <div class="step-card">
-<div class="wallet-header">
-<div class="step-number">1</div>
 <img src="assets/phantom-appsymbol.png" class="wallet-app-icon" alt="Phantom Wallet Appsymbol">
-</div>
+<div class="step-number">1</div>
 <h3>Phantom Wallet installieren</h3>
 <p>
 Installiere zum Beispiel Phantom auf deinem Smartphone oder als Browser-Erweiterung.
 Phantom unterstützt Solana und zeigt SPL-Token in der Wallet an.
 </p>
+
+
+
+<div class="store-badges">
+
+<a class="store-badge" href="https://apps.apple.com/us/app/phantom-trade-markets/id1598432977" target="_blank" rel="noopener">
+<span class="store-icon"></span>
+<span class="store-text">
+<small>Download im</small>
+<strong>App Store</strong>
+</span>
+</a>
+
+<a class="store-badge" href="https://play.google.com/store/apps/details?id=app.phantom" target="_blank" rel="noopener">
+<span class="store-icon">▶</span>
+<span class="store-text">
+<small>Jetzt bei</small>
+<strong>Google Play</strong>
+</span>
+</a>
+
+<a class="store-badge" href="https://phantom.com/download" target="_blank" rel="noopener">
+<span class="store-icon">👻</span>
+<span class="store-text">
+<small>Direkt zur</small>
+<strong>Phantom Website</strong>
+</span>
+</a>
+
+</div>
 </div>
 
+
 <div class="step-card">
+<div class="step-visual">
 <div class="step-number">2</div>
+<div class="step-icon">🔐</div>
+</div>
 <h3>Wallet erstellen</h3>
 <p>
 Erstelle eine neue Wallet und notiere deine geheime Wiederherstellungsphrase sicher offline.
 Diese Phrase niemals an andere weitergeben.
 </p>
+
+<div class="step-mini-box">
+Seed Phrase sicher offline speichern
+</div>
 </div>
 
 <div class="step-card">
+<div class="step-visual">
 <div class="step-number">3</div>
+<div class="step-icon">📋</div>
+</div>
 <h3>Solana-Adresse kopieren</h3>
 <p>
 In deiner Wallet findest du deine öffentliche Solana-Adresse.
 Nur diese öffentliche Adresse wird benötigt, um Tokens empfangen zu können.
 </p>
+
+<div class="step-mini-box">
+Nur die öffentliche Adresse teilen
+</div>
 </div>
 
 <div class="step-card">
+<div class="step-visual">
 <div class="step-number">4</div>
+<div class="step-icon">✉️</div>
+</div>
 <h3>E-Mail senden</h3>
 <p>
 Sende deinen Namen, deinen Bezug zu Schwenningen und deine Solana-Wallet-Adresse per E-Mail an das Projekt.
 </p>
+
+<div class="step-mini-box">
+Name · Bezug · Wallet-Adresse
+</div>
 </div>
 
 <div class="step-card">
+<div class="step-visual">
 <div class="step-number">5</div>
+<div class="step-icon">🪙</div>
+</div>
 <h3>Token erhalten</h3>
 <p>
 Wenn Tokens verfügbar sind, werden dir bis zu 10 Schwenningen Tokens freiwillig an deine Solana-Adresse gesendet.
 </p>
+
+<div class="step-mini-box">
+Bis zu 10 Tokens möglich
+</div>
 </div>
 
 <div class="step-card">
+<div class="step-visual">
 <div class="step-number">!</div>
+<div class="step-icon">⚠️</div>
+</div>
 <h3>Wichtiger Sicherheitshinweis</h3>
 <p>
 Gib niemals deine geheime Wiederherstellungsphrase, private Schlüssel oder Passwörter weiter.
 Für die Verteilung wird ausschließlich deine öffentliche Solana-Adresse benötigt.
 </p>
+
+<div class="step-mini-box" style="background:rgba(255,90,90,.10);border-color:rgba(255,90,90,.28);">
+Niemals Seed Phrase oder Private Keys weitergeben
+</div>
 </div>
 
 </div>
