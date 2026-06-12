@@ -1402,6 +1402,89 @@ footer a{
   }
 }
 
+
+/* TOKEN CHECK BEAUTIFICATION */
+.token-address-box{
+  text-align:center;
+}
+
+.token-address{
+  margin:14px 0 24px;
+  padding:16px;
+  border-radius:16px;
+  background:rgba(255,255,255,.03);
+}
+
+.token-check-section .buttons{
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+}
+
+.token-check-section .btn{
+  min-width:180px;
+  text-align:center;
+  font-size:15px;
+}
+
+.token-check-section .copy-btn{
+  margin-top:0;
+}
+
+@media(max-width:900px){
+  .token-check-section .btn{
+    width:100%;
+    min-width:unset;
+  }
+}
+
+
+/* STRONGER GOLD GLOW */
+
+.section,
+.phantom-section,
+.glossary-section,
+.token-check-section,
+.bison-section,
+.cta-section{
+  border-color:rgba(243,191,43,.32) !important;
+  box-shadow:
+    0 0 24px rgba(243,191,43,.12),
+    0 0 60px rgba(243,191,43,.08),
+    0 40px 100px rgba(0,0,0,.45) !important;
+}
+
+.glossary-card,
+.phantom-step-card,
+.blockchain-point,
+.token-address-box,
+.live-card,
+.holder-row,
+.bison-card{
+  border-color:rgba(243,191,43,.28) !important;
+}
+
+.glossary-card:hover,
+.phantom-step-card:hover,
+.bison-card:hover{
+  box-shadow:
+    0 0 30px rgba(243,191,43,.28),
+    0 0 90px rgba(243,191,43,.18),
+    0 30px 90px rgba(0,0,0,.6) !important;
+}
+
+.token-address-box{
+  box-shadow:
+    inset 0 0 24px rgba(243,191,43,.05),
+    0 0 35px rgba(243,191,43,.12);
+}
+
+.btn{
+  box-shadow:
+    0 0 18px rgba(243,191,43,.22),
+    0 10px 30px rgba(0,0,0,.35);
+}
+
 </style>
 </head>
 
@@ -1778,7 +1861,7 @@ Diese Adresse ist kein Passwort und kann öffentlich geteilt werden.
 
 <div class="buttons">
 <button class="btn copy-btn" onclick="copyTokenAddress(this)">Adresse kopieren</button>
-<a class="btn" href="https://solscan.io/token/3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E" target="_blank" rel="noopener">Auf Solscan prüfen</a>
+<a class="btn" href="https://solanascan.io/token/3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E" target="_blank" rel="noopener">Auf SolanaScan prüfen</a>
 <a class="btn" href="https://explorer.solana.com/address/3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E" target="_blank" rel="noopener">Solana Explorer</a>
 </div>
 </div>
