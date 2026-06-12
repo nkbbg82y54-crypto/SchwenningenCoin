@@ -25,9 +25,24 @@ body{
   color:#fff;
 }
 
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(0,0,0,.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
 
-
-
+nav{
+  max-width:1180px;
+  margin:auto;
+  padding:22px 24px;
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  flex-wrap:wrap;
+}
 
 nav a{
   color:#d7d7d7;
@@ -384,666 +399,101 @@ main{
 }
 
 
-/* BISON SOL KAUFEN SECTION */
-
-.bison-section{
-  margin-bottom:36px;
-  padding:46px 32px;
-  border-radius:32px;
-  background:
-    radial-gradient(circle at top left, rgba(243,191,43,.08), transparent 30%),
-    linear-gradient(145deg, rgba(18,18,18,.96), rgba(5,5,5,.99));
-  border:1px solid rgba(243,191,43,.22);
-  box-shadow:
-    0 0 45px rgba(243,191,43,.08),
-    0 40px 120px rgba(0,0,0,.55);
-}
-
-.bison-head{
-  margin-bottom:34px;
-}
-
-.bison-head h2{
-  color:#fff;
-  font-size:clamp(34px,5vw,52px);
-  line-height:1.1;
-  margin-bottom:18px;
-}
-
-.bison-head h2 span{
-  color:var(--gold);
-}
-
-.bison-head p{
-  max-width:760px;
-  color:#d7d7d7;
-  line-height:1.85;
-  font-size:19px;
-}
-
-.bison-head strong{
-  color:var(--gold);
-}
-
-.bison-grid{
+.deep-grid{
   display:grid;
-  grid-template-columns:1.1fr .9fr .95fr;
-  gap:24px;
-  align-items:stretch;
-}
-
-.bison-card{
-  background:
-    linear-gradient(145deg, rgba(14,14,14,.96), rgba(6,6,6,.98));
-  border:1px solid rgba(243,191,43,.28);
-  border-radius:28px;
-  padding:30px;
-  box-shadow:
-    inset 0 0 30px rgba(255,255,255,.015),
-    0 24px 90px rgba(0,0,0,.45);
-}
-
-.bison-card.featured{
-  border-color:rgba(243,191,43,.75);
-  box-shadow:
-    0 0 28px rgba(243,191,43,.16),
-    0 28px 90px rgba(0,0,0,.55);
-}
-
-.bison-logo-row{
-  text-align:center;
-  margin-bottom:24px;
-}
-
-.bison-logo{
-  width:132px;
-  height:132px;
-  object-fit:contain;
-  margin:0 auto 18px;
-  display:block;
-  filter:
-    drop-shadow(0 0 14px rgba(100,210,225,.22))
-    drop-shadow(0 18px 40px rgba(0,0,0,.55));
-}
-
-.bison-word{
-  font-size:44px;
-  font-weight:900;
-  letter-spacing:.12em;
-  color:#fff;
-  line-height:1;
-}
-
-.bison-subtitle{
-  color:var(--gold);
-  font-weight:900;
-  margin-top:10px;
-  font-size:18px;
-}
-
-.bison-divider{
-  height:1px;
-  background:linear-gradient(90deg, transparent, rgba(243,191,43,.75), transparent);
-  margin:24px 0;
-}
-
-.bison-card p{
-  color:#dddddd;
-  line-height:1.85;
-  font-size:17px;
-}
-
-.bison-main-btn{
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
   margin-top:26px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:14px;
-  width:100%;
-  padding:16px 22px;
-  border-radius:16px;
-  background:linear-gradient(135deg,#ffdd75,#f3bf2b);
-  color:#111;
+}
+.deep-card{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:24px;
+}
+.deep-card h3{
+  color:var(--gold);
   font-size:22px;
-  font-weight:900;
-  text-decoration:none;
-  box-shadow:
-    0 0 24px rgba(243,191,43,.28),
-    0 14px 35px rgba(0,0,0,.4);
-  transition:.22s ease;
-}
-
-.bison-main-btn:hover{
-  transform:translateY(-3px);
-}
-
-.referral-box{
-  margin-top:22px;
-  padding:20px;
-  border-radius:18px;
-  background:rgba(0,0,0,.25);
-  border:1px dashed rgba(243,191,43,.35);
-  text-align:center;
-}
-
-.referral-box small{
-  display:block;
-  color:#e1e1e1;
-  margin-bottom:8px;
-}
-
-.referral-code{
-  display:block;
-  color:var(--gold);
-  font-size:34px;
-  font-weight:900;
-  letter-spacing:.04em;
-  margin-bottom:14px;
-}
-
-.referral-link{
-  color:var(--gold);
-  word-break:break-all;
-  font-size:15px;
-  line-height:1.6;
-}
-
-.bison-icon-large{
-  width:74px;
-  height:74px;
-  border-radius:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--gold);
-  font-size:48px;
-  margin-bottom:22px;
-}
-
-.bison-card h3{
-  color:#fff;
-  font-size:30px;
-  line-height:1.25;
-  margin-bottom:24px;
-}
-
-.bison-card h4{
-  color:var(--gold);
-  font-size:19px;
-  margin-top:22px;
   margin-bottom:12px;
 }
-
-.bonus-pill{
-  margin-top:24px;
-  display:flex;
-  align-items:center;
-  gap:16px;
-  padding:18px;
-  border-radius:18px;
-  background:rgba(243,191,43,.06);
-  border:1px solid rgba(243,191,43,.22);
-}
-
-.bonus-pill strong{
-  display:block;
-  color:#fff;
-  font-size:18px;
-}
-
-.bonus-pill span{
-  color:#d0d0d0;
-  font-size:14px;
-}
-
-.bison-steps{
-  display:grid;
-  gap:22px;
-  margin-top:8px;
-}
-
-.bison-step{
-  display:grid;
-  grid-template-columns:38px 1fr;
-  gap:16px;
-  align-items:start;
-}
-
-.bison-step-number{
-  width:34px;
-  height:34px;
-  border-radius:50%;
-  border:2px solid var(--gold);
-  color:var(--gold);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:900;
-}
-
-.bison-step strong{
-  display:block;
-  color:#fff;
-  font-size:18px;
-  margin-bottom:8px;
-}
-
-.bison-step span{
-  color:#d0d0d0;
-  line-height:1.6;
-}
-
-.bison-trust{
-  margin-top:28px;
-  padding:24px 28px;
-  border-radius:24px;
-  display:flex;
-  gap:22px;
-  align-items:center;
-  background:rgba(255,255,255,.025);
-  border:1px solid rgba(243,191,43,.20);
-}
-
-.bison-trust-icon{
-  width:58px;
-  height:58px;
-  border-radius:18px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--gold);
-  font-size:38px;
-  flex-shrink:0;
-}
-
-.bison-trust p{
-  color:#e7e7e7;
-  line-height:1.7;
-  font-size:18px;
-}
-
-.bison-disclaimer{
-  margin-top:22px;
-  padding:22px 26px;
-  border-radius:22px;
-  background:rgba(255,255,255,.025);
-  border:1px solid rgba(255,255,255,.08);
-  color:#9f9f9f;
-  line-height:1.75;
-  font-size:15px;
-}
-
-.bison-nav-buttons{
-  margin-top:34px;
-  display:flex;
-  justify-content:space-between;
-  gap:18px;
-  flex-wrap:wrap;
-}
-
-.bison-back,
-.bison-next{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-  padding:15px 26px;
-  border-radius:16px;
-  font-weight:900;
-  text-decoration:none;
-}
-
-.bison-back{
-  color:#fff;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.12);
-}
-
-.bison-next{
-  color:#111;
-  background:linear-gradient(135deg,#ffdd75,#f3bf2b);
-}
-
-@media(max-width:980px){
-  .bison-section{
-    padding:34px 20px;
-  }
-
-  .bison-grid{
-    grid-template-columns:1fr;
-  }
-
-  .bison-word{
-    font-size:36px;
-  }
-
-  .bison-trust{
-    align-items:flex-start;
-  }
-
-  .bison-nav-buttons{
-    flex-direction:column;
-  }
-
-  .bison-back,
-  .bison-next{
-    width:100%;
-  }
-}
-
-
-/* PHANTOM HOMEPAGE STYLE SECTION */
-
-.phantom-section{
-  margin-bottom:36px;
-  background:linear-gradient(145deg, rgba(18,18,18,.96), rgba(8,8,8,.98));
-  border:1px solid rgba(243,191,43,.18);
-  border-radius:32px;
-  padding:40px;
-  box-shadow:
-    0 0 40px rgba(243,191,43,.06),
-    0 40px 100px rgba(0,0,0,.45);
-}
-
-.phantom-section h2{
-  color:var(--gold);
-  font-size:34px;
-  margin-bottom:16px;
-}
-
-.phantom-section > p{
+.deep-card p{
+  font-size:16px;
+  line-height:1.8;
   color:var(--muted);
-  line-height:1.95;
-  font-size:18px;
-  margin-bottom:30px;
 }
-
-.phantom-steps-grid{
+.example-box{
+  margin-top:24px;
+  padding:22px;
+  border-radius:22px;
+  background:rgba(243,191,43,.08);
+  border:1px solid rgba(243,191,43,.22);
+  color:#dddddd;
+  line-height:1.85;
+}
+.warning-box{
+  margin-top:24px;
+  padding:22px;
+  border-radius:22px;
+  background:rgba(255,90,90,.10);
+  border:1px solid rgba(255,90,90,.28);
+  color:#ffd7d7;
+  line-height:1.85;
+}
+.term-list{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
+  gap:14px;
+  margin-top:24px;
 }
-
-.phantom-step-card{
-  background:rgba(8,8,8,.82);
-  border:1px solid rgba(243,191,43,.18);
-  border-radius:28px;
-  padding:34px 28px;
-  transition:.28s ease;
+.term{
+  padding:18px 20px;
+  border-radius:18px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  color:var(--muted);
+  line-height:1.75;
 }
-
-.phantom-step-card:hover{
-  transform:translateY(-8px);
-  border-color:rgba(243,191,43,.55);
-  box-shadow:
-    0 0 28px rgba(243,191,43,.28),
-    0 0 90px rgba(243,191,43,.18),
-    0 30px 90px rgba(0,0,0,.6);
+.term strong{
+  color:var(--gold);
 }
-
-.phantom-step-number{
+.step-list{
+  margin-top:24px;
+  display:grid;
+  gap:16px;
+}
+.explain-step{
+  display:grid;
+  grid-template-columns:54px 1fr;
+  gap:18px;
+  align-items:start;
+  padding:20px;
+  border-radius:20px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+}
+.explain-number{
   width:54px;
   height:54px;
   display:flex;
   align-items:center;
   justify-content:center;
   border-radius:18px;
-  background:rgba(243,191,43,.12);
-  border:1px solid rgba(243,191,43,.3);
-  color:#ffdd75;
-  font-weight:900;
-  font-size:20px;
-  margin-bottom:22px;
-}
-
-.phantom-title-row{
-  display:flex;
-  align-items:center;
-  gap:16px;
-  margin:18px 0 16px;
-}
-
-.phantom-title-row h3{
-  color:var(--gold);
-  font-size:24px;
-  margin:0;
-}
-
-.phantom-app-icon{
-  width:52px;
-  height:52px;
-  min-width:52px;
-  border-radius:16px;
-  box-shadow:
-    0 0 28px rgba(150,80,255,.35),
-    0 18px 50px rgba(0,0,0,.45);
-}
-
-.phantom-step-icon{
-  width:52px;
-  height:52px;
-  min-width:52px;
-  border-radius:16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.08);
-  font-size:26px;
-  box-shadow:0 10px 28px rgba(0,0,0,.35);
-}
-
-.phantom-step-card p{
-  color:var(--muted);
-  line-height:1.85;
-  font-size:16px;
-}
-
-.phantom-mini-box{
-  margin-top:22px;
-  padding:14px 16px;
-  border-radius:16px;
-  background:rgba(243,191,43,.08);
-  border:1px solid rgba(243,191,43,.18);
-  color:#d8d8d8;
-  line-height:1.7;
-  font-size:14px;
-}
-
-.phantom-warning{
-  background:rgba(255,90,90,.10);
-  border-color:rgba(255,90,90,.28);
-}
-
-.phantom-store-badges{
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-  margin-top:22px;
-  align-items:center;
-}
-
-.phantom-store-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  min-height:54px;
-  padding:10px 16px;
-  border-radius:14px;
-  background:#0b0b0b;
-  border:1px solid rgba(255,255,255,.16);
-  color:#ffffff;
-  box-shadow:0 10px 28px rgba(0,0,0,.35);
-  transition:.22s;
-  text-decoration:none;
-}
-
-.phantom-store-badge:hover{
-  transform:translateY(-3px);
-  border-color:rgba(243,191,43,.45);
-  box-shadow:
-    0 0 20px rgba(243,191,43,.18),
-    0 14px 36px rgba(0,0,0,.45);
-}
-
-.phantom-store-icon{
-  font-size:28px;
-  line-height:1;
-}
-
-.phantom-store-text{
-  display:flex;
-  flex-direction:column;
-  line-height:1.1;
-}
-
-.phantom-store-text small{
-  font-size:11px;
-  color:#cccccc;
-}
-
-.phantom-store-text strong{
-  font-size:17px;
-  color:#ffffff;
-}
-
-.phantom-flow-box{
-  margin-top:34px;
-  padding:28px;
-  border-radius:26px;
-  background:rgba(243,191,43,.08);
-  border:1px solid rgba(243,191,43,.25);
-  color:#dddddd;
-  line-height:1.85;
-}
-
-.phantom-flow-box strong{
-  color:var(--gold);
-}
-
-@media(max-width:980px){
-  .phantom-section{
-    padding:28px 20px;
-  }
-
-  .phantom-steps-grid{
-    grid-template-columns:1fr;
-  }
-
-  .phantom-title-row{
-    justify-content:center;
-    text-align:left;
-  }
-
-  .phantom-store-badges{
-    justify-content:center;
-  }
-}
-
-
-/* BEGINNER GLOSSARY SECTION */
-
-.glossary-section{
-  margin-bottom:36px;
-  background:linear-gradient(145deg, rgba(18,18,18,.96), rgba(8,8,8,.98));
-  border:1px solid rgba(243,191,43,.18);
-  border-radius:32px;
-  padding:40px;
-  box-shadow:
-    0 0 40px rgba(243,191,43,.06),
-    0 40px 100px rgba(0,0,0,.45);
-}
-
-.glossary-section h2{
-  color:var(--gold);
-  font-size:34px;
-  margin-bottom:16px;
-}
-
-.glossary-intro{
-  color:var(--muted);
-  line-height:1.95;
-  font-size:18px;
-  margin-bottom:30px;
-}
-
-.glossary-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
-}
-
-.glossary-card{
-  background:rgba(8,8,8,.82);
-  border:1px solid rgba(243,191,43,.18);
-  border-radius:26px;
-  padding:28px;
-  transition:.28s ease;
-}
-
-.glossary-card:hover{
-  transform:translateY(-6px);
-  border-color:rgba(243,191,43,.48);
-  box-shadow:
-    0 0 24px rgba(243,191,43,.20),
-    0 0 70px rgba(243,191,43,.12),
-    0 24px 70px rgba(0,0,0,.55);
-}
-
-.glossary-top{
-  display:flex;
-  align-items:center;
-  gap:16px;
-  margin-bottom:14px;
-}
-
-.glossary-icon{
-  width:50px;
-  height:50px;
-  min-width:50px;
-  border-radius:16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   background:rgba(243,191,43,.10);
-  border:1px solid rgba(243,191,43,.25);
-  font-size:26px;
-}
-
-.glossary-card h3{
+  border:1px solid rgba(243,191,43,.24);
   color:var(--gold);
-  font-size:23px;
-  margin:0;
+  font-weight:900;
 }
-
-.glossary-card p{
-  color:var(--muted);
-  line-height:1.8;
+.explain-step h3{
+  color:var(--gold);
+  font-size:22px;
+  margin-bottom:8px;
+}
+.explain-step p{
   font-size:16px;
+  line-height:1.75;
 }
-
-.glossary-highlight{
-  margin-top:26px;
-  padding:24px 26px;
-  border-radius:24px;
-  background:rgba(243,191,43,.08);
-  border:1px solid rgba(243,191,43,.25);
-  color:#dddddd;
-  line-height:1.85;
-}
-
-.glossary-highlight strong{
-  color:var(--gold);
-}
-
 @media(max-width:900px){
-  .glossary-section{
-    padding:28px 20px;
-  }
-
-  .glossary-grid{
-    grid-template-columns:1fr;
-  }
+  .deep-grid{grid-template-columns:1fr}
+  .explain-step{grid-template-columns:1fr}
 }
 
 </style>
@@ -1051,7 +501,29 @@ main{
 
 <body>
 
+
+
+
 <div id="site-header"></div>
+</div>
+
+<div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+</nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+<a href="index.html#story" onclick="closeMenu()">Story</a>
+<a href="index.html#vision" onclick="closeMenu()">Vision</a>
+<a href="index.html#ablauf" onclick="closeMenu()">Ablauf & Token erhalten</a>
+<a href="wallet.html" onclick="closeMenu()">Wallet & Blockchain</a>
+<a href="wallet.html#sol-kaufen" onclick="closeMenu()">Kryptowährungen kaufen</a>
+<a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank" onclick="closeMenu()">Whitepaper</a>
+<a href="regionalpartner.html" onclick="closeMenu()">Regionalpartner</a>
+<a href="community.html" onclick="closeMenu()">Community</a>
+<a href="tokenomics.html" onclick="closeMenu()">Projektstatus &amp; Tokenomics</a>
+<a href="faq.html" onclick="closeMenu()">FAQ</a>
+</div>
+
 
 <main>
 
@@ -1062,399 +534,187 @@ main{
 
 <p>
 Der Schwenningen Token ist ein digitales Heimatprojekt auf der Solana-Blockchain.
-Hier werden die wichtigsten Begriffe erklärt — von Blockchain und Solana bis Phantom Wallet, SOL und Token.
+Hier wird einfach erklärt, was Blockchain, Solana, Tokens und Wallets eigentlich sind.
 </p>
 </section>
 
 
-<section class="glossary-section" id="begriffe">
+<section class="section blockchain-deep">
+<div class="blockchain-layout">
 
-<h2>Wichtige Begriffe einfach erklärt</h2>
+<div class="blockchain-text">
+<h2>Was ist eine Blockchain?</h2>
 
-<p class="glossary-intro">
-Wer neu in der Welt von Wallets, Solana und Tokens ist, muss nicht alles sofort technisch verstehen.
-Diese Übersicht erklärt die wichtigsten Begriffe rund um den Schwenningen Token einfach und ohne Fachsprache.
-</p>
-
-<div class="glossary-grid">
-
-<div class="glossary-card">
-<div class="glossary-top">
-<div class="glossary-icon">🔗</div>
-<h3>Blockchain</h3>
-</div>
 <p>
-Eine Blockchain ist ein öffentliches digitales Netzwerk. Man kann sie sich wie ein gemeinsames digitales Kassenbuch vorstellen,
-das von vielen Computern gleichzeitig gespeichert und geprüft wird.
+Eine Blockchain ist ein öffentliches digitales Netzwerk.
+Man kann sie sich wie ein gemeinsames digitales Kassenbuch vorstellen.
 </p>
-</div>
 
-<div class="glossary-card">
-<div class="glossary-top">
-<div class="glossary-icon">⚡</div>
-<h3>Solana</h3>
-</div>
 <p>
-Solana ist die Blockchain, auf der der Schwenningen Token läuft. Sie ermöglicht schnelle Transaktionen und geringe Netzwerkgebühren.
+Dieses Kassenbuch liegt nicht nur auf einem einzelnen Computer,
+sondern wird von vielen Computern gleichzeitig gespeichert und geprüft.
+Dadurch können Einträge nicht einfach heimlich verändert werden.
 </p>
-</div>
 
-<div class="glossary-card">
-<div class="glossary-top">
-<div class="glossary-icon">🪙</div>
-<h3>Token</h3>
-</div>
 <p>
-Ein Token ist ein digitales Objekt auf einer Blockchain. Der Schwenningen Token ist als lokales Community- und Sammlerprojekt gedacht.
+Wenn ein Token übertragen wird, entsteht ein neuer Eintrag.
+Dieser Eintrag wird dauerhaft gespeichert und kann später öffentlich überprüft werden.
 </p>
+
+<div class="blockchain-points">
+
+<div class="blockchain-point">
+<strong>Öffentlich:</strong> Jeder kann prüfen, dass der Token existiert.
 </div>
 
-<div class="glossary-card">
-<div class="glossary-top">
-<div class="glossary-icon">👛</div>
-<h3>Wallet</h3>
+<div class="blockchain-point">
+<strong>Dauerhaft:</strong> Einträge bleiben auf der Blockchain nachvollziehbar.
 </div>
-<p>
-Eine Wallet ist deine digitale Brieftasche. Dort kannst du SOL, den Schwenningen Token und andere Solana-Token empfangen und anzeigen.
+
+<div class="blockchain-point">
+<strong>Transparent:</strong> Tokenmenge und Tokenkonten sind sichtbar.
+</div>
+
+<div class="blockchain-point">
+<strong>Nicht zentral:</strong> Die Daten liegen nicht nur bei einer einzelnen Stelle.
+</div>
+
+</div>
+</div>
+
+<div class="blockchain-visual" aria-label="Vereinfachte Blockchain-Animation">
+<div class="blockchain-connector"></div>
+<div class="data-pulse"></div>
+<div class="block one">1</div>
+<div class="block two">2</div>
+<div class="block three">3</div>
+<div class="block four">4</div>
+</div>
+
+</div>
+
+<p class="note">
+Die Blöcke stehen vereinfacht für gespeicherte Einträge. Der Lichtpunkt symbolisiert eine neue Information,
+die durch das Netzwerk wandert und dauerhaft angehängt wird.
 </p>
-</div>
-
-<div class="glossary-card">
-<div class="glossary-top">
-<div class="glossary-icon">📬</div>
-<h3>Öffentliche Adresse</h3>
-</div>
-<p>
-Die öffentliche Adresse darfst du weitergeben. An diese Adresse können Tokens gesendet werden. Sie ist nicht dein Passwort.
-</p>
-</div>
-
-<div class="glossary-card">
-<div class="glossary-top">
-<div class="glossary-icon">🔐</div>
-<h3>Seed Phrase</h3>
-</div>
-<p>
-Die Seed Phrase ist der geheime Wiederherstellungsschlüssel deiner Wallet. Wer sie kennt, kann deine Wallet kontrollieren.
-Niemals weitergeben.
-</p>
-</div>
-
-<div class="glossary-card">
-<div class="glossary-top">
-<div class="glossary-icon">💵</div>
-<h3>SOL</h3>
-</div>
-<p>
-SOL ist die Kryptowährung des Solana-Netzwerks. Sie wird für Netzwerkgebühren benötigt, wenn man selbst Transaktionen ausführt.
-</p>
-</div>
-
-<div class="glossary-card">
-<div class="glossary-top">
-<div class="glossary-icon">🔍</div>
-<h3>Explorer</h3>
-</div>
-<p>
-Ein Explorer wie Solscan ist eine öffentliche Suchmaschine für Blockchain-Daten. Dort kann man Token, Adressen und Transaktionen prüfen.
-</p>
-</div>
-
-<div class="glossary-card">
-<div class="glossary-top">
-<div class="glossary-icon">🧩</div>
-<h3>SPL-Token</h3>
-</div>
-<p>
-SPL ist der Token-Standard auf Solana. Dadurch können Wallets und Explorer Solana-Token erkennen und anzeigen.
-</p>
-</div>
-
-<div class="glossary-card">
-<div class="glossary-top">
-<div class="glossary-icon">🏦</div>
-<h3>Kryptobörse</h3>
-</div>
-<p>
-Eine Kryptobörse ist ein Anbieter, über den Kryptowährungen wie SOL gekauft werden können. Danach können sie an die eigene Wallet gesendet werden.
-</p>
-</div>
-
-</div>
-
-<div class="glossary-highlight">
-<strong>Merksatz:</strong><br>
-Die Blockchain ist das öffentliche Netzwerk. Solana ist die technische Plattform.
-Phantom ist deine Wallet. Deine öffentliche Adresse darfst du teilen.
-Die Seed Phrase bleibt immer geheim.
-</div>
-
 </section>
 
 
-<section class="phantom-section" id="phantom-wallet">
 
-<h2>Phantom Wallet einrichten</h2>
+<section class="section">
+<h2>Was ist Solana?</h2>
 
 <p>
-Um Schwenningen Tokens zu empfangen, brauchst du eine Solana-fähige Wallet.
-Als einfaches Beispiel eignet sich Phantom — als App oder Browser-Erweiterung.
+Solana ist die Blockchain, auf der der Schwenningen Token läuft.
+Man kann sich Solana als technische Grundlage vorstellen:
+Sie sorgt dafür, dass der Token existiert, verschickt werden kann und öffentlich überprüfbar bleibt.
 </p>
 
-<div class="phantom-steps-grid">
-
-<div class="phantom-step-card">
-<div class="phantom-step-number">1</div>
-<div class="phantom-title-row">
-<img src="assets/phantom-appsymbol.png" class="phantom-app-icon" alt="Phantom Wallet Appsymbol">
-<h3>Phantom installieren</h3>
-</div>
 <p>
-Installiere Phantom auf deinem Smartphone oder als Browser-Erweiterung.
-Phantom unterstützt Solana und zeigt SPL-Token in der Wallet an.
+Der Schwenningen Token ist ein sogenannter SPL-Token.
+SPL ist der Token-Standard auf Solana — ähnlich wie ein gemeinsames technisches Format,
+damit Wallets und Explorer den Token erkennen und anzeigen können.
 </p>
 
-<div class="phantom-store-badges">
-
-<a class="phantom-store-badge" href="https://apps.apple.com/us/app/phantom-trade-markets/id1598432977" target="_blank" rel="noopener">
-<span class="phantom-store-icon"></span>
-<span class="phantom-store-text">
-<small>Download im</small>
-<strong>App Store</strong>
-</span>
-</a>
-
-<a class="phantom-store-badge" href="https://play.google.com/store/apps/details?id=app.phantom" target="_blank" rel="noopener">
-<span class="phantom-store-icon">▶</span>
-<span class="phantom-store-text">
-<small>Jetzt bei</small>
-<strong>Google Play</strong>
-</span>
-</a>
-
-<a class="phantom-store-badge" href="https://phantom.com/download" target="_blank" rel="noopener">
-<span class="phantom-store-icon">👻</span>
-<span class="phantom-store-text">
-<small>Direkt zur</small>
-<strong>Phantom Website</strong>
-</span>
-</a>
-
-</div>
+<div class="deep-grid">
+<div class="deep-card"><h3>Schnelle Transaktionen</h3><p>Solana ist auf schnelle Übertragungen ausgelegt. Wenn ein Token verschickt wird, erscheint die Transaktion in der Regel sehr schnell auf der Blockchain.</p></div>
+<div class="deep-card"><h3>Geringe Gebühren</h3><p>Für Transfers auf Solana fallen üblicherweise nur sehr kleine Netzwerkgebühren an. Das macht Solana für Community-Projekte besonders geeignet.</p></div>
+<div class="deep-card"><h3>Öffentlich prüfbar</h3><p>Über Dienste wie Solscan oder den Solana Explorer kann jeder sehen, dass der Token existiert und welche Tokenkonten ihn halten.</p></div>
+<div class="deep-card"><h3>Keine zentrale Website nötig</h3><p>Die Website erklärt das Projekt. Der Token selbst liegt jedoch auf der Solana-Blockchain und ist dort unabhängig öffentlich sichtbar.</p></div>
 </div>
 
-<div class="phantom-step-card">
-<div class="phantom-step-number">2</div>
-<div class="phantom-title-row">
-<div class="phantom-step-icon">🔐</div>
-<h3>Wallet erstellen</h3>
+<div class="example-box">
+<strong>Einfach gesagt:</strong><br>
+Solana ist die technische Straße. Die Wallet ist deine digitale Brieftasche.
+Der Schwenningen Token ist das digitale Objekt, das auf dieser Straße übertragen werden kann.
 </div>
-<p>
-Erstelle eine neue Wallet und notiere deine geheime Wiederherstellungsphrase sicher offline.
-Diese Phrase niemals an andere weitergeben.
-</p>
-<div class="phantom-mini-box phantom-warning">
-Niemals Seed Phrase oder Private Keys weitergeben
-</div>
-</div>
-
-<div class="phantom-step-card">
-<div class="phantom-step-number">3</div>
-<div class="phantom-title-row">
-<div class="phantom-step-icon">📋</div>
-<h3>Solana-Adresse kopieren</h3>
-</div>
-<p>
-In deiner Wallet findest du deine öffentliche Solana-Adresse.
-Nur diese öffentliche Adresse wird benötigt, um SOL oder Schwenningen Tokens empfangen zu können.
-</p>
-<div class="phantom-mini-box">
-Nur die öffentliche Adresse teilen
-</div>
-</div>
-
-<div class="phantom-step-card">
-<div class="phantom-step-number">4</div>
-<div class="phantom-title-row">
-<div class="phantom-step-icon">🪙</div>
-<h3>Token empfangen</h3>
-</div>
-<p>
-Sobald du deine öffentliche Solana-Adresse hast, können SOL, Schwenningen Tokens
-oder andere Solana-Token an deine Wallet gesendet werden.
-</p>
-<div class="phantom-mini-box">
-SOL · Schwenningen Token · SPL-Token
-</div>
-</div>
-
-<div class="phantom-step-card">
-<div class="phantom-step-number">5</div>
-<div class="phantom-title-row">
-<div class="phantom-step-icon">💶</div>
-<h3>Kryptowährungen kaufen</h3>
-</div>
-<p>
-Wenn du später selbst Transaktionen durchführen möchtest,
-kannst du optional SOL über eine Kryptobörse wie Bison erwerben.
-</p>
-<div class="phantom-mini-box">
-Optionaler Schritt für eigene Transaktionen
-</div>
-</div>
-
-<div class="phantom-step-card">
-<div class="phantom-step-number">!</div>
-<div class="phantom-title-row">
-<div class="phantom-step-icon">⚠️</div>
-<h3>Sicherheit</h3>
-</div>
-<p>
-Für die Token-Verteilung wird ausschließlich deine öffentliche Solana-Adresse benötigt.
-Passwörter, Seed Phrase oder private Schlüssel werden niemals abgefragt.
-</p>
-<div class="phantom-mini-box phantom-warning">
-Private Daten niemals teilen
-</div>
-</div>
-
-</div>
-
-<div class="phantom-flow-box">
-<strong>Einfacher Ablauf:</strong><br>
-Phantom installieren · Wallet erstellen · öffentliche Solana-Adresse kopieren · Schwenningen Tokens empfangen · SOL nur bei Bedarf kaufen
-</div>
-
 </section>
 
 
-<section class="bison-section" id="sol-kaufen">
 
-<div class="bison-head">
-<h2>💵 Kryptowährungen kaufen <span>(optional)</span></h2>
-<p>
-Für Transaktionen auf der Solana Blockchain wird SOL benötigt.
-Diese können beispielsweise über die <strong>deutsche Kryptobörse Bison</strong>
-einfach und sicher erworben werden.
-</p>
-</div>
-
-<div class="bison-grid">
-
-<div class="bison-card featured">
-
-<div class="bison-logo-row">
-<img src="assets/BISONLogo.png" alt="Bison Kryptobörse" class="bison-logo">
-<div class="bison-word">BISON</div>
-<div class="bison-subtitle">Deutsche Kryptobörse</div>
-<div style="margin-top:12px;color:#bdbdbd;font-size:14px;letter-spacing:.05em;">
-BTC · ETH · SOL · XRP · ADA · weitere Assets
-</div>
-</div>
-
-<div class="bison-divider"></div>
+<section class="section">
+<h2>Was ist ein Token?</h2>
 
 <p>
-Auf Bison können verschiedene Kryptowährungen gekauft werden, beispielsweise Bitcoin (BTC), Ethereum (ETH), Solana (SOL) und weitere digitale Assets. Für den Schwenningen Token wird lediglich eine Solana Wallet benötigt. SOL werden nur benötigt, wenn du selbst Transaktionen auf der Solana Blockchain durchführen möchtest.
+Ein Token ist ein digitales Objekt auf einer Blockchain.
+Er kann in einer Wallet gespeichert, von einer Adresse zu einer anderen übertragen
+und öffentlich über die Blockchain geprüft werden.
 </p>
 
-<a class="bison-main-btn" href="https://join.bisonapp.com/b6rstg" target="_blank" rel="noopener">
-Zu Bison →
+<p>
+Der Schwenningen Token ist kein Geldversprechen, keine Aktie und kein Investmentprodukt.
+Er ist als lokales Community- und Sammlerprojekt gedacht:
+ein digitales Symbol für Heimat, Zusammenhalt und regionale Verbundenheit.
+</p>
+
+<div class="term-list">
+<div class="term"><strong>Tokenmenge:</strong> Es gibt insgesamt 165.000 Schwenningen Tokens. Die Menge orientiert sich symbolisch an etwa 1.650 Einwohnern × 100 Tokens.</div>
+<div class="term"><strong>Transferierbar:</strong> Der Token kann technisch von einer Solana-Adresse an eine andere gesendet werden.</div>
+<div class="term"><strong>Öffentlich sichtbar:</strong> Tokenadresse, Tokenkonten und Transaktionen können über Blockchain-Explorer geprüft werden.</div>
+<div class="term"><strong>Kein Investment:</strong> Der Token wird nicht als Geldanlage beworben und enthält kein Gewinnversprechen.</div>
+</div>
+</section>
+
+
+
+<section class="section">
+<h2>Die wichtigsten Begriffe kurz erklärt</h2>
+<div class="term-list">
+<div class="term"><strong>Wallet:</strong> Deine digitale Brieftasche für Token.</div>
+<div class="term"><strong>Öffentliche Adresse:</strong> Eine Adresse, an die Token gesendet werden können. Diese darf weitergegeben werden.</div>
+<div class="term"><strong>Seed Phrase:</strong> Geheimer Wiederherstellungsschlüssel deiner Wallet. Diese niemals weitergeben.</div>
+<div class="term"><strong>Explorer:</strong> Eine Website wie Solscan, auf der Blockchain-Daten öffentlich geprüft werden können.</div>
+<div class="term"><strong>SPL-Token:</strong> Der technische Token-Standard auf Solana.</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Live-Daten zum Schwenningen Token</h2>
+
+<p>
+Die folgenden Informationen werden direkt über die öffentliche Solana-Blockchain geladen.
+</p>
+
+<div class="live-grid">
+
+<div class="live-card">
+<strong id="connectionStatus">Lädt …</strong>
+<span>Status</span>
+</div>
+
+<div class="live-card">
+<strong id="tokenSupply">Lädt …</strong>
+<span>Aktuelle Tokenmenge</span>
+</div>
+
+<div class="live-card">
+<strong>165.000</strong>
+<span>Geplante Gesamtmenge</span>
+</div>
+
+</div>
+
+<div class="holder-list" id="holderList">
+
+<div class="holder-row">
+<div class="holder-rank">…</div>
+<div class="holder-address">Topholder werden geladen …</div>
+<div class="holder-amount"></div>
+</div>
+
+</div>
+
+<p class="note">
+Die größten Tokenkonten sind öffentlich auf der Blockchain sichtbar.
+</p>
+
+<div class="buttons">
+<a class="btn" href="https://solscan.io/token/3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E" target="_blank">
+Schwenningen Token auf Solscan öffnen
 </a>
-
-<div class="referral-box">
-<small>Dein Referral-Code:</small>
-<span class="referral-code">b6rstg</span>
-<small>Oder nutze direkt diesen Link:</small>
-<div class="referral-link">https://join.bisonapp.com/b6rstg</div>
-</div>
-
-</div>
-
-<div class="bison-card">
-<div class="bison-icon-large">🎁</div>
-<h3>Prämien für Neukunden</h3>
-<div class="bison-divider"></div>
-
-<p>
-Bei einer Registrierung über diesen Link können je nach aktueller Aktion
-Prämien oder Startguthaben für Neukunden verfügbar sein.
-</p>
-
-<div class="bonus-pill">
-<div style="font-size:38px;color:var(--gold);">☆</div>
-<div>
-<strong>Bis zu 20 € in ETH</strong>
-<span>je nach aktueller Aktion</span>
-</div>
-</div>
-
-<h4>Wie erhalte ich die Prämie?</h4>
-<p>
-Nach erfolgreicher Registrierung und Erfüllung der Aktionsbedingungen
-wird die Prämie automatisch deinem Bison-Konto gutgeschrieben.
-</p>
-</div>
-
-<div class="bison-card">
-<div class="bison-icon-large">€</div>
-<h3>So funktioniert’s</h3>
-<div class="bison-divider"></div>
-
-<div class="bison-steps">
-
-<div class="bison-step">
-<div class="bison-step-number">1</div>
-<div>
-<strong>Bei Bison registrieren</strong>
-<span>Über den Link oder mit dem Referral-Code <strong>b6rstg</strong></span>
-</div>
-</div>
-
-<div class="bison-step">
-<div class="bison-step-number">2</div>
-<div>
-<strong>Identität verifizieren</strong>
-<span>Für den Kauf von Kryptowährungen ist eine Verifizierung erforderlich.</span>
-</div>
-</div>
-
-<div class="bison-step">
-<div class="bison-step-number">3</div>
-<div>
-<strong>SOL kaufen</strong>
-<span>Zahlungsmethode wählen und SOL erwerben.</span>
-</div>
-</div>
-
-<div class="bison-step">
-<div class="bison-step-number">4</div>
-<div>
-<strong>An deine Phantom Wallet übertragen</strong>
-<span>Sende deine SOL an deine Phantom Wallet Adresse.</span>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-
-<div class="bison-trust">
-<div class="bison-trust-icon">🛡️</div>
-<p>
-Bison wird von der BaFin reguliert und bietet eine sichere und einfache Möglichkeit,
-Kryptowährungen wie SOL zu kaufen.
-</p>
-</div>
-
-<div class="bison-disclaimer">
-ⓘ * Externer Empfehlungslink. Es gelten die Bedingungen und Aktionen von Bison zum Zeitpunkt der Registrierung.
-Kryptowährungen sind mit Risiken verbunden. Investiere nur, was du bereit bist zu verlieren.
 </div>
 
 </section>
-
 
 </main>
 
@@ -1523,6 +783,16 @@ async function loadLiveData(){
 }
 
 loadLiveData();
+</script>
+
+
+<script>
+function copyTokenAddress(button){
+  navigator.clipboard.writeText("3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E");
+  const oldText = button.innerText;
+  button.innerText = "Adresse kopiert ✓";
+  setTimeout(()=>{button.innerText = oldText}, 2000);
+}
 </script>
 
 </body>
