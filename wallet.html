@@ -746,6 +746,321 @@ main{
   }
 }
 
+
+/* PHANTOM HOMEPAGE STYLE SECTION */
+
+.phantom-section{
+  margin-bottom:36px;
+  background:linear-gradient(145deg, rgba(18,18,18,.96), rgba(8,8,8,.98));
+  border:1px solid rgba(243,191,43,.18);
+  border-radius:32px;
+  padding:40px;
+  box-shadow:
+    0 0 40px rgba(243,191,43,.06),
+    0 40px 100px rgba(0,0,0,.45);
+}
+
+.phantom-section h2{
+  color:var(--gold);
+  font-size:34px;
+  margin-bottom:16px;
+}
+
+.phantom-section > p{
+  color:var(--muted);
+  line-height:1.95;
+  font-size:18px;
+  margin-bottom:30px;
+}
+
+.phantom-steps-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.phantom-step-card{
+  background:rgba(8,8,8,.82);
+  border:1px solid rgba(243,191,43,.18);
+  border-radius:28px;
+  padding:34px 28px;
+  transition:.28s ease;
+}
+
+.phantom-step-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(243,191,43,.55);
+  box-shadow:
+    0 0 28px rgba(243,191,43,.28),
+    0 0 90px rgba(243,191,43,.18),
+    0 30px 90px rgba(0,0,0,.6);
+}
+
+.phantom-step-number{
+  width:54px;
+  height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:18px;
+  background:rgba(243,191,43,.12);
+  border:1px solid rgba(243,191,43,.3);
+  color:#ffdd75;
+  font-weight:900;
+  font-size:20px;
+  margin-bottom:22px;
+}
+
+.phantom-title-row{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin:18px 0 16px;
+}
+
+.phantom-title-row h3{
+  color:var(--gold);
+  font-size:24px;
+  margin:0;
+}
+
+.phantom-app-icon{
+  width:52px;
+  height:52px;
+  min-width:52px;
+  border-radius:16px;
+  box-shadow:
+    0 0 28px rgba(150,80,255,.35),
+    0 18px 50px rgba(0,0,0,.45);
+}
+
+.phantom-step-icon{
+  width:52px;
+  height:52px;
+  min-width:52px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  font-size:26px;
+  box-shadow:0 10px 28px rgba(0,0,0,.35);
+}
+
+.phantom-step-card p{
+  color:var(--muted);
+  line-height:1.85;
+  font-size:16px;
+}
+
+.phantom-mini-box{
+  margin-top:22px;
+  padding:14px 16px;
+  border-radius:16px;
+  background:rgba(243,191,43,.08);
+  border:1px solid rgba(243,191,43,.18);
+  color:#d8d8d8;
+  line-height:1.7;
+  font-size:14px;
+}
+
+.phantom-warning{
+  background:rgba(255,90,90,.10);
+  border-color:rgba(255,90,90,.28);
+}
+
+.phantom-store-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:22px;
+  align-items:center;
+}
+
+.phantom-store-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  min-height:54px;
+  padding:10px 16px;
+  border-radius:14px;
+  background:#0b0b0b;
+  border:1px solid rgba(255,255,255,.16);
+  color:#ffffff;
+  box-shadow:0 10px 28px rgba(0,0,0,.35);
+  transition:.22s;
+  text-decoration:none;
+}
+
+.phantom-store-badge:hover{
+  transform:translateY(-3px);
+  border-color:rgba(243,191,43,.45);
+  box-shadow:
+    0 0 20px rgba(243,191,43,.18),
+    0 14px 36px rgba(0,0,0,.45);
+}
+
+.phantom-store-icon{
+  font-size:28px;
+  line-height:1;
+}
+
+.phantom-store-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+
+.phantom-store-text small{
+  font-size:11px;
+  color:#cccccc;
+}
+
+.phantom-store-text strong{
+  font-size:17px;
+  color:#ffffff;
+}
+
+.phantom-flow-box{
+  margin-top:34px;
+  padding:28px;
+  border-radius:26px;
+  background:rgba(243,191,43,.08);
+  border:1px solid rgba(243,191,43,.25);
+  color:#dddddd;
+  line-height:1.85;
+}
+
+.phantom-flow-box strong{
+  color:var(--gold);
+}
+
+@media(max-width:980px){
+  .phantom-section{
+    padding:28px 20px;
+  }
+
+  .phantom-steps-grid{
+    grid-template-columns:1fr;
+  }
+
+  .phantom-title-row{
+    justify-content:center;
+    text-align:left;
+  }
+
+  .phantom-store-badges{
+    justify-content:center;
+  }
+}
+
+
+/* BEGINNER GLOSSARY SECTION */
+
+.glossary-section{
+  margin-bottom:36px;
+  background:linear-gradient(145deg, rgba(18,18,18,.96), rgba(8,8,8,.98));
+  border:1px solid rgba(243,191,43,.18);
+  border-radius:32px;
+  padding:40px;
+  box-shadow:
+    0 0 40px rgba(243,191,43,.06),
+    0 40px 100px rgba(0,0,0,.45);
+}
+
+.glossary-section h2{
+  color:var(--gold);
+  font-size:34px;
+  margin-bottom:16px;
+}
+
+.glossary-intro{
+  color:var(--muted);
+  line-height:1.95;
+  font-size:18px;
+  margin-bottom:30px;
+}
+
+.glossary-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.glossary-card{
+  background:rgba(8,8,8,.82);
+  border:1px solid rgba(243,191,43,.18);
+  border-radius:26px;
+  padding:28px;
+  transition:.28s ease;
+}
+
+.glossary-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(243,191,43,.48);
+  box-shadow:
+    0 0 24px rgba(243,191,43,.20),
+    0 0 70px rgba(243,191,43,.12),
+    0 24px 70px rgba(0,0,0,.55);
+}
+
+.glossary-top{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:14px;
+}
+
+.glossary-icon{
+  width:50px;
+  height:50px;
+  min-width:50px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(243,191,43,.10);
+  border:1px solid rgba(243,191,43,.25);
+  font-size:26px;
+}
+
+.glossary-card h3{
+  color:var(--gold);
+  font-size:23px;
+  margin:0;
+}
+
+.glossary-card p{
+  color:var(--muted);
+  line-height:1.8;
+  font-size:16px;
+}
+
+.glossary-highlight{
+  margin-top:26px;
+  padding:24px 26px;
+  border-radius:24px;
+  background:rgba(243,191,43,.08);
+  border:1px solid rgba(243,191,43,.25);
+  color:#dddddd;
+  line-height:1.85;
+}
+
+.glossary-highlight strong{
+  color:var(--gold);
+}
+
+@media(max-width:900px){
+  .glossary-section{
+    padding:28px 20px;
+  }
+
+  .glossary-grid{
+    grid-template-columns:1fr;
+  }
+}
+
 </style>
 </head>
 
@@ -770,89 +1085,269 @@ main{
 
 <p>
 Der Schwenningen Token ist ein digitales Heimatprojekt auf der Solana-Blockchain.
-Hier wird einfach erklärt, was Blockchain, Solana, Tokens und Wallets eigentlich sind.
+Hier werden die wichtigsten Begriffe erklärt — von Blockchain und Solana bis Phantom Wallet, SOL und Token.
 </p>
 </section>
 
 
-<section class="section blockchain-deep">
-<div class="blockchain-layout">
+<section class="glossary-section" id="begriffe">
 
-<div class="blockchain-text">
-<h2>Was ist eine Blockchain?</h2>
+<h2>Wichtige Begriffe einfach erklärt</h2>
 
+<p class="glossary-intro">
+Wer neu in der Welt von Wallets, Solana und Tokens ist, muss nicht alles sofort technisch verstehen.
+Diese Übersicht erklärt die wichtigsten Begriffe rund um den Schwenningen Token einfach und ohne Fachsprache.
+</p>
+
+<div class="glossary-grid">
+
+<div class="glossary-card">
+<div class="glossary-top">
+<div class="glossary-icon">🔗</div>
+<h3>Blockchain</h3>
+</div>
 <p>
-Eine Blockchain ist ein öffentliches digitales Netzwerk.
-Man kann sie sich wie ein gemeinsames digitales Kassenbuch vorstellen.
+Eine Blockchain ist ein öffentliches digitales Netzwerk. Man kann sie sich wie ein gemeinsames digitales Kassenbuch vorstellen,
+das von vielen Computern gleichzeitig gespeichert und geprüft wird.
 </p>
+</div>
 
+<div class="glossary-card">
+<div class="glossary-top">
+<div class="glossary-icon">⚡</div>
+<h3>Solana</h3>
+</div>
 <p>
-Dieses Kassenbuch liegt nicht nur auf einem einzelnen Computer,
-sondern wird von vielen Computern gleichzeitig gespeichert und geprüft.
-Dadurch können Einträge nicht einfach heimlich verändert werden.
+Solana ist die Blockchain, auf der der Schwenningen Token läuft. Sie ermöglicht schnelle Transaktionen und geringe Netzwerkgebühren.
 </p>
+</div>
 
+<div class="glossary-card">
+<div class="glossary-top">
+<div class="glossary-icon">🪙</div>
+<h3>Token</h3>
+</div>
 <p>
-Wenn ein Token übertragen wird, entsteht ein neuer Eintrag.
-Dieser Eintrag wird dauerhaft gespeichert und kann später öffentlich überprüft werden.
+Ein Token ist ein digitales Objekt auf einer Blockchain. Der Schwenningen Token ist als lokales Community- und Sammlerprojekt gedacht.
 </p>
-
-<div class="blockchain-points">
-
-<div class="blockchain-point">
-<strong>Öffentlich:</strong> Jeder kann prüfen, dass der Token existiert.
 </div>
 
-<div class="blockchain-point">
-<strong>Dauerhaft:</strong> Einträge bleiben auf der Blockchain nachvollziehbar.
+<div class="glossary-card">
+<div class="glossary-top">
+<div class="glossary-icon">👛</div>
+<h3>Wallet</h3>
 </div>
-
-<div class="blockchain-point">
-<strong>Transparent:</strong> Tokenmenge und Tokenkonten sind sichtbar.
-</div>
-
-<div class="blockchain-point">
-<strong>Nicht zentral:</strong> Die Daten liegen nicht nur bei einer einzelnen Stelle.
-</div>
-
-</div>
-</div>
-
-<div class="blockchain-visual" aria-label="Vereinfachte Blockchain-Animation">
-<div class="blockchain-connector"></div>
-<div class="data-pulse"></div>
-<div class="block one">1</div>
-<div class="block two">2</div>
-<div class="block three">3</div>
-<div class="block four">4</div>
-</div>
-
-</div>
-
-<p class="note">
-Die Blöcke stehen vereinfacht für gespeicherte Einträge. Der Lichtpunkt symbolisiert eine neue Information,
-die durch das Netzwerk wandert und dauerhaft angehängt wird.
+<p>
+Eine Wallet ist deine digitale Brieftasche. Dort kannst du SOL, den Schwenningen Token und andere Solana-Token empfangen und anzeigen.
 </p>
+</div>
+
+<div class="glossary-card">
+<div class="glossary-top">
+<div class="glossary-icon">📬</div>
+<h3>Öffentliche Adresse</h3>
+</div>
+<p>
+Die öffentliche Adresse darfst du weitergeben. An diese Adresse können Tokens gesendet werden. Sie ist nicht dein Passwort.
+</p>
+</div>
+
+<div class="glossary-card">
+<div class="glossary-top">
+<div class="glossary-icon">🔐</div>
+<h3>Seed Phrase</h3>
+</div>
+<p>
+Die Seed Phrase ist der geheime Wiederherstellungsschlüssel deiner Wallet. Wer sie kennt, kann deine Wallet kontrollieren.
+Niemals weitergeben.
+</p>
+</div>
+
+<div class="glossary-card">
+<div class="glossary-top">
+<div class="glossary-icon">💵</div>
+<h3>SOL</h3>
+</div>
+<p>
+SOL ist die Kryptowährung des Solana-Netzwerks. Sie wird für Netzwerkgebühren benötigt, wenn man selbst Transaktionen ausführt.
+</p>
+</div>
+
+<div class="glossary-card">
+<div class="glossary-top">
+<div class="glossary-icon">🔍</div>
+<h3>Explorer</h3>
+</div>
+<p>
+Ein Explorer wie Solscan ist eine öffentliche Suchmaschine für Blockchain-Daten. Dort kann man Token, Adressen und Transaktionen prüfen.
+</p>
+</div>
+
+<div class="glossary-card">
+<div class="glossary-top">
+<div class="glossary-icon">🧩</div>
+<h3>SPL-Token</h3>
+</div>
+<p>
+SPL ist der Token-Standard auf Solana. Dadurch können Wallets und Explorer Solana-Token erkennen und anzeigen.
+</p>
+</div>
+
+<div class="glossary-card">
+<div class="glossary-top">
+<div class="glossary-icon">🏦</div>
+<h3>Kryptobörse</h3>
+</div>
+<p>
+Eine Kryptobörse ist ein Anbieter, über den Kryptowährungen wie SOL gekauft werden können. Danach können sie an die eigene Wallet gesendet werden.
+</p>
+</div>
+
+</div>
+
+<div class="glossary-highlight">
+<strong>Merksatz:</strong><br>
+Die Blockchain ist das öffentliche Netzwerk. Solana ist die technische Plattform.
+Phantom ist deine Wallet. Deine öffentliche Adresse darfst du teilen.
+Die Seed Phrase bleibt immer geheim.
+</div>
+
 </section>
 
 
-<section class="section">
-<h2>Was ist Solana?</h2>
+<section class="phantom-section" id="phantom-wallet">
+
+<h2>Phantom Wallet einrichten</h2>
 
 <p>
-Solana ist die technische Plattform hinter dem Schwenningen Token.
-Sie ermöglicht schnelle und günstige digitale Transaktionen.
+Um Schwenningen Tokens zu empfangen, brauchst du eine Solana-fähige Wallet.
+Als einfaches Beispiel eignet sich Phantom — als App oder Browser-Erweiterung.
 </p>
-</section>
 
-<section class="section">
-<h2>Was ist ein Token?</h2>
+<div class="phantom-steps-grid">
 
+<div class="phantom-step-card">
+<div class="phantom-step-number">1</div>
+<div class="phantom-title-row">
+<img src="assets/phantom-appsymbol.png" class="phantom-app-icon" alt="Phantom Wallet Appsymbol">
+<h3>Phantom installieren</h3>
+</div>
 <p>
-Ein Token ist ein digitaler Wert oder Nachweis auf einer Blockchain.
-
-Der Schwenningen Token soll regionale Verbundenheit digital sichtbar machen.
+Installiere Phantom auf deinem Smartphone oder als Browser-Erweiterung.
+Phantom unterstützt Solana und zeigt SPL-Token in der Wallet an.
 </p>
+
+<div class="phantom-store-badges">
+
+<a class="phantom-store-badge" href="https://apps.apple.com/us/app/phantom-trade-markets/id1598432977" target="_blank" rel="noopener">
+<span class="phantom-store-icon"></span>
+<span class="phantom-store-text">
+<small>Download im</small>
+<strong>App Store</strong>
+</span>
+</a>
+
+<a class="phantom-store-badge" href="https://play.google.com/store/apps/details?id=app.phantom" target="_blank" rel="noopener">
+<span class="phantom-store-icon">▶</span>
+<span class="phantom-store-text">
+<small>Jetzt bei</small>
+<strong>Google Play</strong>
+</span>
+</a>
+
+<a class="phantom-store-badge" href="https://phantom.com/download" target="_blank" rel="noopener">
+<span class="phantom-store-icon">👻</span>
+<span class="phantom-store-text">
+<small>Direkt zur</small>
+<strong>Phantom Website</strong>
+</span>
+</a>
+
+</div>
+</div>
+
+<div class="phantom-step-card">
+<div class="phantom-step-number">2</div>
+<div class="phantom-title-row">
+<div class="phantom-step-icon">🔐</div>
+<h3>Wallet erstellen</h3>
+</div>
+<p>
+Erstelle eine neue Wallet und notiere deine geheime Wiederherstellungsphrase sicher offline.
+Diese Phrase niemals an andere weitergeben.
+</p>
+<div class="phantom-mini-box phantom-warning">
+Niemals Seed Phrase oder Private Keys weitergeben
+</div>
+</div>
+
+<div class="phantom-step-card">
+<div class="phantom-step-number">3</div>
+<div class="phantom-title-row">
+<div class="phantom-step-icon">📋</div>
+<h3>Solana-Adresse kopieren</h3>
+</div>
+<p>
+In deiner Wallet findest du deine öffentliche Solana-Adresse.
+Nur diese öffentliche Adresse wird benötigt, um SOL oder Schwenningen Tokens empfangen zu können.
+</p>
+<div class="phantom-mini-box">
+Nur die öffentliche Adresse teilen
+</div>
+</div>
+
+<div class="phantom-step-card">
+<div class="phantom-step-number">4</div>
+<div class="phantom-title-row">
+<div class="phantom-step-icon">🪙</div>
+<h3>Token empfangen</h3>
+</div>
+<p>
+Sobald du deine öffentliche Solana-Adresse hast, können SOL, Schwenningen Tokens
+oder andere Solana-Token an deine Wallet gesendet werden.
+</p>
+<div class="phantom-mini-box">
+SOL · Schwenningen Token · SPL-Token
+</div>
+</div>
+
+<div class="phantom-step-card">
+<div class="phantom-step-number">5</div>
+<div class="phantom-title-row">
+<div class="phantom-step-icon">💶</div>
+<h3>SOL kaufen</h3>
+</div>
+<p>
+Wenn du später selbst Transaktionen durchführen möchtest,
+kannst du optional SOL über eine Kryptobörse wie Bison erwerben.
+</p>
+<div class="phantom-mini-box">
+Optionaler Schritt für eigene Transaktionen
+</div>
+</div>
+
+<div class="phantom-step-card">
+<div class="phantom-step-number">!</div>
+<div class="phantom-title-row">
+<div class="phantom-step-icon">⚠️</div>
+<h3>Sicherheit</h3>
+</div>
+<p>
+Für die Token-Verteilung wird ausschließlich deine öffentliche Solana-Adresse benötigt.
+Passwörter, Seed Phrase oder private Schlüssel werden niemals abgefragt.
+</p>
+<div class="phantom-mini-box phantom-warning">
+Private Daten niemals teilen
+</div>
+</div>
+
+</div>
+
+<div class="phantom-flow-box">
+<strong>Einfacher Ablauf:</strong><br>
+Phantom installieren · Wallet erstellen · öffentliche Solana-Adresse kopieren · Schwenningen Tokens empfangen · SOL nur bei Bedarf kaufen
+</div>
+
 </section>
 
 
