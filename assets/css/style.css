@@ -1368,3 +1368,25 @@ footer{
   }
 }
 
+/* TOUCH / IPAD DROPDOWN FIX */
+.nav-more-button{
+  background:transparent;
+  border:none;
+  color:#d7d7d7;
+  font-weight:800;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:inherit;
+  font-family:inherit;
+}
+
+.nav-more-button:hover{
+  color:var(--gold);
+}
+
+.nav-more.open .nav-dropdown{
+  display:grid;
+  gap:6px;
+}
