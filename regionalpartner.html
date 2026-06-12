@@ -328,6 +328,15 @@ footer{
   
 }
 
+
+.example-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.example-card{background:rgba(8,8,8,.82);border:1px solid rgba(243,191,43,.22);border-radius:30px;overflow:hidden;box-shadow:0 0 28px rgba(243,191,43,.12),0 30px 90px rgba(0,0,0,.55)}
+.example-card img{width:100%;display:block}
+.example-card h3{color:var(--gold);padding:24px 30px 12px;font-size:30px}
+.example-card p{padding:0 30px 30px;color:var(--muted);line-height:1.9}
+.example-card .hero-badge{margin:24px 30px 0}
+@media(max-width:980px){.example-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -420,6 +429,32 @@ Genau daraus entsteht die besondere Identität des Projekts.
 </div>
 
 </div>
+</div>
+</section>
+
+
+<section id="beispielpartner">
+<div class="section-title">
+<h2>Beispielhafte Regionalpartner</h2>
+<p>So könnten künftige Regionalpartner innerhalb der Schwenningen-Community präsentiert werden.</p>
+</div>
+
+<div class="example-grid">
+
+<div class="example-card">
+<img src="assets/RegPart_BU.png" alt="Beispiel Betrieb">
+<div class="hero-badge">BEISPIELDARSTELLUNG</div>
+<h3>Ihr Betrieb?</h3>
+<p>Hier könnte künftig Ihr Unternehmen, Geschäft, Café, Handwerksbetrieb oder Ihre Organisation stehen.</p>
+</div>
+
+<div class="example-card">
+<img src="assets/RegPart_AV.png" alt="Beispiel Verein">
+<div class="hero-badge">BEISPIELDARSTELLUNG</div>
+<h3>Ihr Verein?</h3>
+<p>Hier könnte künftig Ihr Verein, Ihre Initiative oder Ihr regionales Projekt sichtbar werden.</p>
+</div>
+
 </div>
 </section>
 
