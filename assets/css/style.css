@@ -1370,16 +1370,35 @@ footer{
 
 /* TOUCH / IPAD DROPDOWN FIX */
 .nav-more-button{
-  background:transparent;
+  appearance:none;
+  -webkit-appearance:none;
+
+  background:none;
+  background-color:transparent;
+
   border:none;
+  outline:none;
+
+  padding:0;
+  margin:0;
+
   color:#d7d7d7;
   font-weight:800;
+  font-size:inherit;
+  font-family:inherit;
+
   cursor:pointer;
+
   display:flex;
   align-items:center;
   gap:6px;
-  font-size:inherit;
-  font-family:inherit;
+}
+
+.nav-more-button:focus,
+.nav-more-button:active{
+  background:transparent;
+  outline:none;
+  box-shadow:none;
 }
 
 .nav-more-button:hover{
