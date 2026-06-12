@@ -25,10 +25,24 @@ body{
   color:#fff;
 }
 
+
+
+
+
+nav a{
+  color:#d7d7d7;
+  font-weight:800;
+  text-decoration:none;
+}
+
+nav a:hover{
+  color:var(--gold);
+}
+
 main{
   max-width:1050px;
   margin:auto;
-  padding:115px 24px 70px;
+  padding:90px 24px;
 }
 
 .hero{
@@ -212,7 +226,7 @@ main{
 .note{margin-top:16px;color:#8e8e8e;font-size:14px;line-height:1.7}
 
 @media(max-width:900px){
-  main{padding:100px 18px 60px}
+  main{padding:70px 18px}
   .section{padding:28px 20px}
   .live-grid{grid-template-columns:1fr}
   .holder-row{grid-template-columns:1fr}
@@ -1032,333 +1046,10 @@ main{
   }
 }
 
-
-
-/* EXACT INDEX FOOTER + MODAL OVERRIDE */
-footer{
-  border-top:1px solid rgba(255,255,255,.06);
-  background:#050505;
-  padding:60px 24px;
-  text-align:center;
-  color:#8e8e8e;
-}
-
-footer a{color:var(--gold)}
-
-.footer-small{
-  margin-top:14px;
-  color:#777;
-  font-size:14px;
-  line-height:1.8;
-}
-
-.modal{
-  display:none;
-  position:fixed;
-  z-index:9999;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  overflow:auto;
-  background:rgba(0,0,0,.82);
-  backdrop-filter:blur(8px);
-}
-
-.modal-content{
-  background:#0b0b0b;
-  margin:8% auto;
-  padding:40px;
-  border:1px solid rgba(243,191,43,.25);
-  border-radius:28px;
-  max-width:700px;
-  color:#fff;
-  box-shadow:0 0 50px rgba(0,0,0,.6),0 0 20px rgba(243,191,43,.08);
-}
-
-.modal-content h2,.modal-content h3{color:#f3bf2b}
-.modal-content p{line-height:1.9;color:#d4d4d4}
-
-.close-modal{
-  float:right;
-  font-size:34px;
-  cursor:pointer;
-  color:#f3bf2b;
-}
-
-.modal-content p{line-height:1.9;color:#d4d4d4}
-
-.close-modal{
-  float:right;
-  font-size:34px;
-  cursor:pointer;
-  color:#f3bf2b;
-}
-
-.close-modal{
-  float:right;
-  font-size:34px;
-  cursor:pointer;
-  color:#f3bf2b;
-}
-
-footer{
-  margin-top:90px;
-  padding:50px 24px 70px;
-  border-top:1px solid rgba(255,255,255,.08);
-  text-align:center;
-}
-
-.copyright{
-  color:#8f8f8f;
-  font-size:15px;
-  margin-bottom:26px;
-}
-
-.footer-links{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:14px;
-  flex-wrap:wrap;
-
-  margin-bottom:28px;
-}
-
-.footer-links a{
-  color:var(--gold);
-  font-weight:800;
-  transition:.2s ease;
-}
-
-.footer-links a:hover{
-  opacity:.8;
-}
-
-.footer-links span{
-  color:#666;
-}
-
-.footer-tags{
-  max-width:980px;
-  margin:auto;
-
-  color:#777;
-  line-height:2;
-  font-size:14px;
-}
-
-@media(max-width:900px){
-
-  .footer-tags{
-    line-height:1.9;
-    font-size:13px;
-  }
-}
-
-/* WALLET HERO SPACING FIX */
-.hero{
-  text-align:center;
-  margin-bottom:46px;
-  padding-top:0;
-  min-height:auto;
-  display:block;
-}
-
-
-/* WALLET MENU FIX */
-
-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index:1000;
-  background:rgba(0,0,0,.72);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(255,255,255,.05);
-}
-
-nav{
-  max-width:1250px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 24px;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  font-size:20px;
-  font-weight:800;
-  color:#fff;
-  text-decoration:none;
-}
-
-.logo img{
-  width:52px;
-  height:52px;
-  border-radius:50%;
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:28px;
-  color:#d7d7d7;
-}
-
-.nav-links a{
-  color:#d7d7d7;
-  font-weight:800;
-  text-decoration:none;
-}
-
-.nav-links a:hover{
-  color:var(--gold);
-}
-
-.nav-more{
-  position:relative;
-  padding-bottom:18px;
-}
-
-.nav-more-button{
-  color:#d7d7d7;
-  font-weight:800;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  gap:6px;
-}
-
-.nav-more-button:hover{
-  color:var(--gold);
-}
-
-.nav-dropdown{
-  position:absolute;
-  top:100%;
-  right:0;
-  min-width:260px;
-  padding:14px;
-  border-radius:20px;
-  background:rgba(8,8,8,.96);
-  border:1px solid rgba(243,191,43,.22);
-  box-shadow:0 0 28px rgba(243,191,43,.12),0 28px 80px rgba(0,0,0,.65);
-  display:none;
-  z-index:1001;
-}
-
-.nav-more:hover .nav-dropdown,
-.nav-dropdown:hover{
-  display:grid;
-  gap:6px;
-}
-
-.nav-dropdown a{
-  display:block;
-  padding:13px 14px;
-  border-radius:14px;
-  color:#d7d7d7;
-  transition:.2s ease;
-  white-space:nowrap;
-  text-decoration:none;
-}
-
-.nav-dropdown a:hover{
-  color:var(--gold);
-  background:rgba(243,191,43,.08);
-}
-
-.mobile-menu-btn{
-  display:none;
-  font-size:34px;
-  cursor:pointer;
-  color:var(--gold);
-  line-height:1;
-}
-
-.mobile-menu{
-  position:fixed;
-  top:84px;
-  right:-100%;
-  width:280px;
-  height:calc(100vh - 84px);
-  background:rgba(5,5,5,.96);
-  backdrop-filter:blur(14px);
-  border-left:1px solid rgba(243,191,43,.18);
-  padding:40px 28px;
-  transition:.35s;
-  z-index:999;
-}
-
-.mobile-menu.active{right:0}
-
-.mobile-menu a{
-  display:block;
-  margin-bottom:26px;
-  color:#fff;
-  font-size:20px;
-  text-decoration:none;
-}
-
-.mobile-menu a:hover{color:var(--gold)}
-
-@media(max-width:980px){
-  .nav-links{display:none}
-  .mobile-menu-btn{display:block}
-}
-
-
-/* WALLET HERO FIX */
-.hero{
-  text-align:center;
-  margin-bottom:46px;
-  padding-top:0;
-  min-height:auto;
-  display:block;
-}
-
-
-/* FIX: Menüpunkt „Mehr“ als Button ohne weißen Safari/iPad-Hintergrund */
-.nav-more-button{
-  appearance:none;
-  -webkit-appearance:none;
-  background:none !important;
-  background-color:transparent !important;
-  border:none !important;
-  outline:none !important;
-  box-shadow:none !important;
-  padding:0 !important;
-  margin:0 !important;
-  color:#d7d7d7;
-  font-weight:800;
-  font-size:inherit;
-  font-family:inherit;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  gap:6px;
-}
-
-.nav-more-button:hover,
-.nav-more-button:focus,
-.nav-more-button:active{
-  background:none !important;
-  background-color:transparent !important;
-  color:var(--gold);
-  outline:none !important;
-  box-shadow:none !important;
-}
-
 </style>
 </head>
 
 <body>
-
 
 <div id="site-header"></div>
 
@@ -1767,26 +1458,71 @@ Kryptowährungen sind mit Risiken verbunden. Investiere nur, was du bereit bist 
 
 </main>
 
-
-<div id="site-footer"></div>
-
-<script src="assets/js/main.js"></script>
-
 <script>
-fetch("header.html")
-  .then(r => r.text())
-  .then(h => document.getElementById("site-header").innerHTML = h);
+const TOKEN_MINT = "3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E";
+const RPC_URL = "https://api.mainnet-beta.solana.com";
 
-fetch("footer.html")
-  .then(r => r.text())
-  .then(h => document.getElementById("site-footer").innerHTML = h);
+async function rpc(method, params){
+  const response = await fetch(RPC_URL,{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+      jsonrpc:"2.0",
+      id:1,
+      method,
+      params
+    })
+  });
 
-function copyTokenAddress(button){
-  navigator.clipboard.writeText("3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E");
-  const oldText = button.innerText;
-  button.innerText = "Adresse kopiert ✓";
-  setTimeout(()=>{button.innerText = oldText}, 2000);
+  const data = await response.json();
+  return data.result;
 }
+
+function shortAddress(address){
+  return address.slice(0,6) + "…" + address.slice(-6);
+}
+
+async function loadLiveData(){
+
+  try{
+
+    const supply = await rpc("getTokenSupply",[TOKEN_MINT]);
+
+    document.getElementById("connectionStatus").textContent = "LIVE";
+
+    document.getElementById("tokenSupply").textContent =
+      Number(supply.value.uiAmountString).toLocaleString("de-DE");
+
+    const largest = await rpc("getTokenLargestAccounts",[TOKEN_MINT]);
+
+    const list = document.getElementById("holderList");
+    list.innerHTML = "";
+
+    largest.value.slice(0,5).forEach((account,index)=>{
+
+      const row = document.createElement("div");
+
+      row.className = "holder-row";
+
+      row.innerHTML =
+        '<div class="holder-rank">#' + (index+1) + '</div>' +
+        '<div class="holder-address">' + shortAddress(account.address) + '</div>' +
+        '<div class="holder-amount">' +
+        Number(account.uiAmountString).toLocaleString("de-DE") +
+        '</div>';
+
+      list.appendChild(row);
+    });
+
+  }catch(error){
+
+    document.getElementById("connectionStatus").textContent = "Nicht geladen";
+
+    document.getElementById("tokenSupply").textContent = "—";
+  }
+}
+
+loadLiveData();
 </script>
 
 </body>
