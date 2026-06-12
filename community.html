@@ -24,43 +24,15 @@ body{
 
 a{text-decoration:none;color:inherit}
 
-header{
-  position:sticky;
-  top:0;
-  background:rgba(0,0,0,.78);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(255,255,255,.06);
-  z-index:10;
-}
-
-nav{
-  max-width:1180px;
-  margin:auto;
-  padding:22px 24px;
-  display:flex;
-  justify-content:center;
-  gap:24px;
-  flex-wrap:wrap;
-}
-
-nav a{
-  color:#d7d7d7;
-  font-weight:800;
-}
-
-nav a:hover{
-  color:var(--gold);
-}
-
 main{
   max-width:1180px;
   margin:auto;
-  padding:90px 24px;
+  padding:115px 24px 70px;
 }
 
 .hero{
   text-align:center;
-  margin-bottom:70px;
+  margin-bottom:46px;
 }
 
 .hero h1{
@@ -191,12 +163,16 @@ main{
 
 @media(max-width:980px){
 
+  main{
+    padding:100px 18px 60px;
+  }
+
   .grid{
     grid-template-columns:1fr;
   }
 
   main{
-    padding:70px 18px;
+    padding:100px 18px 60px;
   }
 
   .hero p{
@@ -209,7 +185,7 @@ main{
 .donate-section{
   max-width:1250px;
   margin:auto;
-  padding:90px 24px;
+  padding:115px 24px 70px;
 }
 
 .donate-box{
@@ -350,19 +326,382 @@ main{
   }
 }
 
+
+/* INDEX MENU OVERRIDE */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(0,0,0,.72);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+nav{
+  max-width:1250px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 24px;
+}
+
+.logo{display:flex;align-items:center;gap:14px;font-size:20px;font-weight:800}
+.logo img{width:52px;height:52px;border-radius:50%}
+
+.nav-links{display:flex;gap:28px;color:#d7d7d7}
+.nav-links a:hover{color:var(--gold)}
+
+.mobile-menu-btn{
+  display:none;
+  font-size:34px;
+  cursor:pointer;
+  color:var(--gold);
+  line-height:1;
+}
+
+.logo img{width:52px;height:52px;border-radius:50%}
+
+.nav-links{display:flex;gap:28px;color:#d7d7d7}
+.nav-links a:hover{color:var(--gold)}
+
+.mobile-menu-btn{
+  display:none;
+  font-size:34px;
+  cursor:pointer;
+  color:var(--gold);
+  line-height:1;
+}
+
+.nav-links{display:flex;gap:28px;color:#d7d7d7}
+.nav-links a:hover{color:var(--gold)}
+
+.mobile-menu-btn{
+  display:none;
+  font-size:34px;
+  cursor:pointer;
+  color:var(--gold);
+  line-height:1;
+}
+
+.nav-links a:hover{color:var(--gold)}
+
+.mobile-menu-btn{
+  display:none;
+  font-size:34px;
+  cursor:pointer;
+  color:var(--gold);
+  line-height:1;
+}
+
+.mobile-menu-btn{
+  display:none;
+  font-size:34px;
+  cursor:pointer;
+  color:var(--gold);
+  line-height:1;
+}
+
+.mobile-menu{
+  position:fixed;
+  top:84px;
+  right:-100%;
+  width:280px;
+  height:calc(100vh - 84px);
+  background:rgba(5,5,5,.96);
+  backdrop-filter:blur(14px);
+  border-left:1px solid rgba(243,191,43,.18);
+  padding:40px 28px;
+  transition:.35s;
+  z-index:999;
+}
+
+.mobile-menu.active{right:0}
+
+.mobile-menu a{
+  display:block;
+  margin-bottom:26px;
+  color:#fff;
+  font-size:20px;
+}
+
+.mobile-menu a{
+  display:block;
+  margin-bottom:26px;
+  color:#fff;
+  font-size:20px;
+}
+
+.mobile-menu a:hover{color:var(--gold)}
+
+/* CLEAN MAIN NAVIGATION WITH DROPDOWN */
+
+.nav-more{
+  position:relative;
+  padding-bottom:18px;
+}
+
+.nav-more-button{
+  color:#d7d7d7;
+  font-weight:800;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.nav-more-button:hover{
+  color:var(--gold);
+}
+
+.nav-dropdown{
+  position:absolute;
+  top:100%;
+  right:0;
+  min-width:260px;
+  padding:14px;
+  border-radius:20px;
+  background:rgba(8,8,8,.96);
+  border:1px solid rgba(243,191,43,.22);
+  box-shadow:
+    0 0 28px rgba(243,191,43,.12),
+    0 28px 80px rgba(0,0,0,.65);
+  display:none;
+  z-index:1001;
+}
+
+.nav-more:hover .nav-dropdown,
+.nav-dropdown:hover{
+  display:grid;
+  gap:6px;
+}
+
+.nav-dropdown a{
+  display:block;
+  padding:13px 14px;
+  border-radius:14px;
+  color:#d7d7d7;
+  transition:.2s ease;
+  white-space:nowrap;
+}
+
+.nav-dropdown a:hover{
+  color:var(--gold);
+  background:rgba(243,191,43,.08);
+}
+
+@media(max-width:980px){
+  .nav-more{
+    display:none;
+  }
+}
+
+
+
+
+/* EXACT INDEX FOOTER + MODAL OVERRIDE */
+footer{
+  border-top:1px solid rgba(255,255,255,.06);
+  background:#050505;
+  padding:60px 24px;
+  text-align:center;
+  color:#8e8e8e;
+}
+
+footer a{color:var(--gold)}
+
+.footer-small{
+  margin-top:14px;
+  color:#777;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.footer-small{
+  margin-top:14px;
+  color:#777;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  z-index:9999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background:rgba(0,0,0,.82);
+  backdrop-filter:blur(8px);
+}
+
+.modal-content{
+  background:#0b0b0b;
+  margin:8% auto;
+  padding:40px;
+  border:1px solid rgba(243,191,43,.25);
+  border-radius:28px;
+  max-width:700px;
+  color:#fff;
+  box-shadow:0 0 50px rgba(0,0,0,.6),0 0 20px rgba(243,191,43,.08);
+}
+
+.modal-content h2,.modal-content h3{color:#f3bf2b}
+.modal-content p{line-height:1.9;color:#d4d4d4}
+
+.close-modal{
+  float:right;
+  font-size:34px;
+  cursor:pointer;
+  color:#f3bf2b;
+}
+
+.modal-content p{line-height:1.9;color:#d4d4d4}
+
+.close-modal{
+  float:right;
+  font-size:34px;
+  cursor:pointer;
+  color:#f3bf2b;
+}
+
+.close-modal{
+  float:right;
+  font-size:34px;
+  cursor:pointer;
+  color:#f3bf2b;
+}
+
+.footer-whitepaper{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-top:14px;
+  color:var(--gold);
+  font-weight:800;
+  transition:.2s ease;
+}
+
+.footer-whitepaper:hover{
+  opacity:.85;
+}
+
+footer{
+  margin-top:90px;
+  padding:50px 24px 70px;
+  border-top:1px solid rgba(255,255,255,.08);
+  text-align:center;
+}
+
+.copyright{
+  color:#8f8f8f;
+  font-size:15px;
+  margin-bottom:26px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+
+  margin-bottom:28px;
+}
+
+.footer-links a{
+  color:var(--gold);
+  font-weight:800;
+  transition:.2s ease;
+}
+
+.footer-links a:hover{
+  opacity:.8;
+}
+
+.footer-links span{
+  color:#666;
+}
+
+.footer-tags{
+  max-width:980px;
+  margin:auto;
+
+  color:#777;
+  line-height:2;
+  font-size:14px;
+}
+
+@media(max-width:900px){
+
+  .footer-tags{
+    line-height:1.9;
+    font-size:13px;
+  }
+}
+
+
+/* COMMUNITY HERO SPACING FIX */
+.hero{
+  text-align:center;
+  margin-bottom:46px;
+  padding-top:0;
+  min-height:auto;
+  display:block;
+}
+
 </style>
 </head>
 
 <body>
 
+
 <header>
 <nav>
-<a href="index.html">Startseite</a>
+<a class="logo" href="index.html">
+<img src="assets/coin.png" alt="Schwenningen Token">
+<span>Schwenningen Token</span>
+</a>
+
+<div class="nav-links">
+<a href="index.html#story">Story</a>
+<a href="index.html#vision">Vision</a>
+<a href="index.html#ablauf">Ablauf & Token erhalten</a>
+
+<div class="nav-more">
+<div class="nav-more-button">Mehr ▾</div>
+<div class="nav-dropdown">
 <a href="wallet.html">Wallet & Blockchain</a>
+<a href="wallet.html#sol-kaufen">Kryptowährungen kaufen</a>
+<a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank">Whitepaper</a>
 <a href="regionalpartner.html">Regionalpartner</a>
 <a href="community.html">Community</a>
+<a href="tokenomics.html">Projektstatus & Tokenomics</a>
+<a href="faq.html">FAQ</a>
+</div>
+</div>
+</div>
+
+<div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
 </nav>
 </header>
+
+
+<div class="mobile-menu" id="mobileMenu">
+<a href="index.html#story" onclick="closeMenu()">Story</a>
+<a href="index.html#vision" onclick="closeMenu()">Vision</a>
+<a href="index.html#ablauf" onclick="closeMenu()">Ablauf & Token erhalten</a>
+<a href="wallet.html" onclick="closeMenu()">Wallet & Blockchain</a>
+<a href="wallet.html#sol-kaufen" onclick="closeMenu()">Kryptowährungen kaufen</a>
+<a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank" onclick="closeMenu()">Whitepaper</a>
+<a href="regionalpartner.html" onclick="closeMenu()">Regionalpartner</a>
+<a href="community.html" onclick="closeMenu()">Community</a>
+<a href="tokenomics.html" onclick="closeMenu()">Projektstatus & Tokenomics</a>
+<a href="faq.html" onclick="closeMenu()">FAQ</a>
+</div>
 
 <main>
 
@@ -484,7 +823,112 @@ und kein offizielles Projekt der Gemeindeverwaltung.
 
 </main>
 
+<footer>
+
+<div class="copyright">
+© 2026 Schwenningen Token
+</div>
+
+<div class="footer-links">
+<a href="#" onclick="openModal(); return false;">Impressum</a>
+<span>·</span>
+<a href="#" onclick="openPrivacy(); return false;">Datenschutz</a>
+<span>·</span>
+<a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank">Whitepaper</a>
+</div>
+
+<div class="footer-tags">
+schwenningen-token.de · Solana SPL Token · Community-Projekt · Regionaltoken · Schwenningen Heuberg · Web3 Community · Regionalpartner · Phantom Wallet
+</div>
+
+</footer>
+
+<div id="impressum-modal" class="modal">
+<div class="modal-content">
+<span class="close-modal" onclick="closeModal()">&times;</span>
+<h2>Impressum</h2>
+<br>
+<p>Angaben gemäß § 5 TMG</p>
+<br>
+<p>
+Florian Lessner<br>
+Gartenstraße 2<br>
+72477 Schwenningen<br>
+Deutschland
+</p>
+<br>
+<p>E-Mail:<br>swhbg@schwenningen-token.de</p>
+<br><br>
+<h3>Hinweis</h3>
+<br>
+<p>
+Der Schwenningen Token ist ein privates Community- und Sammlerprojekt auf Basis der Solana Blockchain.
+Es handelt sich ausdrücklich nicht um ein Finanzprodukt, keine Anlageberatung und kein öffentliches Investmentangebot.
+</p>
+</div>
+</div>
+
+<div id="privacy-modal" class="modal">
+<div class="modal-content">
+<span class="close-modal" onclick="closePrivacy()">&times;</span>
+<h2>Datenschutzerklärung</h2>
+<br>
+<h3>1. Allgemeine Hinweise</h3>
+<br>
+<p>Diese Website dient ausschließlich der Darstellung des privaten Community-Projekts „Schwenningen Token“.</p>
+<br>
+<h3>2. Verantwortlicher</h3>
+<br>
+<p>
+Florian Lessner<br>
+Gartenstraße 2<br>
+72477 Schwenningen<br>
+Deutschland
+</p>
+<br>
+<p>E-Mail:<br>swhbg@schwenningen-token.de</p>
+<br>
+<h3>3. Hosting über GitHub Pages</h3>
+<br>
+<p>
+Diese Website wird über GitHub Pages bereitgestellt.
+Beim Aufruf der Website können technisch notwendige Daten wie IP-Adresse,
+Browserinformationen, Datum und Uhrzeit durch GitHub verarbeitet werden.
+</p>
+<br>
+<p>
+Weitere Informationen:<br><br>
+https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement
+</p>
+<br>
+<h3>4. Keine Cookies / Kein Tracking</h3>
+<br>
+<p>Diese Website verwendet keine Cookies, kein Tracking und keine Analyse-Tools.</p>
+<br>
+<h3>5. Keine Registrierung</h3>
+<br>
+<p>Es existieren keine Benutzerkonten, keine Registrierungsmöglichkeiten und kein Kontaktformular.</p>
+<br>
+<h3>6. Externe Inhalte</h3>
+<br>
+<p>Diese Website bindet derzeit keine externen Dienste wie Google Fonts, Google Analytics oder Social-Media-Plugins ein.</p>
+</div>
+</div>
+
+
 <script>
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+function closeMenu(){
+  document.getElementById("mobileMenu").classList.remove("active");
+}
+
+function openModal(){document.getElementById("impressum-modal").style.display="block"}
+function closeModal(){document.getElementById("impressum-modal").style.display="none"}
+function openPrivacy(){document.getElementById("privacy-modal").style.display="block"}
+function closePrivacy(){document.getElementById("privacy-modal").style.display="none"}
 
 function copyDonateAddress(button){
   navigator.clipboard.writeText("HL7xyeaccyBVFoGbbkqfC74HuEFNP8aZseDxVhSxwZJy");
@@ -493,6 +937,14 @@ function copyDonateAddress(button){
   setTimeout(()=>{button.innerText = oldText}, 2000);
 }
 
+window.onclick=function(event){
+  const impressum=document.getElementById("impressum-modal");
+  const privacy=document.getElementById("privacy-modal");
+  if(event.target==impressum){impressum.style.display="none"}
+  if(event.target==privacy){privacy.style.display="none"}
+}
 </script>
+
+
 </body>
 </html>
