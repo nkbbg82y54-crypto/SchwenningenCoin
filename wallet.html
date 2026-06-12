@@ -1322,6 +1322,38 @@ nav{
   display:block;
 }
 
+
+/* FIX: Menüpunkt „Mehr“ als Button ohne weißen Safari/iPad-Hintergrund */
+.nav-more-button{
+  appearance:none;
+  -webkit-appearance:none;
+  background:none !important;
+  background-color:transparent !important;
+  border:none !important;
+  outline:none !important;
+  box-shadow:none !important;
+  padding:0 !important;
+  margin:0 !important;
+  color:#d7d7d7;
+  font-weight:800;
+  font-size:inherit;
+  font-family:inherit;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.nav-more-button:hover,
+.nav-more-button:focus,
+.nav-more-button:active{
+  background:none !important;
+  background-color:transparent !important;
+  color:var(--gold);
+  outline:none !important;
+  box-shadow:none !important;
+}
+
 </style>
 </head>
 
