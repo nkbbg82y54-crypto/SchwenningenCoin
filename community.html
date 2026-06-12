@@ -669,6 +669,60 @@ footer{
   }
 }
 
+
+/* QR CODE HIGHLIGHT MODAL */
+.qr-card{
+  cursor:pointer;
+}
+
+.qr-hint{
+  display:inline-block;
+  margin-top:18px;
+  color:var(--gold);
+  font-weight:900;
+  font-size:17px;
+}
+
+.qr-modal-content{
+  max-width:560px;
+  text-align:center;
+}
+
+.qr-modal-content h2{
+  color:var(--gold);
+  margin-bottom:18px;
+}
+
+.qr-modal-content p{
+  color:#d4d4d4;
+  line-height:1.8;
+  margin-bottom:26px;
+}
+
+.qr-display{
+  width:100%;
+  max-width:420px;
+  border-radius:28px;
+  background:#fff;
+  padding:16px;
+  border:1px solid rgba(243,191,43,.35);
+  box-shadow:
+    0 0 35px rgba(243,191,43,.25),
+    0 30px 90px rgba(0,0,0,.65);
+}
+
+@media(max-width:700px){
+  .qr-modal-content{
+    margin:18% auto;
+    width:92%;
+    padding:28px 20px;
+  }
+
+  .qr-display{
+    max-width:100%;
+  }
+}
+
 </style>
 </head>
 
@@ -742,12 +796,13 @@ Ein Symbol für regionale Verbundenheit, Schwenningen und den Heuberg.
 </p>
 </div>
 
-<div class="card">
+<div class="card qr-card" onclick="openQrModal()">
 <div class="icon">📱</div>
 <h3>QR-Sticker</h3>
 <p>
 Sticker und QR-Codes können reale Orte direkt mit dem Projekt verbinden.
 </p>
+<span class="qr-hint">QR-Code anzeigen →</span>
 </div>
 
 <a class="card featured-link" href="community-galerie-social.html">
@@ -860,6 +915,18 @@ schwenningen-token.de · Solana SPL Token · Community-Projekt · Regionaltoken 
 
 </footer>
 
+
+<div id="qr-modal" class="modal">
+<div class="modal-content qr-modal-content">
+<span class="close-modal" onclick="closeQrModal()">&times;</span>
+<h2>QR-Code zum Schwenningen Token</h2>
+<p>
+Scanne den QR-Code, um direkt zur Projektseite zu gelangen.
+</p>
+<img src="assets/qr-code.png" alt="QR-Code Schwenningen Token" class="qr-display">
+</div>
+</div>
+
 <div id="impressum-modal" class="modal">
 <div class="modal-content">
 <span class="close-modal" onclick="closeModal()">&times;</span>
@@ -942,6 +1009,9 @@ function closeMenu(){
   document.getElementById("mobileMenu").classList.remove("active");
 }
 
+function openQrModal(){document.getElementById("qr-modal").style.display="block"}
+function closeQrModal(){document.getElementById("qr-modal").style.display="none"}
+
 function openModal(){document.getElementById("impressum-modal").style.display="block"}
 function closeModal(){document.getElementById("impressum-modal").style.display="none"}
 function openPrivacy(){document.getElementById("privacy-modal").style.display="block"}
@@ -955,8 +1025,10 @@ function copyDonateAddress(button){
 }
 
 window.onclick=function(event){
+  const qr=document.getElementById("qr-modal");
   const impressum=document.getElementById("impressum-modal");
   const privacy=document.getElementById("privacy-modal");
+  if(event.target==qr){qr.style.display="none"}
   if(event.target==impressum){impressum.style.display="none"}
   if(event.target==privacy){privacy.style.display="none"}
 }
