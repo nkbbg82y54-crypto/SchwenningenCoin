@@ -1,3 +1,8 @@
+/* =========================================================
+   SCHWENNINGEN TOKEN — MASTER STYLE V2
+   Bereinigt aus der bestehenden style.css
+   Bereiche: Global · Header · Footer · Index · FAQ · Wallet · Tokenomics · Community
+   ========================================================= */
 
 :root{
   --gold:#f3bf2b;
@@ -1818,9 +1823,7 @@ top:145px;
 
 }
 
-body.wallet-page /* BISON SOL KAUFEN SECTION */
-
-.bison-section{
+body.wallet-page .bison-section{
 margin-bottom:36px;
   padding:46px 32px;
   border-radius:32px;
@@ -2166,9 +2169,7 @@ width:100%;
 
 }
 
-body.wallet-page /* PHANTOM HOMEPAGE STYLE SECTION */
-
-.phantom-section{
+body.wallet-page .phantom-section{
 margin-bottom:36px;
   background:linear-gradient(145deg, rgba(18,18,18,.96), rgba(8,8,8,.98));
   border:1px solid rgba(243,191,43,.18);
@@ -2375,9 +2376,7 @@ justify-content:center;
 
 }
 
-body.wallet-page /* BEGINNER GLOSSARY SECTION */
-
-.glossary-section{
+body.wallet-page .glossary-section{
 margin-bottom:36px;
   background:linear-gradient(145deg, rgba(18,18,18,.96), rgba(8,8,8,.98));
   border:1px solid rgba(243,191,43,.18);
@@ -2481,9 +2480,7 @@ grid-template-columns:1fr;
 
 }
 
-body.wallet-page /* WALLET PAGE ADDITIONS */
-
-.hero{
+body.wallet-page .hero{
 text-align:center;
   margin-bottom:46px;
   padding-top:0;
@@ -2606,19 +2603,6 @@ body.tokenomics-page .section-title p{
 color:var(--muted);max-width:760px;margin:auto;line-height:1.8
 }
 
-body.tokenomics-page .mobile-menu 
-
-
-
-.hero{
-position:relative;
-  min-height:100vh;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:60px;
-  padding-top:140px;
-}
 
 body.tokenomics-page .hero::before{
 content:"";
@@ -3136,19 +3120,6 @@ body.tokenomics-page .disclaimer p{
 color:#dddddd;line-height:1.9
 }
 
-body.tokenomics-page footer 
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* UNIFIED GLOBAL HOVER EFFECT */
 
@@ -3367,9 +3338,7 @@ display:inline-block;
   font-weight:800;
 }
 
-body.tokenomics-page /* FAQ ACCORDION */
-
-.faq{
+body.tokenomics-page .faq{
 max-width:980px;
   margin:0 auto;
   display:grid;
@@ -3748,15 +3717,6 @@ word-break:normal !important;
   line-height:1.9;
 }
 
-body.tokenomics-page .supply-formul
-
-@media(max-width:980px){
-.supply-explanation-text{
-    text-align:center;
-  }
-
-  .supply-formul
-}
 
 body.tokenomics-page .portal-grid{
 display:grid;
@@ -3812,17 +3772,6 @@ grid-template-columns:1fr;
 
 }
 
-body.tokenomics-page .footer-links 
-
-
-
-
-
-
-
-@media(max-width:900px){
-
-}
 
 /* =========================================================
    TOKENOMICS VISUAL FIX
@@ -4010,10 +3959,6 @@ body.community-page{
     #050505;
 }
 
-body.community-page nav 
-nav a:hover{
-color:var(--gold)
-}
 
 body.community-page main{
 max-width:1180px;margin:auto;padding:90px 24px
@@ -4113,4 +4058,46 @@ body.community-page #site-header .nav-more-button:active{
   color:var(--gold) !important;
   outline:none !important;
   box-shadow:none !important;
+}
+
+/* MASTER HEADER BUTTON FIX */
+#site-header .nav-more-button,
+header .nav-more-button{
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  background:none !important;
+  background-color:transparent !important;
+  border:none !important;
+  outline:none !important;
+  box-shadow:none !important;
+  padding:0 !important;
+  margin:0 !important;
+  color:#d7d7d7 !important;
+  font-weight:800 !important;
+  font-size:inherit !important;
+  font-family:inherit !important;
+  line-height:normal !important;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+#site-header .nav-more-button:hover,
+#site-header .nav-more-button:focus,
+#site-header .nav-more-button:active,
+header .nav-more-button:hover,
+header .nav-more-button:focus,
+header .nav-more-button:active{
+  background:none !important;
+  background-color:transparent !important;
+  color:var(--gold) !important;
+  outline:none !important;
+  box-shadow:none !important;
+}
+
+#site-header .nav-more.open .nav-dropdown,
+header .nav-more.open .nav-dropdown{
+  display:grid;
+  gap:6px;
 }
