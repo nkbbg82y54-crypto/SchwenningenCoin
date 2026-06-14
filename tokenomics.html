@@ -1400,10 +1400,10 @@ footer{
 
 
 
-/* FIX: Zentraler Header-Button "Mehr" ohne weißen Browser-Hintergrund */
-#site-header .nav-more-button,
-button.nav-more-button,
-.nav-more-button{
+/* TOKENOMICS CENTRALIZATION FIX */
+body.tokenomics-page #site-header .nav-more-button,
+body.tokenomics-page button.nav-more-button,
+body.tokenomics-page .nav-more-button{
   appearance:none !important;
   -webkit-appearance:none !important;
   background:none !important;
@@ -1424,15 +1424,9 @@ button.nav-more-button,
   gap:6px;
 }
 
-#site-header .nav-more-button:hover,
-#site-header .nav-more-button:focus,
-#site-header .nav-more-button:active,
-button.nav-more-button:hover,
-button.nav-more-button:focus,
-button.nav-more-button:active,
-.nav-more-button:hover,
-.nav-more-button:focus,
-.nav-more-button:active{
+body.tokenomics-page #site-header .nav-more-button:hover,
+body.tokenomics-page #site-header .nav-more-button:focus,
+body.tokenomics-page #site-header .nav-more-button:active{
   background:none !important;
   background-color:transparent !important;
   color:var(--gold) !important;
@@ -1440,21 +1434,126 @@ button.nav-more-button:active,
   box-shadow:none !important;
 }
 
-/* FIX: Tokenomics-Spezialbereiche sicher sichtbar */
-.live-banner,
-.big-supply,
-.formula-box,
-.timeline,
-.timeline-item,
-.status-box,
-.status-grid,
-.status-item,
-.progress-grid,
-.progress-card,
-.progress-bar,
-.progress-fill{
-  visibility:visible !important;
-  opacity:1 !important;
+/* Tokenomics Spezialbereiche: Design erzwingen */
+body.tokenomics-page .live-banner{
+  max-width:900px !important;
+  margin:0 auto 40px !important;
+  text-align:center !important;
+  padding:18px 22px !important;
+  border-radius:20px !important;
+  background:rgba(0,255,120,.08) !important;
+  border:1px solid rgba(0,255,120,.25) !important;
+  color:#9cffbe !important;
+  font-weight:900 !important;
+  letter-spacing:.04em !important;
+  box-shadow:0 0 24px rgba(0,255,120,.10),0 24px 70px rgba(0,0,0,.35) !important;
+}
+
+body.tokenomics-page .big-supply{
+  max-width:1000px !important;
+  margin:0 auto 60px !important;
+  text-align:center !important;
+  padding:50px 34px !important;
+  border-radius:34px !important;
+  background:linear-gradient(145deg, rgba(18,18,18,.95), rgba(8,8,8,.98)) !important;
+  border:1px solid rgba(243,191,43,.32) !important;
+  box-shadow:0 0 28px rgba(243,191,43,.18),0 0 90px rgba(243,191,43,.10),0 40px 100px rgba(0,0,0,.55) !important;
+}
+
+body.tokenomics-page .big-supply-number{
+  font-size:clamp(58px,9vw,92px) !important;
+  font-weight:900 !important;
+  color:var(--gold) !important;
+  line-height:1 !important;
+  margin-bottom:18px !important;
+}
+
+body.tokenomics-page .formula-box{
+  max-width:1000px !important;
+  margin:40px auto 58px !important;
+  padding:40px 30px !important;
+  border-radius:30px !important;
+  background:rgba(243,191,43,.08) !important;
+  border:1px solid rgba(243,191,43,.30) !important;
+  text-align:center !important;
+  box-shadow:0 0 24px rgba(243,191,43,.10),0 30px 90px rgba(0,0,0,.45) !important;
+}
+
+body.tokenomics-page .formula-box h3{
+  color:#fff !important;
+  font-size:30px !important;
+  margin-bottom:18px !important;
+}
+
+body.tokenomics-page .formula-big{
+  font-size:clamp(26px,4.5vw,42px) !important;
+  color:var(--gold) !important;
+  font-weight:900 !important;
+  line-height:1.25 !important;
+}
+
+body.tokenomics-page .timeline{
+  display:grid !important;
+  gap:18px !important;
+  max-width:1000px !important;
+  margin:40px auto !important;
+}
+
+body.tokenomics-page .timeline-item{
+  padding:22px 26px !important;
+  border-radius:22px !important;
+  background:rgba(8,8,8,.82) !important;
+  border:1px solid rgba(243,191,43,.24) !important;
+  color:#dddddd !important;
+  line-height:1.7 !important;
+  box-shadow:0 0 22px rgba(243,191,43,.06) !important;
+}
+
+body.tokenomics-page .progress-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,1fr) !important;
+  gap:24px !important;
+  margin-top:40px !important;
+}
+
+body.tokenomics-page .progress-card{
+  padding:34px 28px !important;
+  border-radius:26px !important;
+  text-align:center !important;
+  background:linear-gradient(145deg, rgba(18,18,18,.95), rgba(8,8,8,.98)) !important;
+  border:1px solid rgba(243,191,43,.28) !important;
+  color:#dcdcdc !important;
+  line-height:1.7 !important;
+  transition:.28s ease !important;
+  box-shadow:0 0 24px rgba(243,191,43,.10),0 30px 90px rgba(0,0,0,.45) !important;
+}
+
+body.tokenomics-page .progress-card strong{
+  display:block !important;
+  font-size:42px !important;
+  color:var(--gold) !important;
+  margin-bottom:8px !important;
+}
+
+body.tokenomics-page .progress-bar{
+  height:16px !important;
+  border-radius:999px !important;
+  background:#222 !important;
+  overflow:hidden !important;
+  margin-top:16px !important;
+  border:1px solid rgba(255,255,255,.08) !important;
+}
+
+body.tokenomics-page .progress-fill{
+  height:100% !important;
+  width:0 !important;
+  background:linear-gradient(90deg,var(--gold-light),var(--gold)) !important;
+  box-shadow:0 0 18px rgba(243,191,43,.35) !important;
+}
+
+@media(max-width:980px){
+  body.tokenomics-page .progress-grid{grid-template-columns:1fr !important;}
+  body.tokenomics-page .big-supply{padding:38px 24px !important;}
 }
 
 </style>
@@ -1490,20 +1589,6 @@ mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 </p>
 </div>
 
-<div class="live-banner">🟢 LIVE AUF SOLANA · seit 07.06.2026</div>
-
-<div class="big-supply">
-<div class="big-supply-number">165.000</div>
-<h3>Gesamtmenge des Schwenningen Tokens</h3>
-<p>Fest definiert · transparent · keine Nachprägung vorgesehen</p>
-</div>
-
-<div class="formula-box">
-<h3>Warum genau 165.000 Token?</h3>
-<div class="formula-big">1.650 Einwohner × 100 Token = 165.000 Token</div>
-</div>
-
-
 <div class="tokenomics">
 <div class="token-box"><strong>165.000</strong><span>100 Tokens je Einwohner<br>bei ca. 1.650 Einwohnern</span></div>
 <div class="token-box"><strong>SPL</strong><span>Token Standard auf Solana</span></div>
@@ -1516,7 +1601,7 @@ mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 </div>
 
 <div class="status-box">
-<h3>Projektstatus</h3><div class="timeline"><div class="timeline-item">🟢 Token erstellt (07.06.2026)</div><div class="timeline-item">🟢 Mint deaktiviert</div><div class="timeline-item">🟢 Freeze deaktiviert</div><div class="timeline-item">🟢 Community-Verteilung gestartet</div><div class="timeline-item">🔵 Regionalpartner gesucht</div></div>
+<h3>Projektstatus</h3>
 <p>Der aktuelle Stand des Schwenningen Tokens als transparentes Community-Projekt.</p>
 
 <div class="status-grid">
@@ -1568,33 +1653,6 @@ mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 <h4>Regional gedacht</h4>
 <p>Der Fokus liegt auf Schwenningen, Community und digitaler Verbundenheit.</p>
 </div>
-
-</div>
-</div>
-
-
-<div class="status-box">
-<h3>Community-Fortschritt</h3>
-
-<div class="progress-grid">
-
-<div class="progress-card">
-<strong>40</strong>
-Verteilte Token
-<div class="progress-bar"><div class="progress-fill"></div></div>
-<small>40 von 165.000</small>
-</div>
-
-<div class="progress-card">
-<strong>5</strong>
-Tokenholder
-</div>
-
-<a class="progress-card" href="regionalpartner.html" style="display:block;text-decoration:none;color:inherit;">
-<strong>0</strong>
-Regionalpartner
-<div style="margin-top:10px;color:#f3bf2b;font-weight:700;">→ Zur Partnerseite</div>
-</a>
 
 </div>
 </div>
