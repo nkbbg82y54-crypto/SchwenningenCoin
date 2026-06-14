@@ -9,6 +9,7 @@
 </head>
 
 <body class="community-page">
+
 <div id="site-header"></div>
 
 <main>
@@ -34,13 +35,12 @@ Ein Symbol für regionale Verbundenheit, Schwenningen und den Heuberg.
 </p>
 </div>
 
-<div class="card qr-card" onclick="openQrModal()">
+<div class="card">
 <div class="icon">📱</div>
 <h3>QR-Sticker</h3>
 <p>
 Sticker und QR-Codes können reale Orte direkt mit dem Projekt verbinden.
 </p>
-<span class="qr-hint">QR-Code anzeigen →</span>
 </div>
 
 <a class="card featured-link" href="community-galerie-social.html">
@@ -79,15 +79,14 @@ Jeder mit Bezug zu Schwenningen kann Teil der digitalen Community-Idee werden.
 </p>
 </div>
 
-<a class="card" href="mailto:swhbg@schwenningen-token.de?subject=Schwenningen%20Token">
+<div class="card">
 <div class="icon">✉️</div>
 <h3>Kontakt</h3>
 <p>
 Ideen, Fragen oder Interesse können per E-Mail an
-<strong style="color:var(--gold);">swhbg@schwenningen-token.de</strong>
-gesendet werden.
+swhbg@schwenningen-token.de gesendet werden.
 </p>
-</a>
+</div>
 
 </section>
 
@@ -133,35 +132,15 @@ und kein offizielles Projekt der Gemeindeverwaltung.
 
 </main>
 
-
-<div id="site-footer"></div>
-
-<div id="qr-modal" class="modal">
-<div class="modal-content qr-modal-content">
-<span class="close-modal" onclick="closeQrModal()">&times;</span>
-<h2>QR-Code zum Schwenningen Token</h2>
-<p>Scanne den QR-Code, um direkt zur Projektseite zu gelangen.</p>
-<img src="assets/qr-code.png" alt="QR-Code Schwenningen Token" class="qr-display">
-</div>
-</div>
-
-<script src="assets/js/main.js"></script>
 <script>
-function openQrModal(){document.getElementById("qr-modal").style.display="block"}
-function closeQrModal(){document.getElementById("qr-modal").style.display="none"}
 
 function copyDonateAddress(button){
-navigator.clipboard.writeText("HL7xyeaccyBVFoGbbkqfC74HuEFNP8aZseDxVhSxwZJy");
-const oldText=button.innerText;
-button.innerText="Adresse kopiert ✓";
-setTimeout(()=>{button.innerText=oldText},2000);
+  navigator.clipboard.writeText("HL7xyeaccyBVFoGbbkqfC74HuEFNP8aZseDxVhSxwZJy");
+  const oldText = button.innerText;
+  button.innerText = "Adresse kopiert ✓";
+  setTimeout(()=>{button.innerText = oldText}, 2000);
 }
 
-window.onclick=function(event){
-const qr=document.getElementById("qr-modal");
-if(qr && event.target==qr){qr.style.display="none";}
-}
 </script>
 </body>
-
 </html>
