@@ -4361,3 +4361,38 @@ body.community-page .grid{
     font-size:18px;
   }
 }
+
+
+
+/* =========================================================
+   COMMUNITY HEADER FIX ("Mehr"-Button)
+   ========================================================= */
+
+body.community-page .nav-more-button,
+#site-header .nav-more-button,
+header .nav-more-button{
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  background:none !important;
+  background-color:transparent !important;
+  border:none !important;
+  outline:none !important;
+  box-shadow:none !important;
+  padding:0 !important;
+  margin:0 !important;
+  color:#d7d7d7 !important;
+  font-weight:800 !important;
+  font-size:inherit !important;
+  font-family:inherit !important;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+body.community-page .nav-more-button:hover,
+#site-header .nav-more-button:hover,
+header .nav-more-button:hover{
+  color:var(--gold) !important;
+  background:none !important;
+}
