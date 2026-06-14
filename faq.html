@@ -53,25 +53,6 @@
 
 
 <div id="site-header"></div>
-</div>
-
-<div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
-</nav>
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-<a href="index.html#story" onclick="closeMenu()">Story</a>
-<a href="index.html#vision" onclick="closeMenu()">Vision</a>
-<a href="index.html#ablauf" onclick="closeMenu()">Ablauf & Token erhalten</a>
-<a href="wallet.html" onclick="closeMenu()">Wallet & Blockchain</a>
-<a href="wallet.html#sol-kaufen" onclick="closeMenu()">Kryptowährungen kaufen</a>
-<a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank" onclick="closeMenu()">Whitepaper</a>
-<a href="regionalpartner.html" onclick="closeMenu()">Regionalpartner</a>
-<a href="community.html" onclick="closeMenu()">Community</a>
-<a href="tokenomics.html" onclick="closeMenu()">Projektstatus &amp; Tokenomics</a>
-<a href="faq.html" onclick="closeMenu()">FAQ</a>
-</div>
-
 
 <section id="faq" style="padding-top:170px;">
 <div class="section-title">
@@ -209,9 +190,6 @@ Der Token ist technisch frei transferierbar. Diese Website bewirbt jedoch ausdr�
 
 <div id="site-footer"></div>
 <script src="assets/js/main.js"></script>
-<script>
-fetch("header.html").then(r=>r.text()).then(h=>document.getElementById("site-header").innerHTML=h);
-fetch("footer.html").then(r=>r.text()).then(h=>document.getElementById("site-footer").innerHTML=h);
-</script>
+
 </body>
 </html>
