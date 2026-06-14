@@ -1400,160 +1400,58 @@ footer{
 
 
 
-/* TOKENOMICS CENTRALIZATION FIX */
-body.tokenomics-page #site-header .nav-more-button,
-body.tokenomics-page button.nav-more-button,
-body.tokenomics-page .nav-more-button{
-  appearance:none !important;
-  -webkit-appearance:none !important;
-  background:none !important;
-  background-color:transparent !important;
-  border:none !important;
-  outline:none !important;
-  box-shadow:none !important;
-  padding:0 !important;
-  margin:0 !important;
-  color:#d7d7d7 !important;
-  font-weight:800 !important;
-  font-size:inherit !important;
-  font-family:inherit !important;
-  line-height:normal !important;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  gap:6px;
+.live-banner{
+max-width:900px;margin:0 auto 40px;text-align:center;padding:18px;
+border-radius:20px;background:rgba(0,255,120,.08);
+border:1px solid rgba(0,255,120,.25);color:#9cffbe;font-weight:800;
 }
-
-body.tokenomics-page #site-header .nav-more-button:hover,
-body.tokenomics-page #site-header .nav-more-button:focus,
-body.tokenomics-page #site-header .nav-more-button:active{
-  background:none !important;
-  background-color:transparent !important;
-  color:var(--gold) !important;
-  outline:none !important;
-  box-shadow:none !important;
+.big-supply{
+max-width:1000px;margin:0 auto 60px;text-align:center;
+padding:50px;border-radius:34px;
+background:linear-gradient(145deg, rgba(18,18,18,.95), rgba(8,8,8,.98));
+border:1px solid rgba(243,191,43,.25);
+box-shadow:0 0 40px rgba(243,191,43,.12);
 }
-
-/* Tokenomics Spezialbereiche: Design erzwingen */
-body.tokenomics-page .live-banner{
-  max-width:900px !important;
-  margin:0 auto 40px !important;
-  text-align:center !important;
-  padding:18px 22px !important;
-  border-radius:20px !important;
-  background:rgba(0,255,120,.08) !important;
-  border:1px solid rgba(0,255,120,.25) !important;
-  color:#9cffbe !important;
-  font-weight:900 !important;
-  letter-spacing:.04em !important;
-  box-shadow:0 0 24px rgba(0,255,120,.10),0 24px 70px rgba(0,0,0,.35) !important;
+.big-supply-number{
+font-size:92px;font-weight:900;color:var(--gold);
+line-height:1;
 }
-
-body.tokenomics-page .big-supply{
-  max-width:1000px !important;
-  margin:0 auto 60px !important;
-  text-align:center !important;
-  padding:50px 34px !important;
-  border-radius:34px !important;
-  background:linear-gradient(145deg, rgba(18,18,18,.95), rgba(8,8,8,.98)) !important;
-  border:1px solid rgba(243,191,43,.32) !important;
-  box-shadow:0 0 28px rgba(243,191,43,.18),0 0 90px rgba(243,191,43,.10),0 40px 100px rgba(0,0,0,.55) !important;
+.formula-box{
+max-width:1000px;margin:40px auto;
+padding:40px;border-radius:30px;
+background:rgba(243,191,43,.08);
+border:1px solid rgba(243,191,43,.25);
+text-align:center;
 }
-
-body.tokenomics-page .big-supply-number{
-  font-size:clamp(58px,9vw,92px) !important;
-  font-weight:900 !important;
-  color:var(--gold) !important;
-  line-height:1 !important;
-  margin-bottom:18px !important;
+.formula-big{font-size:42px;color:var(--gold);font-weight:900}
+.timeline{display:grid;gap:18px;max-width:1000px;margin:40px auto}
+.timeline-item{
+padding:22px 26px;border-radius:22px;
+background:rgba(8,8,8,.82);
+border:1px solid rgba(243,191,43,.18);
 }
-
-body.tokenomics-page .formula-box{
-  max-width:1000px !important;
-  margin:40px auto 58px !important;
-  padding:40px 30px !important;
-  border-radius:30px !important;
-  background:rgba(243,191,43,.08) !important;
-  border:1px solid rgba(243,191,43,.30) !important;
-  text-align:center !important;
-  box-shadow:0 0 24px rgba(243,191,43,.10),0 30px 90px rgba(0,0,0,.45) !important;
+.progress-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+margin-top:40px;
 }
-
-body.tokenomics-page .formula-box h3{
-  color:#fff !important;
-  font-size:30px !important;
-  margin-bottom:18px !important;
+.progress-card{
+padding:30px;border-radius:24px;text-align:center;
+background:rgba(8,8,8,.82);
+border:1px solid rgba(243,191,43,.22);
 }
-
-body.tokenomics-page .formula-big{
-  font-size:clamp(26px,4.5vw,42px) !important;
-  color:var(--gold) !important;
-  font-weight:900 !important;
-  line-height:1.25 !important;
+.progress-card strong{display:block;font-size:42px;color:var(--gold)}
+.progress-bar{
+height:16px;border-radius:999px;background:#222;overflow:hidden;margin-top:16px
 }
-
-body.tokenomics-page .timeline{
-  display:grid !important;
-  gap:18px !important;
-  max-width:1000px !important;
-  margin:40px auto !important;
+.progress-fill{
+height:100%;width:0.006%;background:linear-gradient(90deg,var(--gold-light),var(--gold));
 }
-
-body.tokenomics-page .timeline-item{
-  padding:22px 26px !important;
-  border-radius:22px !important;
-  background:rgba(8,8,8,.82) !important;
-  border:1px solid rgba(243,191,43,.24) !important;
-  color:#dddddd !important;
-  line-height:1.7 !important;
-  box-shadow:0 0 22px rgba(243,191,43,.06) !important;
-}
-
-body.tokenomics-page .progress-grid{
-  display:grid !important;
-  grid-template-columns:repeat(3,1fr) !important;
-  gap:24px !important;
-  margin-top:40px !important;
-}
-
-body.tokenomics-page .progress-card{
-  padding:34px 28px !important;
-  border-radius:26px !important;
-  text-align:center !important;
-  background:linear-gradient(145deg, rgba(18,18,18,.95), rgba(8,8,8,.98)) !important;
-  border:1px solid rgba(243,191,43,.28) !important;
-  color:#dcdcdc !important;
-  line-height:1.7 !important;
-  transition:.28s ease !important;
-  box-shadow:0 0 24px rgba(243,191,43,.10),0 30px 90px rgba(0,0,0,.45) !important;
-}
-
-body.tokenomics-page .progress-card strong{
-  display:block !important;
-  font-size:42px !important;
-  color:var(--gold) !important;
-  margin-bottom:8px !important;
-}
-
-body.tokenomics-page .progress-bar{
-  height:16px !important;
-  border-radius:999px !important;
-  background:#222 !important;
-  overflow:hidden !important;
-  margin-top:16px !important;
-  border:1px solid rgba(255,255,255,.08) !important;
-}
-
-body.tokenomics-page .progress-fill{
-  height:100% !important;
-  width:0 !important;
-  background:linear-gradient(90deg,var(--gold-light),var(--gold)) !important;
-  box-shadow:0 0 18px rgba(243,191,43,.35) !important;
-}
-
 @media(max-width:980px){
-  body.tokenomics-page .progress-grid{grid-template-columns:1fr !important;}
-  body.tokenomics-page .big-supply{padding:38px 24px !important;}
+.progress-grid{grid-template-columns:1fr}
+.big-supply-number{font-size:64px}
+.formula-big{font-size:28px}
 }
 
 </style>
@@ -1576,9 +1474,49 @@ body.tokenomics-page .progress-fill{
 
 </head>
 
-<body class="tokenomics-page">
+<body><header>
+<nav>
+<a class="logo" href="index.html">
+<img src="assets/coin.png" alt="Schwenningen Token">
+<span>Schwenningen Token</span>
+</a>
 
-<div id="site-header"></div>
+<div class="nav-links">
+<a href="index.html#story">Story</a>
+<a href="index.html#vision">Vision</a>
+<a href="index.html#ablauf">Ablauf & Token erhalten</a>
+
+<div class="nav-more">
+<div class="nav-more-button">Mehr ▾</div>
+<div class="nav-dropdown">
+<a href="wallet.html">Wallet & Blockchain</a>
+<a href="wallet.html#sol-kaufen">Kryptowährungen kaufen</a>
+<a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank">Whitepaper</a>
+<a href="regionalpartner.html">Regionalpartner</a>
+<a href="community.html">Community</a>
+<a href="tokenomics.html">Projektstatus &amp; Tokenomics</a>
+<a href="faq.html">FAQ</a>
+</div>
+</div>
+</div>
+
+<div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+</nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+<a href="index.html#story" onclick="closeMenu()">Story</a>
+<a href="index.html#vision" onclick="closeMenu()">Vision</a>
+<a href="index.html#ablauf" onclick="closeMenu()">Ablauf & Token erhalten</a>
+<a href="wallet.html" onclick="closeMenu()">Wallet & Blockchain</a>
+<a href="wallet.html#sol-kaufen" onclick="closeMenu()">Kryptowährungen kaufen</a>
+<a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank" onclick="closeMenu()">Whitepaper</a>
+<a href="regionalpartner.html" onclick="closeMenu()">Regionalpartner</a>
+<a href="community.html" onclick="closeMenu()">Community</a>
+<a href="tokenomics.html" onclick="closeMenu()">Projektstatus &amp; Tokenomics</a>
+<a href="faq.html" onclick="closeMenu()">FAQ</a>
+</div>
+
 
 <section id="tokenomics">
 <div class="section-title">
@@ -1587,6 +1525,20 @@ body.tokenomics-page .progress-fill{
 Einfach, transparent und bewusst begrenzt —
 mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 </p>
+</div>
+
+
+<div class="live-banner">🟢 LIVE AUF SOLANA · seit 07.06.2026</div>
+
+<div class="big-supply">
+<div class="big-supply-number">165.000</div>
+<h3>Gesamtmenge des Schwenningen Tokens</h3>
+<p>Fest definiert · transparent · keine Nachprägung vorgesehen</p>
+</div>
+
+<div class="formula-box">
+<h3>Warum genau 165.000 Token?</h3>
+<div class="formula-big">1.650 Einwohner × 100 Token = 165.000 Token</div>
 </div>
 
 <div class="tokenomics">
@@ -1601,7 +1553,7 @@ mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 </div>
 
 <div class="status-box">
-<h3>Projektstatus</h3>
+<h3>Projektstatus</h3><div class="timeline"><div class="timeline-item">🟢 Token erstellt (07.06.2026)</div><div class="timeline-item">🟢 Mint deaktiviert</div><div class="timeline-item">🟢 Freeze deaktiviert</div><div class="timeline-item">🟢 Community-Verteilung gestartet</div><div class="timeline-item">🔵 Regionalpartner gesucht</div></div>
 <p>Der aktuelle Stand des Schwenningen Tokens als transparentes Community-Projekt.</p>
 
 <div class="status-grid">
@@ -1657,6 +1609,33 @@ mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 </div>
 </div>
 
+
+<div class="status-box">
+<h3>Community-Fortschritt</h3>
+
+<div class="progress-grid">
+
+<div class="progress-card">
+<strong>40</strong>
+Verteilte Token
+<div class="progress-bar"><div class="progress-fill"></div></div>
+<small>40 von 165.000</small>
+</div>
+
+<div class="progress-card">
+<strong>5</strong>
+Tokenholder
+</div>
+
+<a class="progress-card" href="regionalpartner.html" style="display:block;text-decoration:none;color:inherit;">
+<strong>0</strong>
+Regionalpartner
+<div style="margin-top:10px;color:#f3bf2b;font-weight:700;">→ Zur Partnerseite</div>
+</a>
+
+</div>
+</div>
+
 <div class="token-address-box">
 <div class="token-top">
 <div class="solana-icon">
@@ -1681,36 +1660,151 @@ mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 
 
 
-</section>
+</section><footer>
+
+<div class="copyright">
+© 2026 Schwenningen Token
+</div>
+
+<div class="footer-links">
+<a href="#" onclick="openModal(); return false;">Impressum</a>
+<span>·</span>
+<a href="#" onclick="openPrivacy(); return false;">Datenschutz</a>
+<span>·</span>
+<a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank">Whitepaper</a>
+</div>
+
+<div class="footer-tags">
+schwenningen-token.de · Solana SPL Token · Community-Projekt · Regionaltoken · Schwenningen Heuberg · Web3 Community · Regionalpartner · Phantom Wallet
+</div>
+
+</footer>
 
 
-<div id="site-footer"></div>
+<div id="impressum-modal" class="modal">
+<div class="modal-content">
+<span class="close-modal" onclick="closeModal()">&times;</span>
+<h2>Impressum</h2>
+<br>
+<p>Angaben gemäß § 5 TMG</p>
+<br>
+<p>
+Florian Lessner<br>
+Gartenstraße 2<br>
+72477 Schwenningen<br>
+Deutschland
+</p>
+<br>
+<p>E-Mail:<br>swhbg@schwenningen-token.de</p>
+<br><br>
+<h3>Hinweis</h3>
+<br>
+<p>
+Der Schwenningen Token ist ein privates Community- und Sammlerprojekt auf Basis der Solana Blockchain.
+Es handelt sich ausdrücklich nicht um ein Finanzprodukt, keine Anlageberatung und kein öffentliches Investmentangebot.
+</p>
+</div>
+</div>
 
-<script src="assets/js/main.js"></script>
+<div id="privacy-modal" class="modal">
+<div class="modal-content">
+<span class="close-modal" onclick="closePrivacy()">&times;</span>
+<h2>Datenschutzerklärung</h2>
+<br>
+<h3>1. Allgemeine Hinweise</h3>
+<br>
+<p>Diese Website dient ausschließlich der Darstellung des privaten Community-Projekts „Schwenningen Token“.</p>
+<br>
+<h3>2. Verantwortlicher</h3>
+<br>
+<p>
+Florian Lessner<br>
+Gartenstraße 2<br>
+72477 Schwenningen<br>
+Deutschland
+</p>
+<br>
+<p>E-Mail:<br>swhbg@schwenningen-token.de</p>
+<br>
+<h3>3. Hosting über GitHub Pages</h3>
+<br>
+<p>
+Diese Website wird über GitHub Pages bereitgestellt.
+Beim Aufruf der Website können technisch notwendige Daten wie IP-Adresse,
+Browserinformationen, Datum und Uhrzeit durch GitHub verarbeitet werden.
+</p>
+<br>
+<p>
+Weitere Informationen:<br><br>
+https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement
+</p>
+<br>
+<h3>4. Keine Cookies / Kein Tracking</h3>
+<br>
+<p>Diese Website verwendet keine Cookies, kein Tracking und keine Analyse-Tools.</p>
+<br>
+<h3>5. Keine Registrierung</h3>
+<br>
+<p>Es existieren keine Benutzerkonten, keine Registrierungsmöglichkeiten und kein Kontaktformular.</p>
+<br>
+<h3>6. Externe Inhalte</h3>
+<br>
+<p>Diese Website bindet derzeit keine externen Dienste wie Google Fonts, Google Analytics oder Social-Media-Plugins ein.</p>
+</div>
+</div>
 
 <script>
+
+function toggleFaq(button){
+  const item = button.closest(".faq-item");
+  item.classList.toggle("active");
+}
+
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+function closeMenu(){
+  document.getElementById("mobileMenu").classList.remove("active");
+}
+
+function openModal(){document.getElementById("impressum-modal").style.display="block"}
+function closeModal(){document.getElementById("impressum-modal").style.display="none"}
+function openPrivacy(){document.getElementById("privacy-modal").style.display="block"}
+function closePrivacy(){document.getElementById("privacy-modal").style.display="none"}
+
 function copyAddress(){
   navigator.clipboard.writeText("3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E");
   const button = document.querySelector(".copy-btn");
-  if(button){
-    button.innerText = "Adresse kopiert ✓";
-    setTimeout(()=>{button.innerText = "Adresse kopieren"}, 2000);
-  }
+  button.innerText = "Adresse kopiert ✓";
+  setTimeout(()=>{button.innerText="Adresse kopieren"},2000);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const firstCard = document.querySelector(".progress-card");
-  const strong = firstCard?.querySelector("strong");
-  const fill = firstCard?.querySelector(".progress-fill");
+window.onclick=function(event){
+  const impressum=document.getElementById("impressum-modal");
+  const privacy=document.getElementById("privacy-modal");
+  if(event.target==impressum){impressum.style.display="none"}
+  if(event.target==privacy){privacy.style.display="none"}
+}
+</script>
 
-  if(strong && fill){
-    const distributed = parseInt(strong.textContent.replace(/\./g,''), 10) || 0;
-    const total = 165000;
-    const percent = Math.max(0, Math.min(100, (distributed / total) * 100));
-    fill.style.width = percent + "%";
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".progress-card");
+  if(cards.length > 0){
+    const firstCard = cards[0];
+    const strong = firstCard.querySelector("strong");
+    const fill = firstCard.querySelector(".progress-fill");
+    if(strong && fill){
+      const distributed = parseInt(strong.textContent.replace(/\./g,''),10) || 0;
+      const total = 165000;
+      const percent = Math.max(0, Math.min(100, (distributed/total)*100));
+      fill.style.width = percent + "%";
+    }
   }
 });
 </script>
-
 </body>
+
 </html>
