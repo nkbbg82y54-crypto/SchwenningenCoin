@@ -1399,6 +1399,59 @@ footer{
 }
 
 
+
+/* FIX: Zentraler Header-Button "Mehr" ohne weißen Browser-Hintergrund */
+#site-header .nav-more-button,
+button.nav-more-button,
+.nav-more-button{
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  background:none !important;
+  background-color:transparent !important;
+  border:none !important;
+  outline:none !important;
+  box-shadow:none !important;
+  padding:0 !important;
+  margin:0 !important;
+  color:#d7d7d7 !important;
+  font-weight:800 !important;
+  font-size:inherit !important;
+  font-family:inherit !important;
+  line-height:normal !important;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+#site-header .nav-more-button:hover,
+#site-header .nav-more-button:focus,
+#site-header .nav-more-button:active,
+button.nav-more-button:hover,
+button.nav-more-button:focus,
+button.nav-more-button:active,
+.nav-more-button:hover,
+.nav-more-button:focus,
+.nav-more-button:active{
+  background:none !important;
+  background-color:transparent !important;
+  color:var(--gold) !important;
+  outline:none !important;
+  box-shadow:none !important;
+}
+
+/* FIX: Status- und Fortschrittsbereiche sicher anzeigen */
+.status-box,
+.status-grid,
+.status-item,
+.progress-grid,
+.progress-card,
+.timeline,
+.timeline-item{
+  visibility:visible !important;
+  opacity:1 !important;
+}
+
 </style>
 <link rel="apple-touch-icon" href="assets/coin.png">
 
@@ -1526,6 +1579,7 @@ mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 
 </section>
 
+
 <div id="site-footer"></div>
 
 <script src="assets/js/main.js"></script>
@@ -1539,25 +1593,20 @@ function copyAddress(){
     setTimeout(()=>{button.innerText = "Adresse kopieren"}, 2000);
   }
 }
-</script>
 
-<script>
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".progress-card");
-  if(cards.length > 0){
-    const firstCard = cards[0];
-    const strong = firstCard.querySelector("strong");
-    const fill = firstCard.querySelector(".progress-fill");
-    if(strong && fill){
-      const distributed = parseInt(strong.textContent.replace(/\./g,''),10) || 0;
-      const total = 165000;
-      const percent = Math.max(0, Math.min(100, (distributed / total) * 100));
-      fill.style.width = percent + "%";
-    }
+  const firstCard = document.querySelector(".progress-card");
+  const strong = firstCard?.querySelector("strong");
+  const fill = firstCard?.querySelector(".progress-fill");
+
+  if(strong && fill){
+    const distributed = parseInt(strong.textContent.replace(/\./g,''), 10) || 0;
+    const total = 165000;
+    const percent = Math.max(0, Math.min(100, (distributed / total) * 100));
+    fill.style.width = percent + "%";
   }
 });
 </script>
-
 
 </body>
 </html>
