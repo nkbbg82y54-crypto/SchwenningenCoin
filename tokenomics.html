@@ -1399,61 +1399,6 @@ footer{
 }
 
 
-
-.live-banner{
-max-width:900px;margin:0 auto 40px;text-align:center;padding:18px;
-border-radius:20px;background:rgba(0,255,120,.08);
-border:1px solid rgba(0,255,120,.25);color:#9cffbe;font-weight:800;
-}
-.big-supply{
-max-width:1000px;margin:0 auto 60px;text-align:center;
-padding:50px;border-radius:34px;
-background:linear-gradient(145deg, rgba(18,18,18,.95), rgba(8,8,8,.98));
-border:1px solid rgba(243,191,43,.25);
-box-shadow:0 0 40px rgba(243,191,43,.12);
-}
-.big-supply-number{
-font-size:92px;font-weight:900;color:var(--gold);
-line-height:1;
-}
-.formula-box{
-max-width:1000px;margin:40px auto;
-padding:40px;border-radius:30px;
-background:rgba(243,191,43,.08);
-border:1px solid rgba(243,191,43,.25);
-text-align:center;
-}
-.formula-big{font-size:42px;color:var(--gold);font-weight:900}
-.timeline{display:grid;gap:18px;max-width:1000px;margin:40px auto}
-.timeline-item{
-padding:22px 26px;border-radius:22px;
-background:rgba(8,8,8,.82);
-border:1px solid rgba(243,191,43,.18);
-}
-.progress-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
-margin-top:40px;
-}
-.progress-card{
-padding:30px;border-radius:24px;text-align:center;
-background:rgba(8,8,8,.82);
-border:1px solid rgba(243,191,43,.22);
-}
-.progress-card strong{display:block;font-size:42px;color:var(--gold)}
-.progress-bar{
-height:16px;border-radius:999px;background:#222;overflow:hidden;margin-top:16px
-}
-.progress-fill{
-height:100%;width:0.006%;background:linear-gradient(90deg,var(--gold-light),var(--gold));
-}
-@media(max-width:980px){
-.progress-grid{grid-template-columns:1fr}
-.big-supply-number{font-size:64px}
-.formula-big{font-size:28px}
-}
-
 </style>
 <link rel="apple-touch-icon" href="assets/coin.png">
 
@@ -1474,49 +1419,9 @@ height:100%;width:0.006%;background:linear-gradient(90deg,var(--gold-light),var(
 
 </head>
 
-<body><header>
-<nav>
-<a class="logo" href="index.html">
-<img src="assets/coin.png" alt="Schwenningen Token">
-<span>Schwenningen Token</span>
-</a>
+<body class="tokenomics-page">
 
-<div class="nav-links">
-<a href="index.html#story">Story</a>
-<a href="index.html#vision">Vision</a>
-<a href="index.html#ablauf">Ablauf & Token erhalten</a>
-
-<div class="nav-more">
-<div class="nav-more-button">Mehr ▾</div>
-<div class="nav-dropdown">
-<a href="wallet.html">Wallet & Blockchain</a>
-<a href="wallet.html#sol-kaufen">Kryptowährungen kaufen</a>
-<a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank">Whitepaper</a>
-<a href="regionalpartner.html">Regionalpartner</a>
-<a href="community.html">Community</a>
-<a href="tokenomics.html">Projektstatus &amp; Tokenomics</a>
-<a href="faq.html">FAQ</a>
-</div>
-</div>
-</div>
-
-<div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
-</nav>
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-<a href="index.html#story" onclick="closeMenu()">Story</a>
-<a href="index.html#vision" onclick="closeMenu()">Vision</a>
-<a href="index.html#ablauf" onclick="closeMenu()">Ablauf & Token erhalten</a>
-<a href="wallet.html" onclick="closeMenu()">Wallet & Blockchain</a>
-<a href="wallet.html#sol-kaufen" onclick="closeMenu()">Kryptowährungen kaufen</a>
-<a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank" onclick="closeMenu()">Whitepaper</a>
-<a href="regionalpartner.html" onclick="closeMenu()">Regionalpartner</a>
-<a href="community.html" onclick="closeMenu()">Community</a>
-<a href="tokenomics.html" onclick="closeMenu()">Projektstatus &amp; Tokenomics</a>
-<a href="faq.html" onclick="closeMenu()">FAQ</a>
-</div>
-
+<div id="site-header"></div>
 
 <section id="tokenomics">
 <div class="section-title">
@@ -1525,20 +1430,6 @@ height:100%;width:0.006%;background:linear-gradient(90deg,var(--gold-light),var(
 Einfach, transparent und bewusst begrenzt —
 mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 </p>
-</div>
-
-
-<div class="live-banner">🟢 LIVE AUF SOLANA · seit 07.06.2026</div>
-
-<div class="big-supply">
-<div class="big-supply-number">165.000</div>
-<h3>Gesamtmenge des Schwenningen Tokens</h3>
-<p>Fest definiert · transparent · keine Nachprägung vorgesehen</p>
-</div>
-
-<div class="formula-box">
-<h3>Warum genau 165.000 Token?</h3>
-<div class="formula-big">1.650 Einwohner × 100 Token = 165.000 Token</div>
 </div>
 
 <div class="tokenomics">
@@ -1553,7 +1444,7 @@ mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 </div>
 
 <div class="status-box">
-<h3>Projektstatus</h3><div class="timeline"><div class="timeline-item">🟢 Token erstellt (07.06.2026)</div><div class="timeline-item">🟢 Mint deaktiviert</div><div class="timeline-item">🟢 Freeze deaktiviert</div><div class="timeline-item">🟢 Community-Verteilung gestartet</div><div class="timeline-item">🔵 Regionalpartner gesucht</div></div>
+<h3>Projektstatus</h3>
 <p>Der aktuelle Stand des Schwenningen Tokens als transparentes Community-Projekt.</p>
 
 <div class="status-grid">
@@ -1609,33 +1500,6 @@ mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
 </div>
 </div>
 
-
-<div class="status-box">
-<h3>Community-Fortschritt</h3>
-
-<div class="progress-grid">
-
-<div class="progress-card">
-<strong>40</strong>
-Verteilte Token
-<div class="progress-bar"><div class="progress-fill"></div></div>
-<small>40 von 165.000</small>
-</div>
-
-<div class="progress-card">
-<strong>5</strong>
-Tokenholder
-</div>
-
-<a class="progress-card" href="regionalpartner.html" style="display:block;text-decoration:none;color:inherit;">
-<strong>0</strong>
-Regionalpartner
-<div style="margin-top:10px;color:#f3bf2b;font-weight:700;">→ Zur Partnerseite</div>
-</a>
-
-</div>
-</div>
-
 <div class="token-address-box">
 <div class="token-top">
 <div class="solana-icon">
@@ -1660,134 +1524,22 @@ Regionalpartner
 
 
 
-</section><footer>
+</section>
 
-<div class="copyright">
-© 2026 Schwenningen Token
-</div>
+<div id="site-footer"></div>
 
-<div class="footer-links">
-<a href="#" onclick="openModal(); return false;">Impressum</a>
-<span>·</span>
-<a href="#" onclick="openPrivacy(); return false;">Datenschutz</a>
-<span>·</span>
-<a href="assets/Schwenningen_Coin_Whitepaper.pdf" target="_blank">Whitepaper</a>
-</div>
-
-<div class="footer-tags">
-schwenningen-token.de · Solana SPL Token · Community-Projekt · Regionaltoken · Schwenningen Heuberg · Web3 Community · Regionalpartner · Phantom Wallet
-</div>
-
-</footer>
-
-
-<div id="impressum-modal" class="modal">
-<div class="modal-content">
-<span class="close-modal" onclick="closeModal()">&times;</span>
-<h2>Impressum</h2>
-<br>
-<p>Angaben gemäß § 5 TMG</p>
-<br>
-<p>
-Florian Lessner<br>
-Gartenstraße 2<br>
-72477 Schwenningen<br>
-Deutschland
-</p>
-<br>
-<p>E-Mail:<br>swhbg@schwenningen-token.de</p>
-<br><br>
-<h3>Hinweis</h3>
-<br>
-<p>
-Der Schwenningen Token ist ein privates Community- und Sammlerprojekt auf Basis der Solana Blockchain.
-Es handelt sich ausdrücklich nicht um ein Finanzprodukt, keine Anlageberatung und kein öffentliches Investmentangebot.
-</p>
-</div>
-</div>
-
-<div id="privacy-modal" class="modal">
-<div class="modal-content">
-<span class="close-modal" onclick="closePrivacy()">&times;</span>
-<h2>Datenschutzerklärung</h2>
-<br>
-<h3>1. Allgemeine Hinweise</h3>
-<br>
-<p>Diese Website dient ausschließlich der Darstellung des privaten Community-Projekts „Schwenningen Token“.</p>
-<br>
-<h3>2. Verantwortlicher</h3>
-<br>
-<p>
-Florian Lessner<br>
-Gartenstraße 2<br>
-72477 Schwenningen<br>
-Deutschland
-</p>
-<br>
-<p>E-Mail:<br>swhbg@schwenningen-token.de</p>
-<br>
-<h3>3. Hosting über GitHub Pages</h3>
-<br>
-<p>
-Diese Website wird über GitHub Pages bereitgestellt.
-Beim Aufruf der Website können technisch notwendige Daten wie IP-Adresse,
-Browserinformationen, Datum und Uhrzeit durch GitHub verarbeitet werden.
-</p>
-<br>
-<p>
-Weitere Informationen:<br><br>
-https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement
-</p>
-<br>
-<h3>4. Keine Cookies / Kein Tracking</h3>
-<br>
-<p>Diese Website verwendet keine Cookies, kein Tracking und keine Analyse-Tools.</p>
-<br>
-<h3>5. Keine Registrierung</h3>
-<br>
-<p>Es existieren keine Benutzerkonten, keine Registrierungsmöglichkeiten und kein Kontaktformular.</p>
-<br>
-<h3>6. Externe Inhalte</h3>
-<br>
-<p>Diese Website bindet derzeit keine externen Dienste wie Google Fonts, Google Analytics oder Social-Media-Plugins ein.</p>
-</div>
-</div>
+<script src="assets/js/main.js"></script>
 
 <script>
-
-function toggleFaq(button){
-  const item = button.closest(".faq-item");
-  item.classList.toggle("active");
-}
-
-function toggleMenu(){
-  document.getElementById("mobileMenu").classList.toggle("active");
-}
-
-function closeMenu(){
-  document.getElementById("mobileMenu").classList.remove("active");
-}
-
-function openModal(){document.getElementById("impressum-modal").style.display="block"}
-function closeModal(){document.getElementById("impressum-modal").style.display="none"}
-function openPrivacy(){document.getElementById("privacy-modal").style.display="block"}
-function closePrivacy(){document.getElementById("privacy-modal").style.display="none"}
-
 function copyAddress(){
   navigator.clipboard.writeText("3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E");
   const button = document.querySelector(".copy-btn");
-  button.innerText = "Adresse kopiert ✓";
-  setTimeout(()=>{button.innerText="Adresse kopieren"},2000);
-}
-
-window.onclick=function(event){
-  const impressum=document.getElementById("impressum-modal");
-  const privacy=document.getElementById("privacy-modal");
-  if(event.target==impressum){impressum.style.display="none"}
-  if(event.target==privacy){privacy.style.display="none"}
+  if(button){
+    button.innerText = "Adresse kopiert ✓";
+    setTimeout(()=>{button.innerText = "Adresse kopieren"}, 2000);
+  }
 }
 </script>
-
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -1799,12 +1551,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if(strong && fill){
       const distributed = parseInt(strong.textContent.replace(/\./g,''),10) || 0;
       const total = 165000;
-      const percent = Math.max(0, Math.min(100, (distributed/total)*100));
+      const percent = Math.max(0, Math.min(100, (distributed / total) * 100));
       fill.style.width = percent + "%";
     }
   }
 });
 </script>
-</body>
 
+
+</body>
 </html>
