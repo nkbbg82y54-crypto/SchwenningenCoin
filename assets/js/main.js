@@ -50,3 +50,19 @@ window.onclick=function(event){
   if(impressum && event.target==impressum){impressum.style.display="none"}
   if(privacy && event.target==privacy){privacy.style.display="none"}
 }
+
+
+function loadPartials(){
+  const h=document.getElementById('site-header');
+  const f=document.getElementById('site-footer');
+
+  if(h){
+    fetch('header.html').then(r=>r.text()).then(html=>h.innerHTML=html);
+  }
+
+  if(f){
+    fetch('footer.html').then(r=>r.text()).then(html=>f.innerHTML=html);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadPartials);
