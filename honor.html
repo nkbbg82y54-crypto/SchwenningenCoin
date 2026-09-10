@@ -3,56 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="FAQ zum Schwenningen Token – häufige Fragen zu Token, Wallet, Sicherheit, Verteilung, Rechtlichem und Community.">
-<meta name="keywords" content="Schwenningen Token, Schwenningen Coin, Schwenningen Heuberg, Solana SPL Token, Community Token, Regionaltoken, digitale Heimat, Web3 Community, Phantom Wallet, Regionalpartner">
-<meta name="author" content="Schwenningen Token">
+<meta name="description" content="Schwenningen Heuberg Honor (SWHNR) – der Ehrencoin für besondere Verdienste rund um das Schwenningen Token Projekt.">
 <meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://www.schwenningen-token.de/faq.html">
-
-<meta property="og:type" content="website">
-<meta property="og:locale" content="de_DE">
-<meta property="og:site_name" content="Schwenningen Token">
-<meta property="og:title" content="FAQ | Schwenningen Token">
-<meta property="og:description" content="Häufige Fragen zum Schwenningen Token, zur Wallet, Sicherheit, Verteilung und rechtlicher Einordnung.">
-<meta property="og:url" content="https://www.schwenningen-token.de/faq.html">
-<meta property="og:image" content="https://www.schwenningen-token.de/assets/poster.jpg">
-<meta property="og:image:alt" content="Schwenningen Token Community Poster">
-<meta property="og:image:type" content="image/jpeg">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FAQ | Schwenningen Token">
-<meta name="twitter:description" content="Häufige Fragen zum Schwenningen Token, zur Wallet, Sicherheit, Verteilung und rechtlicher Einordnung.">
-<meta name="twitter:image" content="https://www.schwenningen-token.de/assets/poster.jpg">
-
-<title>FAQ | Schwenningen Token</title>
-
+<title>Schwenningen Heuberg Honor | SWHNR</title>
 <link rel="icon" href="assets/coin.png">
-
-<link rel="stylesheet" href="assets/css/style.css">
 <link rel="apple-touch-icon" href="assets/coin.png">
+<link rel="stylesheet" href="assets/css/style.css">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Schwenningen Token",
-  "url": "https://www.schwenningen-token.de/",
-  "description": "Privates Community- und Sammlerprojekt aus Schwenningen auf der Solana Blockchain.",
-  "inLanguage": "de-DE",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Schwenningen Token"
+<style>
+body.honor-page{
+  --honor-gold:#f3bf2b;
+  --honor-gold-light:#ffdd75;
+  --honor-border:rgba(243,191,43,.25);
+  background:
+    radial-gradient(circle at 80% 10%, rgba(243,191,43,.12), transparent 28%),
+    radial-gradient(circle at 15% 75%, rgba(243,191,43,.06), transparent 30%),
+    #050505;
+}
+body.honor-page main{
+  max-width:1180px;
+  margin:auto;
+  padding:150px 24px 90px;
+}
+body.honor-page .honor-hero{
+  text-align:center;
+  max-width:900px;
+  margin:0 auto 64px;
+}
+body.honor-page .honor-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:9px 16px;
+  margin-bottom:22px;
+  border-radius:999px;
+  border:1px solid rgba(243,191,43,.28);
+  background:rgba(243,191,43,.08);
+  color:var(--honor-gold-light);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.12em;
+}
+body.honor-page .honor-hero h1{
+  color:var(--honor-gold);
+  font-size:clamp(46px,7vw,84px);
+  line-height:.95;
+  margin-bottom:24px;
+}
+body.honor-page .honor-hero p{
+  color:#bdbdbd;
+  font-size:20px;
+  line-height:1.85;
+  max-width:760px;
+  margin:auto;
+}
+body.honor-page .honor-summary{
+  margin:0 auto 64px;
+  max-width:680px;
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:24px;
+  align-items:center;
+  padding:28px 30px;
+  border-radius:28px;
+  border:1px solid var(--honor-border);
+  background:linear-gradient(145deg,rgba(18,18,18,.96),rgba(7,7,7,.99));
+  box-shadow:0 0 38px rgba(243,191,43,.08),0 30px 80px rgba(0,0,0,.45);
+}
+body.honor-page .honor-count{
+  text-align:center;
+  padding:20px;
+  border-radius:22px;
+  background:rgba(243,191,43,.08);
+  border:1px solid rgba(243,191,43,.2);
+}
+body.honor-page .honor-count strong{
+  display:block;
+  color:var(--honor-gold);
+  font-size:52px;
+  line-height:1;
+  margin-bottom:8px;
+}
+body.honor-page .honor-count span{
+  color:#d0d0d0;
+  font-size:14px;
+}
+body.honor-page .honor-summary h2{
+  color:#fff;
+  font-size:26px;
+  margin-bottom:8px;
+}
+body.honor-page .honor-summary p{
+  color:#a9a9a9;
+  line-height:1.7;
+}
+body.honor-page .honor-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+body.honor-page .honor-card{
+  position:relative;
+  overflow:hidden;
+  min-height:330px;
+  padding:30px;
+  border-radius:30px;
+  border:1px solid var(--honor-border);
+  background:
+    radial-gradient(circle at top right, rgba(243,191,43,.12), transparent 38%),
+    linear-gradient(145deg,rgba(17,17,17,.97),rgba(6,6,6,.99));
+  box-shadow:0 30px 80px rgba(0,0,0,.38);
+  transition:.28s ease;
+}
+body.honor-page .honor-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(243,191,43,.55);
+  box-shadow:0 0 28px rgba(243,191,43,.22),0 30px 90px rgba(0,0,0,.55);
+}
+body.honor-page .honor-medal{
+  width:82px;
+  height:82px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:28px;
+  background:radial-gradient(circle at 35% 30%, #ffe696, #f3bf2b 48%, #9a6900 100%);
+  color:#111;
+  font-weight:1000;
+  font-size:18px;
+  letter-spacing:.04em;
+  border:4px solid #4b3400;
+  box-shadow:inset 0 0 0 3px #ffdf75,0 0 28px rgba(243,191,43,.28);
+}
+body.honor-page .honor-card .honor-number{
+  position:absolute;
+  top:26px;
+  right:26px;
+  color:#726126;
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+body.honor-page .honor-card h3{
+  color:var(--honor-gold);
+  font-size:27px;
+  margin-bottom:14px;
+}
+body.honor-page .honor-card p{
+  color:#bdbdbd;
+  line-height:1.8;
+  font-size:16px;
+}
+body.honor-page .honor-reason{
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.08);
+  color:#e0e0e0 !important;
+}
+body.honor-page .honor-empty{
+  grid-column:1/-1;
+  text-align:center;
+  padding:48px 28px;
+  border-radius:28px;
+  border:1px dashed rgba(243,191,43,.28);
+  background:rgba(243,191,43,.04);
+  color:#aaa;
+  line-height:1.8;
+}
+body.honor-page .honor-empty strong{
+  display:block;
+  color:var(--honor-gold);
+  font-size:24px;
+  margin-bottom:10px;
+}
+body.honor-page .honor-note{
+  margin:56px auto 0;
+  max-width:900px;
+  text-align:center;
+  color:#888;
+  font-size:14px;
+  line-height:1.8;
+}
+@media(max-width:980px){
+  body.honor-page main{padding:125px 18px 70px;}
+  body.honor-page .honor-summary{grid-template-columns:1fr;text-align:center;}
+  body.honor-page .honor-grid{grid-template-columns:1fr;}
+  body.honor-page .honor-hero p{font-size:18px;}
+}
+
+body.honor-page .honor-coin-showcase{
+  width:min(390px,82vw);
+  aspect-ratio:1/1;
+  margin:34px auto 0;
+  border-radius:50%;
+  overflow:hidden;
+  box-shadow:
+    0 0 35px rgba(243,191,43,.22),
+    0 0 100px rgba(243,191,43,.12),
+    0 35px 90px rgba(0,0,0,.55);
+}
+body.honor-page .honor-coin-showcase img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+body.honor-page .honor-card-featured{
+  grid-column:1/-1;
+  max-width:760px;
+  width:100%;
+  min-height:0;
+  margin:auto;
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:30px;
+  align-items:center;
+  padding:34px;
+}
+body.honor-page .honor-card-coin{
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  overflow:hidden;
+  box-shadow:0 0 30px rgba(243,191,43,.24);
+}
+body.honor-page .honor-card-coin img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+body.honor-page .honor-card-featured h3{
+  font-size:34px;
+}
+body.honor-page .honor-label{
+  color:#8e7b3d;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.15em;
+  margin-bottom:8px;
+}
+@media(max-width:700px){
+  body.honor-page .honor-card-featured{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  body.honor-page .honor-card-coin{
+    margin:auto;
   }
 }
-</script>
 
+</style>
 <link rel="stylesheet" href="assets/css/ui.css">
 </head>
 
-<body>
-
-
+<body class="honor-page">
 <!-- shared:header:start -->
 <div id="site-header">
 <a class="skip-link" href="#main-content">Zum Inhalt</a>
@@ -102,143 +308,73 @@
 </nav>
 </div>
 <!-- shared:header:end -->
+
 <main id="main-content">
-
-<section id="faq" style="padding-top:170px;">
-<div class="section-title">
-<h2>FAQ</h2>
-<p>
-Die wichtigsten Fragen kompakt erklärt. Zum Öffnen einfach über eine Frage fahren oder antippen.
-</p>
-</div>
-
-<div class="faq">
-
-<div class="faq-item">
-<button class="faq-question" type="button" onclick="toggleFaq(this)">
-<h3>Ist der Schwenningen Token ein Investment?</h3>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<div class="faq-answer-inner">
-Nein. Der Schwenningen Token ist ausdrücklich kein Finanzprodukt, keine Anlageberatung und kein Investmentprojekt. Im Mittelpunkt stehen Community, digitale Heimat und regionale Verbundenheit.
-</div>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question" type="button" onclick="toggleFaq(this)">
-<h3>Gibt es ein Gewinnversprechen?</h3>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<div class="faq-answer-inner">
-Nein. Es gibt keinerlei Renditeversprechen, Kursziele oder Gewinnzusagen. Der Token wird nicht als Wertanlage beworben.
-</div>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question" type="button" onclick="toggleFaq(this)">
-<h3>Wie bekomme ich Tokens?</h3>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<div class="faq-answer-inner">
-Zum Start können Einwohnerinnen und Einwohner aus Schwenningen bis zu 10 Tokens per E-Mail anfragen. Dafür wird eine öffentliche Solana-Wallet-Adresse benötigt.
-</div>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question" type="button" onclick="toggleFaq(this)">
-<h3>Welche Wallet brauche ich?</h3>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<div class="faq-answer-inner">
-Du brauchst eine Solana-fähige Wallet. Als einfaches Beispiel eignet sich Phantom. Wichtig: Für den Empfang wird nur deine öffentliche Solana-Adresse benötigt.
-</div>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question" type="button" onclick="toggleFaq(this)">
-<h3>Was darf ich niemals weitergeben?</h3>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<div class="faq-answer-inner">
-Niemals deine geheime Wiederherstellungsphrase, private Schlüssel oder Passwörter weitergeben. Wer diese Daten hat, kann deine Wallet kontrollieren. Für die Token-Verteilung reicht ausschließlich die öffentliche Adresse.
-</div>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question" type="button" onclick="toggleFaq(this)">
-<h3>Muss ich etwas bezahlen?</h3>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<div class="faq-answer-inner">
-Nein. Die Erstverteilung ist als kostenlose Community-Verteilung gedacht, solange Tokens verfügbar sind. Es besteht kein Anspruch auf Zuteilung.
-</div>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question" type="button" onclick="toggleFaq(this)">
-<h3>Auf welchem Netzwerk läuft der Token?</h3>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<div class="faq-answer-inner">
-Der Schwenningen Token läuft auf der Solana Blockchain als SPL-Token. Die Tokenadresse kann öffentlich über Solscan oder den Solana Explorer geprüft werden.
-</div>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question" type="button" onclick="toggleFaq(this)">
-<h3>Ist das ein offizielles Projekt der Gemeinde?</h3>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<div class="faq-answer-inner">
-Nein. Es handelt sich um ein privates Community-Projekt mit lokalem Bezug. Es besteht keine Verbindung zur Gemeindeverwaltung Schwenningen oder zu offiziellen kommunalen Einrichtungen.
-</div>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question" type="button" onclick="toggleFaq(this)">
-<h3>Was sind Regionalpartner?</h3>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<div class="faq-answer-inner">
-Regionalpartner sind als freiwilliges Zukunftsnetzwerk gedacht. Lokale Vereine, Geschäfte, Gastronomie, Events oder Projekte können später sichtbar Teil der Community-Idee werden.
-</div>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question" type="button" onclick="toggleFaq(this)">
-<h3>Kann ich den Token handeln?</h3>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-answer">
-<div class="faq-answer-inner">
-Der Token ist technisch frei transferierbar. Diese Website bewirbt jedoch ausdrücklich keinen Handel, keine Spekulation und kein Investment.
-</div>
-</div>
-</div>
-
-</div>
+<section class="honor-hero">
+  <div class="honor-kicker">SWHNR · SCHWENNINGEN HEUBERG HONOR</div>
+  <h1>Auszeichnungen</h1>
+  <p>
+    Der SWHNR Ehrencoin würdigt Menschen, die sich in besonderer Weise
+    um das Schwenningen Token Projekt und seine Community verdient gemacht haben.
+  </p>
+  <div class="honor-coin-showcase">
+    <img src="assets/previews/swhnr-coin.webp" alt="Schwenningen Heuberg Honor SWHNR Ehrencoin" width="1200" height="1200" decoding="async">
+  </div>
 </section>
 
+<section class="honor-summary">
+  <div class="honor-count">
+    <strong id="honorCount">0</strong>
+    <span>Ausgezeichnete</span>
+  </div>
+  <div>
+    <h2>Eine digitale Ehrung für besonderes Engagement.</h2>
+    <p>
+      Jede Auszeichnung steht für einen konkreten Beitrag zum Projekt,
+      zur Community oder zur regionalen Idee dahinter.
+    </p>
+  </div>
+</section>
 
+<section class="honor-grid" id="honorGrid">
+
+  <article class="honor-card honor-card-featured">
+    <div class="honor-card-coin">
+      <img src="assets/previews/swhnr-coin.webp" alt="SWHNR Ehrencoin" width="1200" height="1200" decoding="async">
+    </div>
+    <div>
+      <div class="honor-label">SCHWENNINGEN HEUBERG HONOR</div>
+      <div class="honor-number">HONOR 001</div>
+      <h3>Florian Lessner</h3>
+      <p class="honor-reason">
+        Ausgezeichnet als Gründer und Ersteller des Schwenningen Token Projekts –
+        für die Initiierung, Entwicklung und den Aufbau der SWHBG-Community.
+      </p>
+    </div>
+  </article>
+
+  <!--
+  WEITERE AUSZEICHNUNG:
+  Diesen Block kopieren und HONOR-Nummer, Name und Grund anpassen.
+
+  <article class="honor-card">
+    <div class="honor-number">HONOR 002</div>
+    <div class="honor-card-coin">
+      <img src="assets/previews/swhnr-coin.webp" alt="SWHNR Ehrencoin" width="1200" height="1200" decoding="async">
+    </div>
+    <h3>Vorname Nachname</h3>
+    <p class="honor-reason">Grund der Auszeichnung.</p>
+  </article>
+  -->
+
+</section>
+
+<div class="honor-note">
+  Der SWHNR ist ein symbolischer Ehrencoin des Schwenningen Token Projekts.
+  Die Auszeichnung ist nicht käuflich und mit keinem finanziellen Anspruch verbunden.
+</div>
 </main>
+
 <!-- shared:footer:start -->
 <div id="site-footer">
 <footer>
@@ -391,7 +527,17 @@ Der Betreiber behält sich vor, diese Datenschutzerklärung anzupassen, sofern d
 </div>
 </div>
 <!-- shared:footer:end -->
-<script src="assets/js/main.js"></script>
 
+<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".honor-card");
+  const count = document.getElementById("honorCount");
+  const empty = document.getElementById("honorEmpty");
+
+  if(count) count.textContent = cards.length;
+  if(empty && cards.length > 0) empty.remove();
+});
+</script>
 </body>
 </html>

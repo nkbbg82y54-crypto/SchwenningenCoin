@@ -1,0 +1,5 @@
+{
+  "name": "schwenningen-token-v4",
+  "private": true,
+  "scripts": { "build": "python3 tools/build.py" }
+}
