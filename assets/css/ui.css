@@ -51,3 +51,19 @@ body .faq-item:not(.active) .faq-answer { max-height: 0; }
   html { scroll-behavior: auto; }
   #site-header *, .modal { transition: none !important; }
 }
+
+/* The hero follows its rendered width, rather than its intrinsic HTML height. */
+body .hero img.coin {
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+#site-header .logo img {
+  flex-shrink: 0;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
+}
+/* Trim only the white photo border in the interface; the downloaded original stays intact. */
+img[src$="/coin-v2.webp"], img[src$="/logo-v2.webp"] {
+  clip-path: ellipse(46.6% 47.1% at 49.5% 48.8%);
+}
