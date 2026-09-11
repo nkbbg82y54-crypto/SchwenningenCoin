@@ -254,6 +254,21 @@ body.honor-page .honor-label{
   }
 }
 
+
+/* Public verification of the separate SWHNR honor token. */
+body.honor-page .honor-verification{max-width:1100px;margin:0 auto 48px;padding:32px 28px;border-top:1px solid rgba(243,191,43,.25);border-bottom:1px solid rgba(243,191,43,.25);}
+.honor-verification h2{font-size:28px;color:#f3bf2b;margin:0 0 16px;}
+.honor-verification p{line-height:1.7;color:#ccc;max-width:760px;}
+.honor-verification .honor-address-label{font-size:14px;margin:24px 0 8px;color:#aaa;}
+.honor-token-address{display:block;font-family:monospace;font-size:16px;line-height:1.7;overflow-wrap:anywhere;user-select:all;color:#fff;}
+.honor-verify-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;}
+.honor-verify-actions a,.honor-verify-actions button{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;min-height:44px;border:1px solid rgba(243,191,43,.4);border-radius:7px;background:transparent;color:#f3bf2b;font:inherit;font-size:15px;text-decoration:none;cursor:pointer;}
+.honor-verify-actions button{background:#f3bf2b;color:#111;font-weight:700;}
+.honor-verify-actions a:hover{background:rgba(243,191,43,.1);}
+.honor-verification .honor-verify-note{font-size:14px;color:#aaa;margin-top:18px;}
+.honor-verify-actions .copy-status{flex-basis:100%;order:2;}
+@media(max-width:600px){body.honor-page .honor-verification{margin-left:20px;margin-right:20px;padding:26px 0;}.honor-verify-actions{flex-direction:column;align-items:stretch;}.honor-verification h2{font-size:24px;}}
+
 </style>
 <link rel="stylesheet" href="assets/css/ui.css?v=4">
 </head>
@@ -299,6 +314,19 @@ body.honor-page .honor-label{
       zur Community oder zur regionalen Idee dahinter.
     </p>
   </div>
+</section>
+
+<section class="honor-verification" id="token-pruefen" aria-labelledby="honor-verify-title">
+<h2 id="honor-verify-title">Den Ehrencoin selbst prüfen</h2>
+<p>Hier findest du die Tokenadresse des Schwenningen Heuberg Honor (SWHNR). Über die Blockchain-Explorer kannst du die öffentlich verfügbaren Tokeninformationen und Transaktionen einsehen.</p>
+<p class="honor-address-label">SWHNR · Tokenadresse auf Solana</p>
+<code class="honor-token-address" id="honor-token-address">4XMcoT5dH8T8oak5av3bU6NinnrixGQsVf1rXCUNtuPw</code>
+<div class="honor-verify-actions">
+<button type="button" data-address="4XMcoT5dH8T8oak5av3bU6NinnrixGQsVf1rXCUNtuPw" onclick="copyText(this.dataset.address, this)" aria-label="SWHNR-Tokenadresse kopieren">Adresse kopieren</button>
+<a href="https://solscan.io/token/4XMcoT5dH8T8oak5av3bU6NinnrixGQsVf1rXCUNtuPw" target="_blank" rel="noopener noreferrer">Auf Solscan prüfen ↗</a>
+<a href="https://explorer.solana.com/address/4XMcoT5dH8T8oak5av3bU6NinnrixGQsVf1rXCUNtuPw?cluster=mainnet-beta" target="_blank" rel="noopener noreferrer">Im Solana Explorer prüfen ↗</a>
+</div>
+<p class="honor-verify-note">Die Links öffnen externe Blockchain-Explorer in einem neuen Tab. Die Namen und Begründungen der Auszeichnungen werden auf dieser Website gepflegt; die Tokenadresse allein belegt keine Zuordnung zu einer Person.</p>
 </section>
 
 <section class="honor-grid" id="honorGrid">
