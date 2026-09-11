@@ -29,3 +29,9 @@ Die 404-Seite verwendet Pfade ab dem Hauptverzeichnis der Domain, passend zu `ww
 - Logik für Menüzustände, FAQ und Kopieren bei Erfolg, Ablehnung und fehlender Zwischenablage geprüft.
 
 Die Logiktests verwenden vereinfachte Dokumentobjekte. Eine visuelle Prüfung in einem echten Browser sowie eine rechtliche Prüfung der vorhandenen Texte wurden nicht durchgeführt.
+
+## Neue Struktur (11. September 2026)
+
+Die Startseite bündelt Einstieg, Projektüberblick, Token-Verteilung, Community und Transparenz. Die vollständige Geschichte liegt auf `projekt.html`. `honor.html` bleibt eigenständig und hat einen direkten Menüpunkt. `assets/css/editorial.css` gestaltet die Start- und Projektseite.
+
+Browserprüfung: Startseite bei 1365 und 390 Pixeln Breite visuell geprüft, Coin jeweils quadratisch (390 bzw. 210 Pixel), keine horizontale Überbreite. Mobiles Menü geöffnet und Projektlink getestet; Projektseite mit allen sechs Kapiteln geprüft.

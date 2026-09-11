@@ -2,7 +2,7 @@
 
 const TOKEN_ADDRESS = '3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E';
 const DONATE_ADDRESS = 'HL7xyeaccyBVFoGbbkqfC74HuEFNP8aZseDxVhSxwZJy';
-const mobileLayout = window.matchMedia('(max-width: 900px)');
+const mobileLayout = window.matchMedia('(max-width: 1050px)');
 let currentDialog = null;
 let dialogOpener = null;
 let inertBackground = [];

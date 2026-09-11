@@ -63,7 +63,17 @@ body .hero img.coin {
   object-fit: contain;
   aspect-ratio: 1 / 1;
 }
-/* Trim only the white photo border in the interface; the downloaded original stays intact. */
-img[src$="/coin-v2.webp"], img[src$="/logo-v2.webp"] {
-  clip-path: ellipse(46.6% 47.1% at 49.5% 48.8%);
-}
+
+
+/* The image itself now contains the circular mask, independent of browser CSS caching. */
+img[src$="coin-round-v3.svg"] { object-fit: contain; aspect-ratio: 1 / 1; }
+
+/* A quiet, consistent frame for the new information structure. */
+#site-header header > nav{max-width:1200px;padding:16px 24px;gap:22px}
+#site-header .logo{font-size:18px;gap:10px}
+#site-header .nav-links{gap:22px;font-size:14px}
+#site-header .nav-links>a{white-space:nowrap;padding:10px 0}
+#site-header .logo img{width:42px;height:42px}
+#site-footer footer{padding:36px 24px}
+body .card,body .vision-card,body .step-card,body .progress-card{box-shadow:none!important;transform:none!important}
+@media(max-width:1050px){#site-header .nav-links{display:none}#site-header .mobile-menu-btn{display:block}#site-header .mobile-menu{display:block}}
