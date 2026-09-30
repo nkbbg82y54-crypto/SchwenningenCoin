@@ -27,3 +27,13 @@ body.honor-detail main>section.honor-summary{padding:32px;background:var(--surfa
 .honor-detail .honor-grid{scroll-margin-top:100px}
 @media(max-width:900px){.home-page .home-hero .eyebrow{justify-content:center}}
 @media(max-width:760px){body.honor-detail main>section.honor-hero{grid-template-columns:1fr;gap:28px}.honor-detail .honor-coin-showcase{max-width:260px}.honor-detail .honor-card{grid-template-columns:1fr;padding:24px}.honor-detail .honor-card-coin{width:100px}body.honor-detail main>section.honor-summary{padding:24px}}
+
+/* Consistent full-width page background and safe content widths. */
+body.editorial-page{background-image:radial-gradient(ellipse 850px 500px at 85% 0,#b28a2310,transparent);background-repeat:no-repeat}
+.editorial-page main{background-image:none;width:100%;min-width:0}
+body.detail-page{overflow-x:visible}
+.detail-page main>section,.detail-page main>section>*{min-width:0;max-width:100%}
+.detail-page main h1,.detail-page main h2,.detail-page main h3{overflow-wrap:anywhere}
+#site-header .nav-links{gap:17px}
+.detail-page main .example-card img{max-height:none;width:100%;height:auto}
+@media(max-width:1150px){#site-header .nav-links{display:none}#site-header .mobile-menu-btn{display:block}#site-header .mobile-menu{display:block}}
