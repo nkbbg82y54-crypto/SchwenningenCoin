@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Schwenningen Token">
-<meta property="og:title" content="Schwenningen Token | Digitale Heimat auf Solana">
+<meta property="og:title" content="Transparenz &amp; Tokenomics | Schwenningen Token">
 <meta property="og:description" content="Verteilung, Gesamtmenge und Projektstatus des Schwenningen Token auf Solana.">
 <meta property="og:url" content="https://www.schwenningen-token.de/tokenomics.html">
 <meta property="og:image" content="https://www.schwenningen-token.de/assets/poster.jpg">
@@ -21,11 +21,11 @@
 <meta property="og:image:type" content="image/jpeg">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Schwenningen Token | Digitale Heimat auf Solana">
+<meta name="twitter:title" content="Transparenz &amp; Tokenomics | Schwenningen Token">
 <meta name="twitter:description" content="Verteilung, Gesamtmenge und Projektstatus des Schwenningen Token auf Solana.">
 <meta name="twitter:image" content="https://www.schwenningen-token.de/assets/poster.jpg">
 
-<title>Tokenomics | Schwenningen Token</title>
+<title>Transparenz &amp; Tokenomics | Schwenningen Token</title>
 
 <link rel="icon" href="assets/coin-icon-v2.png">
 
@@ -52,6 +52,40 @@
 <link rel="stylesheet" href="assets/css/subpages.css?v=1">
 <link rel="stylesheet" href="assets/css/ui.css?v=4">
 <link rel="stylesheet" href="assets/css/brand.css?v=2">
+<style>
+.tokenomics-detail main .tk-intro h1 span{color:var(--gold)}
+.tokenomics-detail main .tk-lead{max-width:660px;font-size:20px}
+.tokenomics-detail main .tk-status{display:flex;align-items:center;gap:10px;font-size:14px;margin-top:26px}
+.tk-status>span{width:7px;height:7px;border-radius:50%;background:#94bd87;flex-shrink:0}
+.tokenomics-detail .tk-overview{display:grid;grid-template-columns:1fr 1.25fr;gap:0;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-top:40px;background:var(--surface)}
+.tk-supply,.tk-community{padding:36px}
+.tk-supply{border-right:1px solid var(--border);background:linear-gradient(135deg,#e8c3650d,transparent)}
+.tk-supply>strong{font-size:clamp(48px,6vw,76px);font-weight:500;line-height:1.05;letter-spacing:-.055em;color:var(--gold);font-variant-numeric:tabular-nums}
+.tokenomics-detail main .tk-supply>p:not(.eyebrow){margin-top:8px}
+.tokenomics-detail main .tk-supply .tk-origin{font-size:14px;margin-top:26px;max-width:280px}
+.tokenomics-detail main .tk-community h2{font-size:24px}
+.tk-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:30px 0}
+.tk-metrics>div{display:flex;flex-direction:column;gap:8px;min-width:0}
+.tk-metrics dt{font-size:13px;color:var(--muted)}
+.tk-metrics dd{order:-1;font-size:42px;line-height:1.1;margin:0;color:var(--text);font-variant-numeric:tabular-nums}
+.tokenomics-detail main .tk-note{font-size:13px;color:var(--muted);margin-top:18px}
+.tk-link{color:var(--gold);font-size:15px;text-decoration:underline;text-underline-offset:5px}
+.tk-section-heading{max-width:700px}
+.tk-rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;margin:36px 0 28px}
+.tk-rules article{border-top:1px solid var(--border);padding-top:22px}
+.tk-rule-number{display:block;font-size:13px;color:var(--gold);margin-bottom:18px}
+.tokenomics-detail main .tk-rules p{font-size:16px}
+.tk-check-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.tk-security{margin:28px 0 0}
+.tk-security>div{border-top:1px solid var(--border);padding:20px 0}
+.tk-security dt{font-size:17px;color:var(--text)}
+.tk-security dd{font-size:15px;line-height:1.7;color:var(--muted);margin:8px 0 0}
+.tk-address-panel{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:30px;min-width:0}
+.tk-address{display:block;overflow-wrap:anywhere;white-space:normal;font-size:15px;line-height:1.8;background:#12150f;padding:18px;margin-top:24px;border-radius:5px;color:var(--gold)}
+.tk-explorers{display:flex;flex-direction:column;gap:16px;border-top:1px solid var(--border);margin-top:26px;padding-top:24px}
+@media(max-width:900px){.tokenomics-detail .tk-overview,.tk-check-layout{grid-template-columns:1fr}.tk-supply{border-right:0;border-bottom:1px solid var(--border)}.tk-check-layout{gap:30px}.tokenomics-detail main .tk-supply .tk-origin{max-width:none}}
+@media(max-width:600px){.tk-supply,.tk-community,.tk-address-panel{padding:24px}.tk-rules{grid-template-columns:1fr;gap:28px}.tk-metrics{gap:12px}.tk-metrics dd{font-size:34px}.tk-metrics dt{font-size:12px}.tokenomics-detail main .tk-lead{font-size:18px}}
+</style>
 </head>
 
 <body class="editorial-page detail-page  tokenomics-detail">
@@ -72,149 +106,36 @@
 </div>
 <!-- shared:header:end -->
 <main id="main-content">
-<section id="tokenomics">
-<div class="section-title">
-<p class="eyebrow">TRANSPARENZ</p><h1>Tokenomics & Projektstatus</h1>
-<p>
-Einfach, transparent und bewusst begrenzt —
-mit Fokus auf Community, Fairness und Nachvollziehbarkeit.
-</p>
+<section id="tokenomics" class="tk-intro" aria-labelledby="tk-title">
+<p class="eyebrow">TRANSPARENZ</p>
+<h1 id="tk-title">Der Token.<br><span>Die Zahlen dahinter.</span></h1>
+<p class="tk-lead">Wie viele Token es gibt, wie sie verteilt werden und wo du die Angaben selbst nachprüfen kannst.</p>
+<p class="tk-status"><span aria-hidden="true"></span>Auf Solana seit 7. Juni 2026</p>
+<div class="tk-overview">
+<div class="tk-supply"><p class="eyebrow">GESAMTMENGE</p><strong>165.000</strong><p>Schwenningen Token</p><p class="tk-origin">Die Idee hinter der Menge: rund 1.650 Einwohner × 100 Token.</p></div>
+<div class="tk-community"><h2>Unsere Community wächst.</h2><dl class="tk-metrics">
+<div><dt>Verteilte Token</dt><dd>140</dd></div>
+<div><dt>Tokenholder</dt><dd>6</dd></div>
+<div><dt>Regionalpartner</dt><dd>2</dd></div>
+</dl><a class="tk-link" href="regionalpartner.html">Unsere Regionalpartner kennenlernen →</a><p class="tk-note">Stand: 30. September 2026 · manuell aktualisiert</p></div>
 </div>
-
-
-<div class="live-banner">🟢 LIVE AUF SOLANA · seit 07.06.2026</div>
-
-<div class="big-supply">
-<div class="big-supply-number">165.000</div>
-<h3>Gesamtmenge des Schwenningen Tokens</h3>
-<p>Fest definiert · transparent · keine Nachprägung vorgesehen</p>
+</section>
+<section aria-labelledby="tk-distribution-title">
+<div class="tk-section-heading"><p class="eyebrow">VERTEILUNG</p><h2 id="tk-distribution-title">Für die Menschen vor Ort.</h2><p>Die Community-Verteilung für Einwohnerinnen und Einwohner von Schwenningen ist gestartet.</p></div>
+<div class="tk-rules">
+<article><span class="tk-rule-number">01</span><h3>Kostenlos zum Start</h3><p>Zum Einstieg gibt es bis zu 10 Token pro Person. Es gibt keinen Verkauf und keinen Vorverkauf.</p></article>
+<article><span class="tk-rule-number">02</span><h3>Frei übertragbar</h3><p>Die Token können zwischen Solana-Wallets übertragen werden.</p></article>
+<article><span class="tk-rule-number">03</span><h3>Gemeinschaft im Mittelpunkt</h3><p>Ein privates Community- und Sammlerprojekt für regionale Verbundenheit, kein Investmentangebot.</p></article>
 </div>
-
-<div class="formula-box">
-<h3>Warum genau 165.000 Token?</h3>
-<div class="formula-big">1.650 Einwohner × 100 Token = 165.000 Token</div>
-</div>
-
-<div class="tokenomics">
-<div class="token-box"><strong>165.000</strong><span>100 Tokens je Einwohner<br>bei ca. 1.650 Einwohnern</span></div>
-<div class="token-box"><strong>SPL</strong><span>Token Standard auf Solana</span></div>
-<div class="token-box"><strong>FIX</strong><span>Keine weitere Ausgabe vorgesehen</span></div>
-<div class="token-box"><strong>OPEN</strong><span>Frei transferierbar</span></div>
-<div class="token-box"><strong>0 €</strong><span>Keine Verkaufsaktion / kein Presale</span></div>
-<div class="token-box"><strong>10</strong><span>Bis zu 10 Tokens pro Person zum Start</span></div>
-<div class="token-box"><strong>PUBLIC</strong><span>Öffentlich auf Solana einsehbar</span></div>
-<div class="token-box"><strong>LOCAL</strong><span>Community-Verteilung für Schwenningen</span></div>
-</div>
-
-<div class="status-box">
-<h3>Projektstatus</h3><div class="timeline"><div class="timeline-item">🟢 Token erstellt (07.06.2026)</div><div class="timeline-item">🟢 Mint deaktiviert</div><div class="timeline-item">🟢 Freeze deaktiviert</div><div class="timeline-item">🟢 Community-Verteilung gestartet</div><div class="timeline-item">🔵 Regionalpartner gesucht</div></div>
-<p>Der aktuelle Stand des Schwenningen Tokens als transparentes Community-Projekt.</p>
-
-<div class="status-grid">
-
-<div class="status-item">
-<div class="status-label live">● LIVE</div>
-<h4>Token aktiv</h4>
-<p>Seit dem 07.06.2026 öffentlich auf der Solana Blockchain verfügbar.</p>
-</div>
-
-<div class="status-item">
-<div class="status-label">FIXED SUPPLY</div>
-<h4>165.000 Tokens</h4>
-<p>Die maximale Gesamtmenge ist fest definiert und transparent einsehbar.</p>
-</div>
-
-<div class="status-item">
-<div class="status-label">COMMUNITY</div>
-<h4>Verteilung gestartet</h4>
-<p>Kostenlose Community-Verteilung für Einwohnerinnen und Einwohner.</p>
-</div>
-
-<div class="status-item">
-<div class="status-label">VERIFIED</div>
-<h4>Blockchain sichtbar</h4>
-<p>Der Token ist öffentlich über Solscan und Solana Explorer nachvollziehbar.</p>
-</div>
-
-<div class="status-item">
-<div class="status-label">MINT</div>
-<h4>Mint deaktiviert</h4>
-<p>Es ist keine weitere Ausgabe von Tokens vorgesehen.</p>
-</div>
-
-<div class="status-item">
-<div class="status-label">FREEZE</div>
-<h4>Freeze deaktiviert</h4>
-<p>Token können nicht zentral eingefroren werden.</p>
-</div>
-
-<div class="status-item">
-<div class="status-label">NO PRESALE</div>
-<h4>Kein Vorverkauf</h4>
-<p>Keine Verkaufsrunde, kein Presale und kein Investmentangebot.</p>
-</div>
-
-<div class="status-item">
-<div class="status-label">LOCAL FIRST</div>
-<h4>Regional gedacht</h4>
-<p>Der Fokus liegt auf Schwenningen, Community und digitaler Verbundenheit.</p>
-</div>
-
-</div>
-</div>
-
-
-<div class="status-box">
-<h3>Community-Fortschritt</h3>
-
-<div class="progress-grid">
-
-<div class="progress-card">
-<strong>140</strong>
-Verteilte Token
-<div class="progress-bar"><div class="progress-fill"></div></div>
-<small>140 von 165.000</small>
-</div>
-
-<div class="progress-card">
-<strong>6</strong>
-Tokenholder
-</div>
-
-<a class="progress-card" href="regionalpartner.html" style="display:block;text-decoration:none;color:inherit;">
-<strong>2</strong>
-Regionalpartner
-<div style="margin-top:10px;color:#f3bf2b;font-weight:700;">→ Zur Partnerseite</div>
-</a>
-
-</div>
-</div>
-
-<div class="token-address-box">
-<div class="token-top">
-<div class="solana-icon">
-<img src="assets/previews/solana.webp" alt="Solana" width="800" height="1200" decoding="async" loading="lazy">
-</div>
-<div>
-<div class="network-label">SOLANA NETWORK</div>
-<div class="token-title">Schwenningen Token</div>
-</div>
-</div>
-
-<div class="address-label">Token-Adresse</div>
-<div class="token-address">3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E</div>
-
-<div class="explorer-links">
-<a href="https://solscan.io/token/3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E" target="_blank" class="explorer-btn">Token auf Solscan prüfen</a>
-<a href="https://explorer.solana.com/address/3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E" target="_blank" class="explorer-btn">Token im Solana Explorer ansehen</a>
-</div>
-
-<button class="copy-btn" onclick="copyAddress()">Adresse kopieren</button>
-</div>
-
-
-
-</section></main>
+<a class="tk-link" href="index.html#ablauf">So erhältst du deine Token →</a>
+</section>
+<section aria-labelledby="tk-check-title">
+<div class="tk-check-layout"><div><p class="eyebrow">NACHVOLLZIEHBAR</p><h2 id="tk-check-title">Öffentlich einsehbar.<br>Selbst nachprüfbar.</h2><p>Der Schwenningen Token nutzt den SPL-Standard auf Solana. Token-Daten und Transaktionen sind über die Blockchain-Explorer einsehbar.</p>
+<dl class="tk-security"><div><dt>Nachprägung deaktiviert</dt><dd>Die Berechtigung zum Erzeugen weiterer Token wurde deaktiviert (Mint Authority).</dd></div><div><dt>Einfrieren deaktiviert</dt><dd>Die Berechtigung zum zentralen Einfrieren von Token-Konten wurde deaktiviert (Freeze Authority).</dd></div></dl></div>
+<div class="tk-address-panel"><h3>Die offizielle Token-Adresse</h3><p class="tk-note">Zum Abgleichen im Explorer oder in deiner Wallet.</p><code class="tk-address">3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E</code><button type="button" class="copy-btn" onclick="copyAddress()">Adresse kopieren</button>
+<div class="tk-explorers"><a class="tk-link" href="https://solscan.io/token/3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E" target="_blank" rel="noopener noreferrer">Auf Solscan ansehen ↗</a><a class="tk-link" href="https://explorer.solana.com/address/3tHuuQm2qN3v6NAvf9tJuEagGdu2Mofpq935udPkQr9E" target="_blank" rel="noopener noreferrer">Im Solana Explorer ansehen ↗</a></div></div></div>
+</section>
+</main>
 <!-- shared:footer:start -->
 <div id="site-footer">
 <footer>
@@ -368,22 +289,7 @@ Der Betreiber behält sich vor, diese Datenschutzerklärung anzupassen, sofern d
 </div>
 <!-- shared:footer:end -->
 <script src="assets/js/main.js?v=2"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".progress-card");
-  if(cards.length > 0){
-    const firstCard = cards[0];
-    const strong = firstCard.querySelector("strong");
-    const fill = firstCard.querySelector(".progress-fill");
-    if(strong && fill){
-      const distributed = parseInt(strong.textContent.replace(/\./g,''),10) || 0;
-      const total = 165000;
-      const percent = Math.max(0, Math.min(100, (distributed/total)*100));
-      fill.style.width = percent + "%";
-    }
-  }
-});
-</script>
+
 </body>
 
 </html>
