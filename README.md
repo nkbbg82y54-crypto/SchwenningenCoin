@@ -88,3 +88,11 @@ Begriffserklärungen, Blockchain-Hintergrund, Token-Prüfung und der vollständi
 Die Download-Auswahl verwendet lokal gespeicherte deutsche Original-Badges von Apple und Google (`assets/downloads/`) sowie eine Desktop-Kachel mit Monitor-Symbol und vorhandenem Phantom-Appsymbol. Badge-Quellen: Apple Media Services (`tools.applemediaservices.com`) und Google Play (`play.google.com/intl/en_us/badges/`). Die Bilder verlinken direkt auf die jeweiligen Downloads.
 
 Die drei Download-Schaltflächen sind auf 40 Pixel sichtbare Höhe abgestimmt. Spezifische CSS-Regeln verhindern, dass allgemeine Bildstile die Badge-Größen überschreiben; der transparente Rand der Google-Grafik wird bei der Ausrichtung berücksichtigt.
+
+## Einheitliche Teilnahme und Anfrageablauf
+
+Die Website nennt einheitlich 10 Token für Einzelpersonen aus Schwenningen oder mit Bezug zum Ort und 100 Token für Vereine und Institutionen, kostenlos und solange verfügbar. Die Anfrage benötigt Name, Bezug zu Schwenningen, gegebenenfalls Vereinsname/Betrieb und öffentliche Solana-Adresse. Die E-Mail-Vorlagen auf Startseite, Wallet-Seite und FAQ enthalten dieselben Felder. Nach Prüfung erfolgt bei erfüllten Voraussetzungen und Verfügbarkeit die Übertragung an die angegebene Adresse. Es wird keine feste Bearbeitungszeit oder zusätzliche E-Mail-Bestätigung zugesagt.
+
+Die Startseite zeigt 240 verteilte Token und 7 Tokenholder mit Stand 7. Oktober 2026 und Link zur Transparenz-Seite. Bei künftigen Zahlenänderungen `index.html`, `tokenomics.html` und diese README gemeinsam aktualisieren. `assets/css/participation.css` gestaltet die Statuszeile und den Anfragehinweis.
+
+Mobile Vorprüfung am 7. Oktober 2026: alle zehn vollständigen Seiten bei 320 Pixel Breite ohne horizontales Überlaufen; keine defekten bereits geladenen Bilder gefunden. Menüöffnung/-navigation, Weg zur Wallet-Anleitung, 40-Pixel-Downloadbuttons sowie Öffnen des BISON-Bereichs bei 390 Pixel geprüft. Galerie enthält 25 WebP-Vorschauen und 25 Original-Downloadlinks. Kein tatsächlicher E-Mail-Versand durchgeführt.
