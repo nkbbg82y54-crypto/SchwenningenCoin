@@ -11,7 +11,7 @@ Statische Website für das private Community-Projekt Schwenningen Token. HTML, C
 - `community.html` und `community-galerie-social.html`: Community und Galerie mit Original-Downloads.
 - `regionalpartner.html`: Regionalpartner mit zwei optimierten Partnerpostern.
 - `honor.html`: Auszeichnungen und Ehrencoin.
-- `tokenomics.html`, `wallet.html`, `faq.html`: Transparenz, Wallet-Hilfe und Fragen.
+- `tokenomics.html`, `wallet.html`, `faq.html`: Transparenz, kurze Phantom-Anleitung und Fragen.
 - `404.html`: Fehlerseite.
 - `header.html` und `footer.html`: gemeinsame HTML-Bausteine, keine eigenständigen Seiten.
 - `assets/css/`: aktuelle Stylesheets; `assets/js/main.js`: gemeinsame Interaktionen.
@@ -78,3 +78,9 @@ Vor weiteren Löschungen Verweise in HTML, CSS, JavaScript und SVG prüfen, eins
 - Erfolgreiche GitHub-Pages-Veröffentlichungen der Website-Änderungen kontrolliert.
 
 Eine vollständige erneute Browserprüfung aller Seiten und Funktionen war nicht Bestandteil dieser Änderungen.
+
+## Wallet-Anleitung
+
+`wallet.html` führt in fünf Schritten durch Download, Erstellung einer Wallet mit Wiederherstellungsphrase, Offline-Sicherung, Kopieren der Solana-Adresse und Token-Anfrage. Grundlage sind die offiziellen Phantom-Anleitungen zur [Einrichtung](https://phantom.com/learn/guides/how-to-create-a-new-wallet) und [Empfangsadresse](https://help.phantom.com/articles/28355153389075), abgeglichen am 7. Oktober 2026. `assets/css/wallet-guide.css` gestaltet die Anleitung.
+
+Begriffserklärungen, Blockchain-Hintergrund, Token-Prüfung und der vollständige vorhandene BISON-Bereich stehen in standardmäßig geschlossenen HTML-Aufklappbereichen (`details`/`summary`). Sie funktionieren ohne zusätzliches JavaScript. Der Empfehlungslink `https://join.bisonapp.com/b6rstg`, Referral-Code und zugehörige Hinweise bleiben erhalten. BISON-Aktionsangaben wurden bei dieser Umgestaltung nicht neu geprüft; es gelten die Bedingungen des Anbieters.
