@@ -100,3 +100,7 @@ Mobile Vorprüfung am 7. Oktober 2026: alle zehn vollständigen Seiten bei 320 P
 ## Regionalpartnerschaft anfragen
 
 Der Button „Partnerschaft anfragen“ auf `regionalpartner.html` öffnet eine vorbereitete E-Mail an `swhbg@schwenningen-token.de`. Betreff und Text enthalten eine kurze Interessenbekundung sowie Felder für Ansprechperson, Betrieb/Verein/Institution, Ort und regionalen Bezug, optionalen Webauftritt und Ideen oder Fragen zur Zusammenarbeit. Der Versand erfolgt erst durch die anfragende Person im eigenen E-Mail-Programm.
+
+## Community-QR-Code
+
+Das QR-Code-Fenster auf `community.html` zeigt die bereitgestellte SVG-Datei `assets/qr-code-v2.svg` (1147 × 1147). Sie wird unverändert übernommen; der neue Dateiname verhindert die Wiederverwendung der alten Bildadresse aus dem Browsercache.
