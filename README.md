@@ -46,6 +46,12 @@ Neue Bilder benötigen eigene optimierte Vorschauen; `tools/build.py` erzeugt di
 
 Alle zehn vollständigen HTML-Seiten verweisen auf `/assets/coin-icon-v3.png` als Favicon und Apple-Touch-Icon (180 × 180 Pixel). Der neue Dateiname dient der Aktualisierung gegenüber älteren gespeicherten Symbolen. Bei einem künftigen Motivwechsel wieder einen neuen Dateinamen verwenden. Bereits gespeicherte Lesezeichen können das alte Symbol länger behalten.
 
+## Verteilungsstand
+
+Stand: 7. Oktober 2026, nach Angabe des Projektbetreibers: **240 verteilte Token** und **7 Tokenholder**. Gegenüber dem vorherigen Stand wurden weitere 100 Token an einen zusätzlichen Holder verteilt. Die Gesamtmenge bleibt bei 165.000 Token.
+
+Diese Kennzahlen und ihr Standdatum werden manuell in `tokenomics.html` gepflegt. Bei einer Änderung auch diesen Abschnitt aktualisieren.
+
 ## Veröffentlichung
 
 Repository: https://github.com/nkbbg82y54-crypto/SchwenningenCoin
