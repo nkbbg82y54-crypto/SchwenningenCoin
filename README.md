@@ -1,37 +1,72 @@
-# Schwenningen Token – korrigierte V4
+# Schwenningen Token – Website V4
 
-Die HTML-Dateien und der Ordner `assets` sind direkt für das bestehende Hosting verwendbar. Alle bisherigen Seiten bleiben erhalten. „Auszeichnungen“ ist in beiden Navigationsmenüs enthalten.
+Stand: 7. Oktober 2026
 
-## Gemeinsame Navigation und Footer bearbeiten
+Statische Website für das private Community-Projekt Schwenningen Token. HTML, CSS und JavaScript werden über GitHub Pages unter https://www.schwenningen-token.de/ veröffentlicht.
+
+## Seiten und Dateien
+
+- `index.html`: Startseite und Einstieg in die Token-Verteilung.
+- `projekt.html`: Geschichte in sechs Kapiteln und Vision; ohne Story-Poster, mit aktuellem Doppelcoin.
+- `community.html` und `community-galerie-social.html`: Community und Galerie mit Original-Downloads.
+- `regionalpartner.html`: Regionalpartner mit zwei optimierten Partnerpostern.
+- `honor.html`: Auszeichnungen und Ehrencoin.
+- `tokenomics.html`, `wallet.html`, `faq.html`: Transparenz, Wallet-Hilfe und Fragen.
+- `404.html`: Fehlerseite.
+- `header.html` und `footer.html`: gemeinsame HTML-Bausteine, keine eigenständigen Seiten.
+- `assets/css/`: aktuelle Stylesheets; `assets/js/main.js`: gemeinsame Interaktionen.
+- `tools/build.py`: Synchronisierung der gemeinsamen Bausteine und Erstellung von `dist`.
+
+## Navigation und Footer bearbeiten
 
 1. `header.html` oder `footer.html` ändern.
-2. Im Website-Ordner `python3 tools/build.py` ausführen (Python 3 erforderlich).
-3. Die aktualisierten HTML-Dateien und `assets` hochladen. Alternativ den Inhalt des erzeugten Ordners `dist` hochladen.
+2. Im Website-Ordner `python3 tools/build.py` ausführen (Python 3 erforderlich; alternativ `npm run build`).
+3. Die geänderten HTML-Dateien und benötigten Assets prüfen und in das Repository übernehmen.
 
-Das Werkzeug übernimmt die gemeinsamen Inhalte in alle Seiten. Deshalb funktionieren die vorhandene Navigation und der Footer auch ohne nachträgliche Dateiabrufe. Die markierten Bereiche in den einzelnen HTML-Dateien werden beim nächsten Durchlauf automatisch synchronisiert.
+Das Werkzeug schreibt die gemeinsamen Inhalte in die markierten Bereiche der Inhaltsseiten. Navigation und Footer sind deshalb ohne zusätzliche Dateiabrufe vorhanden. Das Skript verändert die HTML-Dateien im Projektordner und kopiert HTML und Assets nach `dist`.
 
-`assets/css/ui.css` steuert die gemeinsame Navigation, Dialoge und Bedienhilfen. Das übrige Seitendesign bleibt in den bisherigen Styles erhalten. `assets/js/main.js` enthält die gemeinsamen Interaktionen.
+Ein bestehender `dist`-Ordner wird nur ergänzt und überschrieben: Gelöschte Quelldateien werden dort nicht automatisch entfernt. Für einen bereinigten Export muss `dist` vor dem Build geleert werden. Das Skript kopiert die Domain-Datei `CNAME` nicht nach `dist`.
 
-## Bilder
+## Bilder und Ladezeiten
 
-Die Website zeigt optimierte WebP-Dateien aus `assets/previews`. Die ursprünglichen Bilder bleiben im Ordner `assets` erhalten und sind weiterhin die Downloadziele in der Galerie. Neue Bilder benötigen ebenfalls passende Vorschauen; das Synchronisierungswerkzeug erzeugt keine neuen Bildvarianten.
+Für die Anzeige werden optimierte WebP-Dateien verwendet; Galerie-Downloads verweisen weiterhin auf die PNG-Originale in `assets/galerie/`.
+
+| Einsatz | Aktuelle Bilddateien | Übertragungsgröße |
+| --- | --- | --- |
+| Galerie: 25 Motive | `assets/previews/galerie/*.webp` (die 25 Galerie-Motive) | Zusammen ca. 2,87 MB statt 68,37 MB |
+| Auszeichnungen: drei Coin-Abbildungen | `assets/previews/galerie/swhnr-22f836914b.webp` | Eine gemeinsam verwendete Datei mit ca. 152 KB statt 2,49 MB |
+| Projekt: Doppelcoin | `assets/previews/galerie/doppelcoin.webp` | Ca. 107 KB |
+| Regionalpartner: zwei Poster | `assets/previews/galerie/partner-strohpark-d700fc25.webp` und `partner-albverein-4983b4fb.webp` | Zusammen ca. 293 KB statt 5,54 MB |
+
+Die neuen Vorschauen haben höchstens 800 Pixel an der längsten Seite und wurden mit WebP-Qualität 80 erstellt. Die Bildproportionen bleiben erhalten. Verzögertes Laden (`loading="lazy"`) bleibt bei Galerie, Doppelcoin und Partnerpostern aktiv.
+
+Neue Bilder benötigen eigene optimierte Vorschauen; `tools/build.py` erzeugt diese nicht. Bei einem Bildwechsel die Bildpfade und Größenangaben im HTML prüfen. Originale beibehalten, sofern sie als Download oder anderweitig verlinkt sind.
+
+## Browser- und Lesezeichen-Symbol
+
+Alle zehn vollständigen HTML-Seiten verweisen auf `/assets/coin-icon-v3.png` als Favicon und Apple-Touch-Icon (180 × 180 Pixel). Der neue Dateiname dient der Aktualisierung gegenüber älteren gespeicherten Symbolen. Bei einem künftigen Motivwechsel wieder einen neuen Dateinamen verwenden. Bereits gespeicherte Lesezeichen können das alte Symbol länger behalten.
 
 ## Veröffentlichung
 
-Die 404-Seite verwendet Pfade ab dem Hauptverzeichnis der Domain, passend zu `www.schwenningen-token.de`. Bei Veröffentlichung in einem Unterverzeichnis müssen ihre Rückverweise und Bildpfade angepasst werden.
+Repository: https://github.com/nkbbg82y54-crypto/SchwenningenCoin
 
-## Durchgeführte Prüfungen
+Änderungen auf `main` werden über den GitHub-Pages-Ablauf „pages build and deployment“ veröffentlicht. Nach dem Hochladen unter „Actions“ prüfen, ob die Veröffentlichung erfolgreich abgeschlossen wurde. Für den bestehenden Ablauf werden die HTML-Dateien und `assets` im Repository-Hauptverzeichnis gepflegt; ein lokaler Build allein veröffentlicht nichts.
 
-- Lokale Datei- und Sprungziele sowie eindeutige IDs geprüft.
-- Einheitliche Navigation und Footer auf allen acht Inhaltsseiten geprüft.
-- Honor-Link in Desktop- und Mobilnavigation geprüft.
-- JavaScript-Syntax und alle HTML-Klickfunktionen geprüft.
-- Logik für Menüzustände, FAQ und Kopieren bei Erfolg, Ablehnung und fehlender Zwischenablage geprüft.
+Die im Repository vorhandene `CNAME`-Datei für die eigene Domain erhalten. Die Fehlerseite und die Symbol-Verweise verwenden Pfade ab dem Domain-Hauptverzeichnis. Bei einem Umzug in ein Unterverzeichnis müssen diese Pfade angepasst werden.
 
-Die Logiktests verwenden vereinfachte Dokumentobjekte. Eine visuelle Prüfung in einem echten Browser sowie eine rechtliche Prüfung der vorhandenen Texte wurden nicht durchgeführt.
+## Bereinigung und Pflege
 
-## Neue Struktur (11. September 2026)
+Am 7. Oktober 2026 wurden 42 ungenutzte Dateien mit zusammen rund 46 MB aus V4 und dem aktuellen GitHub-Stand entfernt: alte Bilder und Vorschauen, zwei alte Stylesheets sowie nicht verlinkte Whitepaper-Dateien. Aktuelle Galerie-Originale und der verlinkte Whitepaper-Download bleiben erhalten. Der alte lokale `_BACKUP`-Ordner wurde aus V4 entfernt; eine Wiederherstellungssicherung liegt außerhalb des Website-Ordners. Die Git-Historie bleibt erhalten.
 
-Die Startseite bündelt Einstieg, Projektüberblick, Token-Verteilung, Community und Transparenz. Die vollständige Geschichte liegt auf `projekt.html`. `honor.html` bleibt eigenständig und hat einen direkten Menüpunkt. `assets/css/editorial.css` gestaltet die Start- und Projektseite.
+Vor weiteren Löschungen Verweise in HTML, CSS, JavaScript und SVG prüfen, einschließlich Download-Links und Browser-Symbolen. Bausteine, Build-Werkzeug und Projektdokumentation werden auch dann benötigt, wenn sie nicht direkt von einer Webseite verlinkt sind. Relevante Änderungen an Struktur, Bildern oder Veröffentlichung in dieser README lokal und auf GitHub mitführen.
 
-Browserprüfung: Startseite bei 1365 und 390 Pixeln Breite visuell geprüft, Coin jeweils quadratisch (390 bzw. 210 Pixel), keine horizontale Überbreite. Mobiles Menü geöffnet und Projektlink getestet; Projektseite mit allen sechs Kapiteln geprüft.
+## Prüfung der Änderungen vom 7. Oktober 2026
+
+- Neue WebP-Vorschauen geöffnet und visuell kontrolliert; Dateigrößen geprüft.
+- Bei den Bildumstellungen bestehende Links beibehalten und Bildziele geprüft.
+- Alle sechs Story-Kapitel nach Entfernung des Posters erhalten.
+- Browser- und Apple-Touch-Icon auf allen zehn vollständigen Seiten eingebunden.
+- Nach der Bereinigung keine fehlenden lokalen Dateiziele in der Verweisprüfung gefunden.
+- Erfolgreiche GitHub-Pages-Veröffentlichungen der Website-Änderungen kontrolliert.
+
+Eine vollständige erneute Browserprüfung aller Seiten und Funktionen war nicht Bestandteil dieser Änderungen.
