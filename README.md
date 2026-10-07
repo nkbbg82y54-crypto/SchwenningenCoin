@@ -86,3 +86,5 @@ Eine vollständige erneute Browserprüfung aller Seiten und Funktionen war nicht
 Begriffserklärungen, Blockchain-Hintergrund, Token-Prüfung und der vollständige vorhandene BISON-Bereich stehen in standardmäßig geschlossenen HTML-Aufklappbereichen (`details`/`summary`). Sie funktionieren ohne zusätzliches JavaScript. Der Empfehlungslink `https://join.bisonapp.com/b6rstg`, Referral-Code und zugehörige Hinweise bleiben erhalten. BISON-Aktionsangaben wurden bei dieser Umgestaltung nicht neu geprüft; es gelten die Bedingungen des Anbieters.
 
 Die Download-Auswahl verwendet lokal gespeicherte deutsche Original-Badges von Apple und Google (`assets/downloads/`) sowie eine Desktop-Kachel mit Monitor-Symbol und vorhandenem Phantom-Appsymbol. Badge-Quellen: Apple Media Services (`tools.applemediaservices.com`) und Google Play (`play.google.com/intl/en_us/badges/`). Die Bilder verlinken direkt auf die jeweiligen Downloads.
+
+Die drei Download-Schaltflächen sind auf 40 Pixel sichtbare Höhe abgestimmt. Spezifische CSS-Regeln verhindern, dass allgemeine Bildstile die Badge-Größen überschreiben; der transparente Rand der Google-Grafik wird bei der Ausrichtung berücksichtigt.
