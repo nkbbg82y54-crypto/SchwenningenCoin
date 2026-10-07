@@ -104,3 +104,7 @@ Der Button „Partnerschaft anfragen“ auf `regionalpartner.html` öffnet eine 
 ## Community-QR-Code
 
 Das QR-Code-Fenster auf `community.html` zeigt die bereitgestellte SVG-Datei `assets/qr-code-v2.svg` (1147 × 1147). Sie wird unverändert übernommen; der neue Dateiname verhindert die Wiederverwendung der alten Bildadresse aus dem Browsercache.
+
+## Community: Mitgestalten statt Inhalte wiederholen
+
+`community.html` konzentriert sich auf eigene Motive, lokale Aktionen und Bekanntmachen vor Ort. „Idee per E-Mail vorschlagen“ enthält Fragen zur Idee, zum regionalen Bezug, zum eigenen Beitrag und zur gewünschten Unterstützung. Galerie und QR-Code sind kompakt erreichbar; Betriebe und Vereine werden zur Regionalpartner-Seite geführt. Die vorhandene freiwillige Unterstützung inklusive Adresse und Kopierfunktion bleibt in einem standardmäßig geschlossenen Bereich erhalten. `assets/css/community.css` gestaltet die Seite. Verteilungszahlen, Wallet-Anleitung und Partnerporträts werden hier nicht wiederholt.
