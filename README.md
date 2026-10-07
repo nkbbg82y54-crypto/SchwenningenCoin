@@ -7,7 +7,7 @@ Statische Website für das private Community-Projekt Schwenningen Token. HTML, C
 ## Seiten und Dateien
 
 - `index.html`: Startseite und Einstieg in die Token-Verteilung.
-- `projekt.html`: Geschichte in sechs Kapiteln und Vision; ohne Story-Poster, mit aktuellem Doppelcoin.
+- `projekt.html`: Drei kurze Abschnitte zu Idee, Gemeinschaft und Teilnahme; Doppelcoin zwischen den Texten, kompakte Vision und Einstieg in die Community.
 - `community.html` und `community-galerie-social.html`: Community und Galerie mit Original-Downloads.
 - `regionalpartner.html`: Regionalpartner mit zwei optimierten Partnerpostern.
 - `honor.html`: Auszeichnungen und Ehrencoin.
@@ -42,6 +42,8 @@ Die neuen Vorschauen haben höchstens 800 Pixel an der längsten Seite und wurde
 
 Neue Bilder benötigen eigene optimierte Vorschauen; `tools/build.py` erzeugt diese nicht. Bei einem Bildwechsel die Bildpfade und Größenangaben im HTML prüfen. Originale beibehalten, sofern sie als Download oder anderweitig verlinkt sind.
 
+Die Projektseite verwendet zusätzlich `assets/css/project.css` für die kompakte Gliederung und eine einspaltige Darstellung der Vision auf kleinen Bildschirmen.
+
 ## Browser- und Lesezeichen-Symbol
 
 Alle zehn vollständigen HTML-Seiten verweisen auf `/assets/coin-icon-v3.png` als Favicon und Apple-Touch-Icon (180 × 180 Pixel). Der neue Dateiname dient der Aktualisierung gegenüber älteren gespeicherten Symbolen. Bei einem künftigen Motivwechsel wieder einen neuen Dateinamen verwenden. Bereits gespeicherte Lesezeichen können das alte Symbol länger behalten.
@@ -70,7 +72,7 @@ Vor weiteren Löschungen Verweise in HTML, CSS, JavaScript und SVG prüfen, eins
 
 - Neue WebP-Vorschauen geöffnet und visuell kontrolliert; Dateigrößen geprüft.
 - Bei den Bildumstellungen bestehende Links beibehalten und Bildziele geprüft.
-- Alle sechs Story-Kapitel nach Entfernung des Posters erhalten.
+- Projektseite anschließend auf drei kurze Abschnitte verdichtet; Doppelcoin als Bildpause, drei Visionsaussagen und abschließender Teilnahme-Link.
 - Browser- und Apple-Touch-Icon auf allen zehn vollständigen Seiten eingebunden.
 - Nach der Bereinigung keine fehlenden lokalen Dateiziele in der Verweisprüfung gefunden.
 - Erfolgreiche GitHub-Pages-Veröffentlichungen der Website-Änderungen kontrolliert.
