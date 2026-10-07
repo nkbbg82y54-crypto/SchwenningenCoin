@@ -96,3 +96,7 @@ Die Website nennt einheitlich 10 Token für Einzelpersonen aus Schwenningen oder
 Die Startseite zeigt 240 verteilte Token, 7 Tokenholder und 2 Regionalpartner mit Stand 7. Oktober 2026 und Link zur Transparenz-Seite. Bei künftigen Zahlenänderungen `index.html`, `tokenomics.html` und diese README gemeinsam aktualisieren. `assets/css/participation.css` gestaltet die Statuszeile und den Anfragehinweis.
 
 Mobile Vorprüfung am 7. Oktober 2026: alle zehn vollständigen Seiten bei 320 Pixel Breite ohne horizontales Überlaufen; keine defekten bereits geladenen Bilder gefunden. Menüöffnung/-navigation, Weg zur Wallet-Anleitung, 40-Pixel-Downloadbuttons sowie Öffnen des BISON-Bereichs bei 390 Pixel geprüft. Galerie enthält 25 WebP-Vorschauen und 25 Original-Downloadlinks. Kein tatsächlicher E-Mail-Versand durchgeführt.
+
+## Regionalpartnerschaft anfragen
+
+Der Button „Partnerschaft anfragen“ auf `regionalpartner.html` öffnet eine vorbereitete E-Mail an `swhbg@schwenningen-token.de`. Betreff und Text enthalten eine kurze Interessenbekundung sowie Felder für Ansprechperson, Betrieb/Verein/Institution, Ort und regionalen Bezug, optionalen Webauftritt und Ideen oder Fragen zur Zusammenarbeit. Der Versand erfolgt erst durch die anfragende Person im eigenen E-Mail-Programm.
