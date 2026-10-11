@@ -1,6 +1,6 @@
 # Schwenningen Token – Website V4
 
-Stand: 7. Oktober 2026
+Stand: 11. Oktober 2026
 
 Statische Website für das private Community-Projekt Schwenningen Token. HTML, CSS und JavaScript werden über GitHub Pages unter https://www.schwenningen-token.de/ veröffentlicht.
 
@@ -108,3 +108,7 @@ Das QR-Code-Fenster auf `community.html` zeigt die bereitgestellte SVG-Datei `as
 ## Community: Mitgestalten statt Inhalte wiederholen
 
 `community.html` konzentriert sich auf eigene Motive, lokale Aktionen und Bekanntmachen vor Ort. „Idee per E-Mail vorschlagen“ enthält Fragen zur Idee, zum regionalen Bezug, zum eigenen Beitrag und zur gewünschten Unterstützung. Galerie und QR-Code sind kompakt erreichbar; Betriebe und Vereine werden zur Regionalpartner-Seite geführt. Die vorhandene freiwillige Unterstützung inklusive Adresse und Kopierfunktion bleibt in einem standardmäßig geschlossenen Bereich erhalten. `assets/css/community.css` gestaltet die Seite. Verteilungszahlen, Wallet-Anleitung und Partnerporträts werden hier nicht wiederholt.
+
+## Impressum
+
+Am 11. Oktober 2026 wurde der vom Betreiber vorgegebene Impressumstext übernommen: Anbieter und Kontakt, Hinweis zum privaten nicht kommerziellen Projekt, unentgeltliche Token-Ausgabe ohne festen zugesicherten Geldwert, keine Gegenleistung für Aufnahme oder Verlinkung sowie Verantwortlichkeit für externe Links. Die bisherige TMG-Angabe entfällt. Die bestehenden Kontaktdaten bleiben erhalten. Der Text ist in `footer.html` und allen neun Seiten mit eingebundenem Impressum identisch; die Datenschutzerklärung wurde nicht geändert.
