@@ -1,6 +1,6 @@
 # Schwenningen Token – Website V4
 
-Stand: 11. Oktober 2026
+Stand: 17. November 2026
 
 Statische Website für das private Community-Projekt Schwenningen Token. HTML, CSS und JavaScript werden über GitHub Pages unter https://www.schwenningen-token.de/ veröffentlicht.
 
@@ -118,3 +118,7 @@ Am 11. Oktober 2026 wurde der vom Betreiber vorgegebene Impressumstext übernomm
 Am 11. Oktober 2026 wurde Abschnitt 6 der Datenschutzerklärung ergänzt: Verarbeitung der per E-Mail übermittelten Angaben für Anfragebearbeitung, Teilnahmeprüfung und Token-Übertragung, E-Mail-Dienst STRATO, Aufbewahrung ausschließlich im Postfach ohne separate Teilnehmerliste sowie Löschung nach abgeschlossener Bearbeitung einschließlich Rückfragen, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Die öffentliche und dauerhafte Speicherung der Transaktionsdaten auf der Solana-Blockchain wird erläutert; E-Mail-Löschung entfernt keine Blockchain-Daten. Neben den Token-Anfragen auf Startseite, Wallet-Seite und FAQ stehen direkte Datenschutzhinweise. Die Erklärung ist in `footer.html` und allen neun Inhaltsseiten identisch.
 
 Die Rechtsgrundlagen in Abschnitt 6 wurden konkret zugeordnet: Allgemeine E-Mail-Anfragen werden auf Art. 6 Abs. 1 lit. f DSGVO mit dem benannten Interesse an der Beantwortung gestützt. Für angefragte und vereinbarte kostenlose Token-Übertragungen nennt der Text Art. 6 Abs. 1 lit. b DSGVO und beschränkt die Verarbeitung auf die hierfür erforderlichen Angaben. Die bisherige pauschale Verknüpfung mit „beziehungsweise“ wurde ersetzt.
+
+## 404-Seite
+
+Die Fehlerseite verwendet den Spruch „Der Token ist noch da. Diese Seite nicht.“ und einen interaktiven Coin mit dem aktuellen Coin-Bild v3 auf der Vorderseite und einer gestalteten Rückseite. Drehen per Ziehen, horizontalem Wischen, Klick, Enter/Leertaste oder Pfeiltasten. Keine automatische Daueranimation; reduzierte Bewegung wird berücksichtigt. Ohne JavaScript erscheint ein statisches Coin-Bild. Der Startseiten-Link funktioniert unabhängig davon. Eigene schlanke Dateien: `assets/css/not-found.css` und `assets/js/not-found.js`; alle Ressourcenpfade sind absolut, damit auch verschachtelte ungültige URLs funktionieren.
